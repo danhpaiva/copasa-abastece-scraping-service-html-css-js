@@ -100,8 +100,9 @@ function renderCards(alertas) {
     return new Date(b.inicio) - new Date(a.inicio);
   });
 
-  sorted.forEach(alerta => {
+  sorted.forEach((alerta, i) => {
     const card = buildCard(alerta);
+    card.style.animationDelay = `${i * 80}ms`;
     container.appendChild(card);
 
     if (alerta.esta_ativa && alerta.fim) {
