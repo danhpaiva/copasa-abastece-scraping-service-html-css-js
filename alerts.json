@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-28T17:30:00",
+  "gerado_em": "2026-06-28T17:52:28",
   "alertas": [
     {
       "titulo": "28/06 - BELO HORIZONTE , CONTAGEM, NOVA LIMA, RAPOSOS, RIBEIRÃO DAS NEVES, SABARÁ, SANTA LUZIA, e VESPASIANO - Situação do Abastecimento",
@@ -724,7 +724,9 @@
       "inicio": "2026-06-27T17:20:00",
       "fim": "2026-06-28T13:00:00",
       "esta_ativa": false,
-      "bairros_afetados": []
+      "bairros_afetados": [
+        "Vale Do Sol."
+      ]
     },
     {
       "titulo": "27/06 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
@@ -735,7 +737,11 @@
       "inicio": "2026-06-27T13:00:00",
       "fim": "2026-06-28T12:00:00",
       "esta_ativa": false,
-      "bairros_afetados": []
+      "bairros_afetados": [
+        "Esperanca",
+        "Girassol",
+        "Menezes"
+      ]
     },
     {
       "titulo": "27/06 - BELO HORIZONTE - Situação do Abastecimento",
@@ -746,7 +752,21 @@
       "inicio": "2026-06-27T20:58:00",
       "fim": "2026-06-28T23:00:00",
       "esta_ativa": true,
-      "bairros_afetados": []
+      "bairros_afetados": [
+        "Alto Das Antenas",
+        "Araguaia",
+        "Barreiro De Cima",
+        "Bonsucesso",
+        "Flavio Marques Lisboa",
+        "Jardim Das Rosas",
+        "Jardim Liberdade",
+        "Liberdade",
+        "Milionários",
+        "São Judas Tadeu",
+        "Serra Do Curral",
+        "Vila Cemig",
+        "Vila Esperança"
+      ]
     },
     {
       "titulo": "26/06 - SANTA LUZIA - Situação do Abastecimento",
@@ -757,7 +777,9 @@
       "inicio": "2026-06-26T10:00:00",
       "fim": "2026-06-27T01:00:00",
       "esta_ativa": false,
-      "bairros_afetados": []
+      "bairros_afetados": [
+        "Maria Antonieta"
+      ]
     },
     {
       "titulo": "25/06 - BELO HORIZONTE - Situação do Abastecimento",
@@ -768,7 +790,23 @@
       "inicio": "2026-06-25T23:00:00",
       "fim": "2026-06-26T21:00:00",
       "esta_ativa": false,
-      "bairros_afetados": []
+      "bairros_afetados": [
+        "Barroca",
+        "Cidade Jardim",
+        "Coração De Jesus",
+        "Estoril",
+        "Estrela",
+        "Grajaú",
+        "Gutierrez",
+        "Luxemburgo",
+        "Monte São José",
+        "Santa Lúcia",
+        "Santo Antônio",
+        "São Bento",
+        "São Jorge Ii",
+        "Vila Barragem Santa Lúcia",
+        "Vila Paris."
+      ]
     }
   ]
 }
