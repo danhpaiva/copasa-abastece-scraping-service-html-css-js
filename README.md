@@ -13,12 +13,15 @@ Os dados são coletados pelo scraper Python [`copasa-abastece-scraping-service-p
 
 - Status visual destacado: verde (sem interrupções) ou vermelho (com alerta ativo)
 - Contador regressivo até o fim de cada interrupção ("Termina em 4h 30min")
-- Filtro por bairro quando houver bairros específicos configurados
+- Busca por bairro: filtra os alertas em tempo real e posiciona o bairro encontrado em primeiro lugar
+- Bairros afetados com nomes acentuados e expansão de lista ("+ N mais") para alertas com muitos bairros
+- Cidades monitoradas exibidas no rodapé, lidas dinamicamente do `bairros.json`
 - Botão "Atualizar agora" com cooldown de 3 minutos
 - Indicador de dados desatualizados (pipeline com problema)
 - Auto-refresh silencioso a cada 30 minutos
 - Tema claro/escuro com detecção automática do sistema operacional
 - Cache offline via localStorage e Service Worker (PWA instalável)
+- Cache do Service Worker atualizado automaticamente a cada deploy
 - Compatível com mobile, tablet e desktop
 
 ---
@@ -53,10 +56,12 @@ GitHub Actions (cron: toda hora)
     │     (lê bairros.json para saber quais cidades/bairros monitorar)
     ├── Empacota resultado em alerts.json (com campo gerado_em)
     ├── Injeta timestamp de deploy no footer do index.html
+    ├── Atualiza versão do cache no sw.js (força bust em cada deploy)
     ├── Commita e faz push se houve mudança
     └── CD: publica o site via GitHub Pages
           │
           └── Browser carrega a página
+                ├── Busca bairros.json para exibir cidades e corrigir acentuação
                 ├── Exibe cache do localStorage imediatamente (sem flash)
                 ├── Faz fetch do alerts.json atualizado
                 ├── Service Worker serve assets offline
@@ -78,13 +83,13 @@ GitHub Actions (cron: toda hora)
       "inicio": "2026-06-28T06:00:00",
       "fim": "2026-06-30T07:00:00",
       "esta_ativa": true,
-      "bairros_afetados": []
+      "bairros_afetados": ["Nazare", "Sao Gabriel", "Vista do Sol"]
     }
   ]
 }
 ```
 
-> `bairros_afetados` é uma lista dos bairros monitorados encontrados no alerta. Fica vazio quando `bairros` está vazio no `bairros.json` (modo cidade inteira).
+> `bairros_afetados` contém os nomes dos bairros normalizados (sem acentos), conforme retornados pelo scraper. A acentuação correta é restaurada pelo frontend via `display_names` no `bairros.json`.
 
 ---
 
@@ -98,13 +103,22 @@ Edite o [`bairros.json`](bairros.json) na raiz deste repositório:
 {
   "bairros": [],
   "aliases": {},
-  "cidades_alvo": ["Belo Horizonte", "Contagem", "Sabara", "Nova Lima"]
+  "cidades_alvo": [
+    "Belo Horizonte", "Contagem", "Nova Lima", "Raposos",
+    "Ribeirao das Neves", "Sabara", "Santa Luzia", "Vespasiano"
+  ],
+  "display_names": {
+    "Sao Gabriel": "São Gabriel",
+    "Nazare": "Nazaré",
+    "Sabara": "Sabará"
+  }
 }
 ```
 
-- **`cidades_alvo`** — exibe alertas que afetam qualquer uma dessas cidades
+- **`cidades_alvo`** — exibe alertas que afetam qualquer uma dessas cidades (sem acentos, conforme normalizado pelo scraper)
 - **`bairros`** — lista de bairros específicos a destacar dentro dos alertas encontrados (sem acentos). Deixe `[]` para mostrar todos os alertas das cidades sem filtro por bairro
 - **`aliases`** — variações de grafia que o scraper deve tratar como o mesmo bairro
+- **`display_names`** — mapa de nomes normalizados para nomes com acentuação correta, usado pelo frontend para exibição
 
 ### 2. Habilitar o GitHub Pages
 
