@@ -7,6 +7,9 @@ const $ = (sel, ctx = document) => ctx.querySelector(sel);
 // Intervalos ativos de countdown, para limpar ao recarregar
 const _timers = [];
 
+// Bairros selecionados no filtro (conjunto vazio = todos)
+const _filtro = new Set();
+
 function formatDate(isoString) {
   if (!isoString) return 'Desconhecida';
   const d = new Date(isoString);
@@ -51,6 +54,67 @@ function startCountdown(el, fimIso) {
   tick();
   const id = setInterval(tick, 30000); // atualiza a cada 30s
   _timers.push(id);
+}
+
+function renderFilter(alertas) {
+  const bar   = $('#filter-bar');
+  const chips = $('#filter-chips');
+
+  // Coleta todos os bairros únicos presentes em qualquer alerta
+  const todos = [...new Set(
+    alertas.flatMap(a => a.bairros_afetados || [])
+  )].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+
+  // Só exibe o filtro se houver mais de um bairro
+  if (todos.length <= 1) { bar.hidden = true; return; }
+
+  chips.innerHTML = '';
+  bar.hidden = false;
+
+  // Chip "Todos"
+  const all = document.createElement('button');
+  all.className = 'chip' + (_filtro.size === 0 ? ' active' : '');
+  all.textContent = 'Todos';
+  all.addEventListener('click', () => {
+    _filtro.clear();
+    applyFilter(alertas);
+    renderFilter(alertas);
+  });
+  chips.appendChild(all);
+
+  todos.forEach(bairro => {
+    const chip = document.createElement('button');
+    chip.className = 'chip' + (_filtro.has(bairro) ? ' active' : '');
+    chip.textContent = bairro;
+    chip.addEventListener('click', () => {
+      if (_filtro.has(bairro)) {
+        _filtro.delete(bairro);
+      } else {
+        _filtro.add(bairro);
+      }
+      applyFilter(alertas);
+      renderFilter(alertas);
+    });
+    chips.appendChild(chip);
+  });
+}
+
+function applyFilter(alertas) {
+  // Seleciona todos os cards pelo índice de posição no container
+  const cards = [...$('#cards-container').querySelectorAll('.card')];
+  const sorted = [...alertas].sort((a, b) => {
+    if (a.esta_ativa !== b.esta_ativa) return a.esta_ativa ? -1 : 1;
+    return new Date(b.inicio) - new Date(a.inicio);
+  });
+
+  cards.forEach((card, i) => {
+    if (_filtro.size === 0) {
+      card.hidden = false;
+      return;
+    }
+    const bairros = sorted[i]?.bairros_afetados || [];
+    card.hidden = !bairros.some(b => _filtro.has(b));
+  });
 }
 
 function checkStaleData(geradoEm) {
@@ -110,6 +174,9 @@ function renderCards(alertas) {
       if (el) startCountdown(el, alerta.fim);
     }
   });
+
+  renderFilter(alertas);
+  applyFilter(alertas);
 }
 
 function buildCard(alerta) {
