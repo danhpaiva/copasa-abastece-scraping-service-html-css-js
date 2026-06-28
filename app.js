@@ -413,11 +413,15 @@ async function load() {
     data = await res.json();
   } catch (err) {
     if (!cached) showError('Falha ao buscar alerts.json: ' + err.message);
-    return;
+    return false; // indica falha
   }
+
+  const geradoEm = Array.isArray(data) ? null : (data.gerado_em || null);
+  const mudou = geradoEm !== _lastGeradoEm;
 
   cacheSave(data);
   applyData(data);
+  return mudou;
 }
 
 let _cooldownTimer = null;
@@ -435,7 +439,7 @@ function startCooldown(btn) {
       _cooldownTimer = null;
       btn.disabled = false;
       btn.querySelector('.btn-refresh-icon').textContent = '↻';
-      btn.querySelector('.btn-refresh-label').textContent = 'Atualizar agora';
+      btn.querySelector('.btn-refresh-label').textContent = ' Verificar agora';
     } else {
       const m = Math.floor(remaining / 60);
       const s = String(remaining % 60).padStart(2, '0');
@@ -451,8 +455,16 @@ async function refresh() {
   const btn = $('#btn-refresh');
   btn.disabled = true;
   btn.classList.add('spinning');
-  await load();
-  startCooldown(btn);
+
+  const mudou = await load();
+
+  // Feedback visual por 2s antes de entrar no cooldown
+  btn.classList.remove('spinning');
+  btn.querySelector('.btn-refresh-icon').textContent = '✓';
+  btn.querySelector('.btn-refresh-label').textContent =
+    mudou ? ' Dados atualizados' : ' Sem novidades';
+
+  setTimeout(() => startCooldown(btn), 2000);
 }
 
 // ── Service Worker ─────────────────────────────────────
