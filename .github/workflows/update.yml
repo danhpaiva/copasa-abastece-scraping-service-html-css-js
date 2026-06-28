@@ -168,7 +168,11 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "chore: atualiza alerts.json e build-info [skip ci]"
-            git push
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push origin main && break
+              echo "Push falhou, tentativa $i/3. Aguardando..."
+              sleep 5
+            done
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
