@@ -1,10 +1,13 @@
 'use strict';
 
 const ALERTS_URL          = './alerts.json';
+const BAIRROS_URL         = './bairros.json';
 const CACHE_KEY           = 'copasa_alerts_cache';
 const THEME_KEY           = 'copasa_theme';
 const TITLE_BASE          = 'Copasa Abastece — Monitor de Interrupções';
 const REFRESH_COOLDOWN_MS = 3 * 60 * 1000; // 3 minutos
+
+let _displayNames = {};  // mapa normalizado → nome com acentos
 
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 
@@ -208,14 +211,18 @@ function renderCards(alertas) {
 
 const BAIRROS_VISIVEIS = 5;
 
+function displayBairro(b) {
+  return _displayNames[b] || b;
+}
+
 function buildBairrosHtml(bairros) {
   const visiveis = bairros.slice(0, BAIRROS_VISIVEIS);
   const restantes = bairros.slice(BAIRROS_VISIVEIS);
-  const tagsVisiveis = visiveis.map(b => `<span class="tag bairro">${esc(b)}</span>`).join('');
+  const tagsVisiveis = visiveis.map(b => `<span class="tag bairro">${esc(displayBairro(b))}</span>`).join('');
 
   if (restantes.length === 0) return tagsVisiveis;
 
-  const tagsRestantes = restantes.map(b => `<span class="tag bairro">${esc(b)}</span>`).join('');
+  const tagsRestantes = restantes.map(b => `<span class="tag bairro">${esc(displayBairro(b))}</span>`).join('');
   return `
     ${tagsVisiveis}
     <span class="tag-more-wrap">
@@ -451,9 +458,28 @@ function startAutoRefresh() {
   }, AUTO_REFRESH_MS);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+async function loadBairrosConfig() {
+  try {
+    const res = await fetch(BAIRROS_URL, { cache: 'no-store' });
+    if (!res.ok) return;
+    const cfg = await res.json();
+
+    // #4 — mapa de nomes com acentos
+    _displayNames = cfg.display_names || {};
+
+    // #2 — exibe cidades monitoradas no rodapé
+    const cidades = cfg.cidades_alvo || [];
+    const el = $('#cidades-monitoradas');
+    if (el && cidades.length > 0) {
+      el.textContent = 'Monitorando: ' + cidades.join(', ');
+    }
+  } catch {}
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
   registerSW();
   initTheme();
+  await loadBairrosConfig();
   load();
   startAutoRefresh();
   $('#btn-refresh').addEventListener('click', refresh);

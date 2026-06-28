@@ -1,5 +1,31 @@
 {
   "bairros": [],
   "aliases": {},
-  "cidades_alvo": ["Belo Horizonte", "Contagem", "Sabara", "Nova Lima"]
+  "cidades_alvo": ["Belo Horizonte", "Contagem", "Sabara", "Nova Lima"],
+  "display_names": {
+    "Sao Gabriel": "São Gabriel",
+    "Nazare": "Nazaré",
+    "Sabara": "Sabará",
+    "Nova Lima": "Nova Lima",
+    "Belo Horizonte": "Belo Horizonte",
+    "Contagem": "Contagem",
+    "Venda Nova": "Venda Nova",
+    "Pampulha": "Pampulha",
+    "Barreiro": "Barreiro",
+    "Noroeste": "Noroeste",
+    "Nordeste": "Nordeste",
+    "Leste": "Leste",
+    "Oeste": "Oeste",
+    "Sul": "Sul",
+    "Centro Sul": "Centro Sul",
+    "Sao Joao Del Rei": "São João Del Rei",
+    "Ribeirao das Neves": "Ribeirão das Neves",
+    "Santa Luzia": "Santa Luzia",
+    "Betim": "Betim",
+    "Ibirite": "Ibirité",
+    "Esmeraldas": "Esmeraldas",
+    "Brumadinho": "Brumadinho",
+    "Caete": "Caeté",
+    "Lagoa Santa": "Lagoa Santa"
+  }
 }
