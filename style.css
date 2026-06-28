@@ -260,6 +260,25 @@ main {
   font-style: italic;
 }
 
+/* ── Countdown ── */
+.countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+
+.countdown-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-alert);
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown.expired .countdown-value {
+  color: var(--color-muted);
+  font-weight: 400;
+}
+
 /* ── Section label ── */
 .section-label {
   font-size: .85rem;

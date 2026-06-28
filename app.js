@@ -3,7 +3,9 @@
 const ALERTS_URL = './alerts.json';
 
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
-const $$ = (sel, ctx = document) => ctx.querySelectorAll(sel);
+
+// Intervalos ativos de countdown, para limpar ao recarregar
+const _timers = [];
 
 function formatDate(isoString) {
   if (!isoString) return 'Desconhecida';
@@ -25,6 +27,32 @@ function formatDateShort(isoString) {
   });
 }
 
+function formatCountdown(ms) {
+  if (ms <= 0) return 'encerrando…';
+  const totalMin = Math.floor(ms / 60000);
+  const days  = Math.floor(totalMin / 1440);
+  const hours = Math.floor((totalMin % 1440) / 60);
+  const mins  = totalMin % 60;
+
+  if (days > 0)  return `${days}d ${hours}h ${mins}min`;
+  if (hours > 0) return `${hours}h ${mins}min`;
+  return `${mins}min`;
+}
+
+function startCountdown(el, fimIso) {
+  const fim = new Date(fimIso);
+
+  function tick() {
+    const diff = fim - Date.now();
+    el.textContent = formatCountdown(diff);
+    if (diff <= 0) el.closest('.countdown')?.classList.add('expired');
+  }
+
+  tick();
+  const id = setInterval(tick, 30000); // atualiza a cada 30s
+  _timers.push(id);
+}
+
 function setStatus(type, text) {
   const banner = $('#status-banner');
   banner.className = `status-banner ${type}`;
@@ -32,6 +60,9 @@ function setStatus(type, text) {
 }
 
 function renderCards(alertas) {
+  _timers.forEach(clearInterval);
+  _timers.length = 0;
+
   const container = $('#cards-container');
   container.innerHTML = '';
 
@@ -54,6 +85,11 @@ function renderCards(alertas) {
   sorted.forEach(alerta => {
     const card = buildCard(alerta);
     container.appendChild(card);
+
+    if (alerta.esta_ativa && alerta.fim) {
+      const el = card.querySelector('.countdown-value');
+      if (el) startCountdown(el, alerta.fim);
+    }
   });
 }
 
@@ -73,6 +109,15 @@ function buildCard(alerta) {
     ? `<a href="${esc(alerta.url)}" target="_blank" rel="noopener">${esc(alerta.titulo)}</a>`
     : esc(alerta.titulo);
 
+  const countdownHtml = isActive && alerta.fim
+    ? `<div class="detail-row">
+        <span class="detail-label">Termina em</span>
+        <div class="countdown">
+          <span class="countdown-value">–</span>
+        </div>
+      </div>`
+    : '';
+
   card.innerHTML = `
     <div class="card-header">
       <h2 class="card-title">${tituloHtml}</h2>
@@ -81,6 +126,7 @@ function buildCard(alerta) {
       </span>
     </div>
     <div class="card-body">
+      ${countdownHtml}
       <div class="detail-row">
         <span class="detail-label">Período</span>
         <div class="period">
