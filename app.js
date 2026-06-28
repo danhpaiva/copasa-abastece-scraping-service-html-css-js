@@ -53,6 +53,24 @@ function startCountdown(el, fimIso) {
   _timers.push(id);
 }
 
+function checkStaleData(geradoEm) {
+  const banner = $('#stale-banner');
+  if (!geradoEm) { banner.hidden = true; return; }
+
+  const diffMs = Date.now() - new Date(geradoEm);
+  const diffH  = diffMs / 3600000;
+
+  if (diffH >= 2) {
+    const h = Math.floor(diffH);
+    banner.hidden = false;
+    $('#stale-text').textContent =
+      `Dados com ${h}h de atraso — o pipeline pode estar com problema. ` +
+      `Verifique o GitHub Actions.`;
+  } else {
+    banner.hidden = true;
+  }
+}
+
 function setStatus(type, text) {
   const banner = $('#status-banner');
   banner.className = `status-banner ${type}`;
@@ -194,6 +212,7 @@ async function load() {
   }
 
   $('#last-updated').textContent = geradoEm ? formatDate(geradoEm) : 'Desconhecida';
+  checkStaleData(geradoEm);
 
   const ativos = alertas.filter(a => a.esta_ativa);
 

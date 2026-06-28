@@ -114,6 +114,30 @@ main {
   50%       { opacity: .5; transform: scale(.85); }
 }
 
+/* ── Stale data banner ── */
+.stale-banner {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+  padding: .65rem 1rem;
+  border-radius: var(--radius);
+  background: #fffbeb;
+  border: 1.5px solid #fde68a;
+  color: #92400e;
+  font-size: .82rem;
+  font-weight: 500;
+}
+
+.stale-banner a {
+  margin-left: auto;
+  color: #92400e;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.stale-banner[hidden] { display: none; }
+
 /* ── Last Updated + Refresh ── */
 .meta-bar {
   display: flex;
