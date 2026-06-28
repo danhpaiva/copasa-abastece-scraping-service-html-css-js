@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-28T18:18:51",
+  "gerado_em": "2026-06-28T18:54:14",
   "alertas": [
     {
       "titulo": "28/06 - BELO HORIZONTE , CONTAGEM, NOVA LIMA, RAPOSOS, RIBEIRÃO DAS NEVES, SABARÁ, SANTA LUZIA, e VESPASIANO - Situação do Abastecimento",
@@ -779,33 +779,6 @@
       "esta_ativa": false,
       "bairros_afetados": [
         "Maria Antonieta"
-      ]
-    },
-    {
-      "titulo": "25/06 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202606%2Fd673caf3-ae5f-41f9-8f0e-0b7c4911fff7",
-      "cidades": [
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-06-25T23:00:00",
-      "fim": "2026-06-26T21:00:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Barroca",
-        "Cidade Jardim",
-        "Coração De Jesus",
-        "Estoril",
-        "Estrela",
-        "Grajaú",
-        "Gutierrez",
-        "Luxemburgo",
-        "Monte São José",
-        "Santa Lúcia",
-        "Santo Antônio",
-        "São Bento",
-        "São Jorge Ii",
-        "Vila Barragem Santa Lúcia",
-        "Vila Paris."
       ]
     }
   ]
