@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME    = 'copasa-__SW_VER__';
+const CACHE_NAME    = 'copasa-202606281503';
 const STATIC_ASSETS = ['./', './index.html', './style.css', './app.js', './icon.svg', './manifest.json'];
 
 // Instala e pré-cacheia os assets estáticos

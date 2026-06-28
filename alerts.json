@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-28T14:51:41",
+  "gerado_em": "2026-06-28T15:03:56",
   "alertas": [
     {
       "titulo": "28/06 - BELO HORIZONTE , CONTAGEM, NOVA LIMA, RAPOSOS, RIBEIRÃO DAS NEVES, SABARÁ, SANTA LUZIA, e VESPASIANO - Situação do Abastecimento",
@@ -727,6 +727,17 @@
       "bairros_afetados": []
     },
     {
+      "titulo": "27/06 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202606%2F4a68ceb9-4c57-45b6-ae17-b97342e4b1c4",
+      "cidades": [
+        "Ribeirão Das Neves"
+      ],
+      "inicio": "2026-06-27T13:00:00",
+      "fim": "2026-06-28T12:00:00",
+      "esta_ativa": false,
+      "bairros_afetados": []
+    },
+    {
       "titulo": "27/06 - BELO HORIZONTE - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202606%2F4593e31f-bf41-4fd3-aebb-dad451ca2a0e",
       "cidades": [
@@ -738,6 +749,17 @@
       "bairros_afetados": []
     },
     {
+      "titulo": "26/06 - SANTA LUZIA - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202606%2F0416bdcf-9cfa-433e-a5ca-429c0b8d177d",
+      "cidades": [
+        "Santa Luzia"
+      ],
+      "inicio": "2026-06-26T10:00:00",
+      "fim": "2026-06-27T01:00:00",
+      "esta_ativa": false,
+      "bairros_afetados": []
+    },
+    {
       "titulo": "25/06 - BELO HORIZONTE - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202606%2Fd673caf3-ae5f-41f9-8f0e-0b7c4911fff7",
       "cidades": [
@@ -745,6 +767,17 @@
       ],
       "inicio": "2026-06-25T23:00:00",
       "fim": "2026-06-26T21:00:00",
+      "esta_ativa": false,
+      "bairros_afetados": []
+    },
+    {
+      "titulo": "24/06 - VESPASIANO - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202606%2F40db1dea-5c12-4c43-89d4-800d7c86f133",
+      "cidades": [
+        "Vespasiano"
+      ],
+      "inicio": "2026-06-24T13:25:00",
+      "fim": "2026-06-25T04:00:00",
       "esta_ativa": false,
       "bairros_afetados": []
     }
