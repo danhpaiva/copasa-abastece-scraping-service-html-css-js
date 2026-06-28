@@ -3,9 +3,23 @@
 [![Update Alerts](https://github.com/danhpaiva/copasa-abastece-scraping-service-html-css-js/actions/workflows/update.yml/badge.svg)](https://github.com/danhpaiva/copasa-abastece-scraping-service-html-css-js/actions/workflows/update.yml)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-live-blue?logo=github)](https://danhpaiva.github.io/copasa-abastece-scraping-service-html-css-js/)
 
-Página estática publicada no **GitHub Pages** que exibe em tempo real as interrupções no abastecimento de água da Copasa para os bairros monitorados.
+Página estática publicada no **GitHub Pages** que exibe em tempo real as interrupções no abastecimento de água da Copasa para as cidades monitoradas.
 
 Os dados são coletados pelo scraper Python [`copasa-abastece-scraping-service-py`](https://github.com/danhpaiva/copasa-abastece-scraping-service-py) e atualizados automaticamente a cada hora via **GitHub Actions**.
+
+---
+
+## Funcionalidades
+
+- Status visual destacado: verde (sem interrupções) ou vermelho (com alerta ativo)
+- Contador regressivo até o fim de cada interrupção ("Termina em 4h 30min")
+- Filtro por bairro quando houver bairros específicos configurados
+- Botão "Atualizar agora" com cooldown de 3 minutos
+- Indicador de dados desatualizados (pipeline com problema)
+- Auto-refresh silencioso a cada 30 minutos
+- Tema claro/escuro com detecção automática do sistema operacional
+- Cache offline via localStorage e Service Worker (PWA instalável)
+- Compatível com mobile, tablet e desktop
 
 ---
 
@@ -15,12 +29,15 @@ Os dados são coletados pelo scraper Python [`copasa-abastece-scraping-service-p
 .
 ├── index.html                    # Página principal
 ├── style.css                     # Estilos (mobile-first, sem dependências)
-├── app.js                        # Lógica de fetch e renderização
+├── app.js                        # Lógica de fetch, renderização e SW
+├── sw.js                         # Service Worker (cache offline / PWA)
+├── manifest.json                 # Web App Manifest (instalável no celular)
+├── icon.svg                      # Ícone do app
 ├── alerts.json                   # Dados gerados pelo scraper (auto-atualizado)
-├── bairros.json                  # Bairros e cidades monitorados (configure aqui)
+├── bairros.json                  # Cidades e bairros monitorados (configure aqui)
 └── .github/
     └── workflows/
-        └── update.yml            # GitHub Action que roda o scraper a cada hora
+        └── update.yml            # GitHub Action: CI + scrape + CD (cron horário)
 ```
 
 ---
@@ -33,12 +50,17 @@ GitHub Actions (cron: toda hora)
     ├── CI: valida arquivos obrigatórios e JSONs
     ├── Baixa scraper.py do repositório copasa-abastece-scraping-service-py
     ├── Executa: python scraper.py --output /tmp/alerts_raw.json
-    │     (lê bairros.json deste repositório para saber o que monitorar)
+    │     (lê bairros.json para saber quais cidades/bairros monitorar)
     ├── Empacota resultado em alerts.json (com campo gerado_em)
+    ├── Injeta timestamp de deploy no footer do index.html
     ├── Commita e faz push se houve mudança
     └── CD: publica o site via GitHub Pages
           │
-          └── Browser lê alerts.json via fetch() e renderiza os cards
+          └── Browser carrega a página
+                ├── Exibe cache do localStorage imediatamente (sem flash)
+                ├── Faz fetch do alerts.json atualizado
+                ├── Service Worker serve assets offline
+                └── Auto-refresh silencioso a cada 30min
 ```
 
 ---
@@ -56,33 +78,33 @@ GitHub Actions (cron: toda hora)
       "inicio": "2026-06-28T06:00:00",
       "fim": "2026-06-30T07:00:00",
       "esta_ativa": true,
-      "bairros_afetados": ["Nazare", "Sao Gabriel", "Vista do Sol"]
+      "bairros_afetados": []
     }
   ]
 }
 ```
 
+> `bairros_afetados` é uma lista dos bairros monitorados encontrados no alerta. Fica vazio quando `bairros` está vazio no `bairros.json` (modo cidade inteira).
+
 ---
 
 ## Configurar no seu repositório
 
-### 1. Configurar os bairros monitorados
+### 1. Configurar as cidades e bairros monitorados
 
 Edite o [`bairros.json`](bairros.json) na raiz deste repositório:
 
 ```json
 {
-  "bairros": ["Nome Do Bairro", "Outro Bairro"],
-  "aliases": {
-    "Grafia Alternativa": "Nome Do Bairro"
-  },
-  "cidades_alvo": ["Belo Horizonte"]
+  "bairros": [],
+  "aliases": {},
+  "cidades_alvo": ["Belo Horizonte", "Contagem", "Sabara", "Nova Lima"]
 }
 ```
 
-- **`bairros`** — lista de bairros a monitorar (sem acentos, como aparecem no site da Copasa)
+- **`cidades_alvo`** — exibe alertas que afetam qualquer uma dessas cidades
+- **`bairros`** — lista de bairros específicos a destacar dentro dos alertas encontrados (sem acentos). Deixe `[]` para mostrar todos os alertas das cidades sem filtro por bairro
 - **`aliases`** — variações de grafia que o scraper deve tratar como o mesmo bairro
-- **`cidades_alvo`** — restringe a busca a essas cidades; deixe vazio `[]` para monitorar todas
 
 ### 2. Habilitar o GitHub Pages
 
@@ -112,11 +134,15 @@ npx serve .
 
 Acesse `http://localhost:3000`. O `alerts.json` já contém dados de exemplo para desenvolvimento local.
 
+> O Service Worker só é registrado em contexto seguro (HTTPS ou localhost), portanto funciona normalmente em desenvolvimento local.
+
 ---
 
 ## Dependências
 
 **Nenhuma no frontend.** HTML + CSS + JS puros, sem npm, sem build step, sem frameworks.
+
+O PWA (Service Worker + manifest) é implementado nativamente, sem bibliotecas externas.
 
 A GitHub Action instala `playwright`, `requests` e `beautifulsoup4` apenas no ambiente de CI para rodar o scraper.
 
