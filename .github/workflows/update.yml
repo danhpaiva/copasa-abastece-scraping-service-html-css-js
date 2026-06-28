@@ -100,7 +100,7 @@ jobs:
       - name: Executar scraper
         run: |
           set +e
-          python scraper.py --output /tmp/alerts_raw.json
+          python scraper.py --json --output /tmp/alerts_raw.json
           code=$?
           set -e
           # 0 = sem alertas, 1 = alertas encontrados — ambos são sucesso
