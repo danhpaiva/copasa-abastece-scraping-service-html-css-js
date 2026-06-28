@@ -1,8 +1,9 @@
 'use strict';
 
-const ALERTS_URL  = './alerts.json';
-const CACHE_KEY   = 'copasa_alerts_cache';
-const TITLE_BASE  = 'Copasa Abastece — Monitor de Interrupções';
+const ALERTS_URL      = './alerts.json';
+const CACHE_KEY       = 'copasa_alerts_cache';
+const TITLE_BASE      = 'Copasa Abastece — Monitor de Interrupções';
+const REFRESH_COOLDOWN_MS = 3 * 60 * 1000; // 3 minutos
 
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 
@@ -335,13 +336,39 @@ async function load() {
   applyData(data);
 }
 
+let _cooldownTimer = null;
+let _cooldownEnd   = 0;
+
+function startCooldown(btn) {
+  _cooldownEnd = Date.now() + REFRESH_COOLDOWN_MS;
+  btn.disabled = true;
+  btn.classList.remove('spinning');
+
+  _cooldownTimer = setInterval(() => {
+    const remaining = Math.ceil((_cooldownEnd - Date.now()) / 1000);
+    if (remaining <= 0) {
+      clearInterval(_cooldownTimer);
+      _cooldownTimer = null;
+      btn.disabled = false;
+      btn.querySelector('.btn-refresh-icon').textContent = '↻';
+      btn.querySelector('.btn-refresh-label').textContent = 'Atualizar agora';
+    } else {
+      const m = Math.floor(remaining / 60);
+      const s = String(remaining % 60).padStart(2, '0');
+      btn.querySelector('.btn-refresh-icon').textContent = '';
+      btn.querySelector('.btn-refresh-label').textContent = `Aguarde ${m}:${s}`;
+    }
+  }, 1000);
+}
+
 async function refresh() {
+  if (_cooldownTimer || Date.now() < _cooldownEnd) return;
+
   const btn = $('#btn-refresh');
   btn.disabled = true;
   btn.classList.add('spinning');
   await load();
-  btn.classList.remove('spinning');
-  btn.disabled = false;
+  startCooldown(btn);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
