@@ -211,22 +211,34 @@ function applyFilter(alertas) {
     : '';
 }
 
-function checkStaleData(geradoEm) {
+function checkStaleData(geradoEm, alertasNovos) {
   const banner = $('#stale-banner');
+  const staleText = $('#stale-text');
   if (!geradoEm) { banner.hidden = true; return; }
 
-  const diffMs = Date.now() - new Date(geradoEm);
+  const diffMs = Date.now() - new Date(geradoEm + 'Z');
   const diffH  = diffMs / 3600000;
 
+  // Caso 1: dados muito antigos (pipeline parado)
   if (diffH >= 2) {
     const h = Math.floor(diffH);
     banner.hidden = false;
-    $('#stale-text').textContent =
-      `Dados com ${h}h de atraso — o pipeline pode estar com problema. ` +
-      `Verifique o GitHub Actions.`;
-  } else {
-    banner.hidden = true;
+    staleText.textContent =
+      `Dados com ${h}h de atraso — o pipeline pode estar com problema. `;
+    return;
   }
+
+  // Caso 2: dados frescos mas zerados — havia alertas ativos antes (possível falha do scraper)
+  const haviamAtivos = _alertasAtual.some(a => a.esta_ativa);
+  if ((alertasNovos || []).length === 0 && haviamAtivos) {
+    banner.hidden = false;
+    staleText.textContent =
+      `Dados recém-atualizados indicam 0 alertas, mas havia interrupções ativas. ` +
+      `Possível instabilidade no site da Copasa — dados anteriores podem ser mais precisos. `;
+    return;
+  }
+
+  banner.hidden = true;
 }
 
 function setStatus(type, text) {
@@ -396,7 +408,7 @@ function applyData(data, forceRender = false) {
   }
 
   $('#last-updated').textContent = geradoEm ? formatDate(geradoEm) : 'Desconhecida';
-  checkStaleData(geradoEm);
+  checkStaleData(geradoEm, alertas);
 
   const ativos = alertas.filter(a => a.esta_ativa);
   updateTitle(ativos.length);

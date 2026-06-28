@@ -115,14 +115,27 @@ jobs:
           raw = json.loads(pathlib.Path("/tmp/alerts_raw.json").read_text())
           alertas = raw if isinstance(raw, list) else raw.get("alertas", raw)
 
-          output = {
-              "gerado_em": ts,
-              "alertas": alertas,
-          }
-          pathlib.Path("alerts.json").write_text(
-              json.dumps(output, ensure_ascii=False, indent=2)
-          )
-          print(f"alerts.json gerado com {len(alertas)} alerta(s).")
+          # Proteção contra falso-zero: não sobrescreve se o scraper retornou 0 alertas
+          # mas o arquivo anterior tinha alertas ativos (possível instabilidade do site da Copasa)
+          alerts_path = pathlib.Path("alerts.json")
+          skip_alerts = False
+          if len(alertas) == 0 and alerts_path.exists():
+              try:
+                  anterior = json.loads(alerts_path.read_text())
+                  alertas_ant = anterior.get("alertas", []) if isinstance(anterior, dict) else anterior
+                  ativos_ant = [a for a in alertas_ant if a.get("esta_ativa")]
+                  if ativos_ant:
+                      print(f"⚠ PROTEÇÃO: scraper retornou 0 alertas mas havia {len(ativos_ant)} ativo(s). alerts.json preservado.")
+                      skip_alerts = True
+              except Exception as e:
+                  print(f"Aviso: não foi possível ler alerts.json anterior: {e}")
+
+          if not skip_alerts:
+              output = {"gerado_em": ts, "alertas": alertas}
+              alerts_path.write_text(json.dumps(output, ensure_ascii=False, indent=2))
+              print(f"alerts.json gerado com {len(alertas)} alerta(s).")
+          else:
+              print("alerts.json mantido sem alteração (proteção contra falso-zero).")
 
           # Injeta timestamp de deploy no footer do index.html (horário de Brasília, UTC-3)
           brt = datetime.timezone(datetime.timedelta(hours=-3))
