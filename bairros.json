@@ -1,16 +1,5 @@
 {
-  "bairros": [
-    "Nazare",
-    "Sao Gabriel",
-    "Vista do Sol",
-    "Buritis"
-  ],
-  "aliases": {
-    "Nazaré": "Nazare",
-    "São Gabriel": "Sao Gabriel",
-    "Vista do Sol": "Vista do Sol"
-  },
-  "cidades_alvo": [
-    "Belo Horizonte"
-  ]
+  "bairros": [],
+  "aliases": {},
+  "cidades_alvo": ["Belo Horizonte", "Contagem", "Sabara", "Nova Lima"]
 }
