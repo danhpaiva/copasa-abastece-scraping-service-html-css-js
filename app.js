@@ -71,7 +71,9 @@ function _fmtDate(d) {
 
 function formatDate(isoString) {
   if (!isoString) return 'Desconhecida';
-  const d = new Date(isoString);
+  // gerado_em é UTC mas vem sem 'Z' — força interpretação correta
+  const utc = isoString.endsWith('Z') ? isoString : isoString + 'Z';
+  const d = new Date(utc);
   return isNaN(d) ? isoString : _fmtDate(d);
 }
 
