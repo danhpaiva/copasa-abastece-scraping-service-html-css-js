@@ -96,10 +96,11 @@ jobs:
             -o scraper.py
 
       - name: Executar scraper
-        shell: bash {0}
         run: |
+          set +e
           python scraper.py --output /tmp/alerts_raw.json
           code=$?
+          set -e
           # 0 = sem alertas, 1 = alertas encontrados — ambos são sucesso
           test $code -le 1
 
@@ -116,7 +117,7 @@ jobs:
               alertas = raw.get("alertas", raw)
 
           output = {
-              "gerado_em": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S"),
+              "gerado_em": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
               "alertas": alertas,
           }
           pathlib.Path("alerts.json").write_text(

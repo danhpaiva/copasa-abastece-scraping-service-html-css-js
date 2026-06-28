@@ -17,6 +17,7 @@ Os dados são coletados pelo scraper Python [`copasa-abastece-scraping-service-p
 ├── style.css                     # Estilos (mobile-first, sem dependências)
 ├── app.js                        # Lógica de fetch e renderização
 ├── alerts.json                   # Dados gerados pelo scraper (auto-atualizado)
+├── bairros.json                  # Bairros e cidades monitorados (configure aqui)
 └── .github/
     └── workflows/
         └── update.yml            # GitHub Action que roda o scraper a cada hora
@@ -29,14 +30,15 @@ Os dados são coletados pelo scraper Python [`copasa-abastece-scraping-service-p
 ```
 GitHub Actions (cron: toda hora)
     │
+    ├── CI: valida arquivos obrigatórios e JSONs
     ├── Baixa scraper.py do repositório copasa-abastece-scraping-service-py
     ├── Executa: python scraper.py --output /tmp/alerts_raw.json
+    │     (lê bairros.json deste repositório para saber o que monitorar)
     ├── Empacota resultado em alerts.json (com campo gerado_em)
-    └── Commita e faz push se houve mudança
+    ├── Commita e faz push se houve mudança
+    └── CD: publica o site via GitHub Pages
           │
-          └── GitHub Pages serve os arquivos estáticos
-                │
-                └── Browser lê alerts.json via fetch() e renderiza os cards
+          └── Browser lê alerts.json via fetch() e renderiza os cards
 ```
 
 ---
@@ -49,7 +51,7 @@ GitHub Actions (cron: toda hora)
   "alertas": [
     {
       "titulo": "28/06 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://copasaabastece.com.br/...",
+      "url": "https://www.copasa.com.br/...",
       "cidades": ["Belo Horizonte", "Contagem"],
       "inicio": "2026-06-28T06:00:00",
       "fim": "2026-06-30T07:00:00",
@@ -64,21 +66,35 @@ GitHub Actions (cron: toda hora)
 
 ## Configurar no seu repositório
 
-### 1. Habilitar o GitHub Pages
+### 1. Configurar os bairros monitorados
 
-No repositório → **Settings → Pages → Source**: selecione a branch `main` e a pasta `/` (root).
+Edite o [`bairros.json`](bairros.json) na raiz deste repositório:
 
-### 2. Ativar permissões de escrita para o Actions
+```json
+{
+  "bairros": ["Nome Do Bairro", "Outro Bairro"],
+  "aliases": {
+    "Grafia Alternativa": "Nome Do Bairro"
+  },
+  "cidades_alvo": ["Belo Horizonte"]
+}
+```
+
+- **`bairros`** — lista de bairros a monitorar (sem acentos, como aparecem no site da Copasa)
+- **`aliases`** — variações de grafia que o scraper deve tratar como o mesmo bairro
+- **`cidades_alvo`** — restringe a busca a essas cidades; deixe vazio `[]` para monitorar todas
+
+### 2. Habilitar o GitHub Pages
+
+No repositório → **Settings → Pages → Source**: selecione **GitHub Actions**.
+
+### 3. Ativar permissões de escrita para o Actions
 
 **Settings → Actions → General → Workflow permissions** → marque **Read and write permissions**.
 
-### 3. Configurar os bairros monitorados
+### 4. Disparar manualmente (primeira vez)
 
-Edite as variáveis de configuração no [`scraper.py`](https://github.com/danhpaiva/copasa-abastece-scraping-service-py) conforme a documentação do repositório do scraper.
-
-### 4. Disparar manualmente (opcional)
-
-Acesse **Actions → Update Alerts → Run workflow** para forçar uma execução imediata antes do próximo ciclo de uma hora.
+Acesse **Actions → Update Alerts → Run workflow** para forçar uma execução imediata. Após isso o cron horário assume.
 
 ---
 
@@ -90,19 +106,19 @@ Qualquer servidor HTTP estático funciona:
 # Python
 python -m http.server 3000
 
-# Node.js (npx)
+# Node.js (npx, sem instalação prévia)
 npx serve .
 ```
 
-Acesse `http://localhost:3000`. O `alerts.json` de exemplo já contém dados fictícios realistas para desenvolvimento.
+Acesse `http://localhost:3000`. O `alerts.json` já contém dados de exemplo para desenvolvimento local.
 
 ---
 
 ## Dependências
 
-**Nenhuma.** O frontend usa apenas HTML + CSS + JS puros, sem npm, sem build step, sem frameworks.
+**Nenhuma no frontend.** HTML + CSS + JS puros, sem npm, sem build step, sem frameworks.
 
-A GitHub Action instala `playwright`, `requests` e `beautifulsoup4` apenas no ambiente de CI.
+A GitHub Action instala `playwright`, `requests` e `beautifulsoup4` apenas no ambiente de CI para rodar o scraper.
 
 ---
 
