@@ -1,28 +1,4 @@
 {
-  "gerado_em": "2026-06-28T13:53:15",
-  "alertas": [
-    {
-      "titulo": "28/06 - BELO HORIZONTE , CONTAGEM, NOVA LIMA, RAPOSOS, RIBEIRÃO DAS NEVES, SABARÁ, SANTA LUZIA, e VESPASIANO - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202606%2Fc259aa85-fb31-4b30-a528-9d0681c22123",
-      "cidades": [
-        "Belo Horizonte",
-        "Contagem",
-        "Nova Lima",
-        "Raposos",
-        "Ribeirão Das Neves",
-        "Sabará",
-        "Santa Luzia",
-        "Vespasiano"
-      ],
-      "inicio": "2026-06-28T06:00:00",
-      "fim": "2026-06-30T07:00:00",
-      "esta_ativa": true,
-      "bairros_afetados": [
-        "Nazare",
-        "Sao Gabriel",
-        "Vista do Sol",
-        "Buritis"
-      ]
-    }
-  ]
+  "gerado_em": "2026-06-28T14:21:44",
+  "alertas": []
 }
