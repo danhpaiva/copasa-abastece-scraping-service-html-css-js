@@ -236,7 +236,7 @@ function renderCards(alertas) {
 function buildCard(alerta) {
   const isActive = alerta.esta_ativa;
   const card = document.createElement('article');
-  card.className = `card${isActive ? ' active' : ''}`;
+  card.className = `card${isActive ? ' active' : ' inactive'}`;
 
   const cidades = (alerta.cidades || []).map(c =>
     `<span class="tag city">${esc(c)}</span>`).join('');
