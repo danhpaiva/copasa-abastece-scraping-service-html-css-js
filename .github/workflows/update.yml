@@ -117,7 +117,7 @@ jobs:
               alertas = raw.get("alertas", raw)
 
           output = {
-              "gerado_em": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S"),
+              "gerado_em": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
               "alertas": alertas,
           }
           pathlib.Path("alerts.json").write_text(
