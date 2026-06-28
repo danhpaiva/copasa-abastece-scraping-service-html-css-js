@@ -170,3 +170,11 @@ A GitHub Action instala `playwright`, `requests` e `beautifulsoup4` apenas no am
 |---|---|
 | [`copasa-abastece-scraping-service-py`](https://github.com/danhpaiva/copasa-abastece-scraping-service-py) | Scraper Python que coleta os dados da Copasa |
 | [`copasa-abastece-scraping-service-html-css-js`](https://github.com/danhpaiva/copasa-abastece-scraping-service-html-css-js) | Este repositório — frontend estático |
+
+---
+
+## Aviso legal
+
+> ⚠ **Este não é um serviço oficial da Copasa.**
+>
+> Este projeto é independente, sem fins lucrativos e sem vínculo com a [Copasa](https://www.copasa.com.br). Os dados são obtidos automaticamente do site oficial da Copasa e podem apresentar atraso de até 1 hora ou inconsistências. Não nos responsabilizamos por decisões tomadas com base nas informações exibidas. Consulte sempre os canais oficiais da Copasa para informações definitivas.
