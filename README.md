@@ -13,15 +13,17 @@ Os dados são coletados pelo scraper Python [`copasa-abastece-scraping-service-p
 
 - Status visual destacado: verde (sem interrupções) ou vermelho (com alerta ativo)
 - Contador regressivo até o fim de cada interrupção ("Termina em 4h 30min")
+- Card transiciona automaticamente de **ATIVO → ENCERRADO** quando o contador chega a zero, sem esperar o pipeline
 - Busca por bairro: filtra os alertas em tempo real e posiciona o bairro encontrado em primeiro lugar
 - Bairros afetados com nomes acentuados e expansão de lista ("+ N mais") para alertas com muitos bairros
 - Cidades monitoradas exibidas no rodapé, lidas dinamicamente do `bairros.json`
-- Botão "Atualizar agora" com cooldown de 3 minutos
+- Botão "Verificar agora" com cooldown de 3 minutos e feedback visual: "✓ Sem novidades" ou "✓ Dados atualizados"
 - Indicador de dados desatualizados (pipeline com problema)
 - Auto-refresh silencioso a cada 30 minutos
 - Tema claro/escuro com detecção automática do sistema operacional
 - Cache offline via localStorage e Service Worker (PWA instalável)
 - Cache do Service Worker atualizado automaticamente a cada deploy
+- Disclaimer de serviço não oficial no rodapé
 - Compatível com mobile, tablet e desktop
 
 ---
@@ -55,7 +57,7 @@ GitHub Actions (cron: toda hora)
     ├── Executa: python scraper.py --output /tmp/alerts_raw.json
     │     (lê bairros.json para saber quais cidades/bairros monitorar)
     ├── Empacota resultado em alerts.json (com campo gerado_em)
-    ├── Injeta timestamp de deploy no footer do index.html
+    ├── Injeta timestamp de deploy no footer do index.html (horário de Brasília)
     ├── Atualiza versão do cache no sw.js (força bust em cada deploy)
     ├── Commita e faz push se houve mudança
     └── CD: publica o site via GitHub Pages
