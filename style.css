@@ -347,6 +347,12 @@ main {
 .card[hidden] { display: none; }
 
 /* ── Alert Card ── */
+#cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
 .card {
   background: var(--color-surface);
   border-radius: var(--radius);
@@ -363,6 +369,20 @@ main {
 
 .card.active {
   border-color: var(--color-alert-border);
+}
+
+.card.inactive {
+  border-color: var(--color-ok-border);
+}
+
+.card.inactive .card-header {
+  background: var(--color-ok-bg);
+  border-bottom-color: var(--color-ok-border);
+}
+
+.badge.inactive {
+  background: var(--color-ok);
+  color: #fff;
 }
 
 .card-header {
@@ -411,10 +431,6 @@ main {
   color: #fff;
 }
 
-.badge.inactive {
-  background: var(--color-inactive-border);
-  color: var(--color-inactive);
-}
 
 .card-body {
   padding: .875rem 1.25rem;
