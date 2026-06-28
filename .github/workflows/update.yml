@@ -32,7 +32,7 @@ jobs:
 
       - name: Verificar arquivos obrigatórios
         run: |
-          for f in index.html style.css app.js alerts.json bairros.json; do
+          for f in index.html sw.js manifest.json alerts.json bairros.json assets/style.css assets/app.js assets/icon.svg; do
             if [ ! -f "$f" ]; then
               echo "ERRO: arquivo obrigatório ausente: $f"
               exit 1
@@ -58,7 +58,7 @@ jobs:
           python -c "
           import re, sys
           html = open('index.html').read()
-          for asset in ['style.css', 'app.js']:
+          for asset in ['assets/style.css', 'assets/app.js']:
               if asset not in html:
                   print(f'ERRO: {asset} nao referenciado no index.html')
                   sys.exit(1)
