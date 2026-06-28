@@ -1,0 +1,71 @@
+name: Update Alerts
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # toda hora
+  workflow_dispatch:        # disparo manual
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout este repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências do scraper
+        run: |
+          pip install playwright requests beautifulsoup4
+          playwright install chromium --with-deps
+
+      - name: Baixar scraper.py
+        run: |
+          curl -fsSL \
+            "https://raw.githubusercontent.com/danhpaiva/copasa-abastece-scraping-service-py/main/scraper.py" \
+            -o scraper.py
+
+      - name: Executar scraper
+        run: python scraper.py --output /tmp/alerts_raw.json
+
+      - name: Empacotar resultado com timestamp
+        run: |
+          python - <<'EOF'
+          import json, datetime, pathlib
+
+          raw = json.loads(pathlib.Path("/tmp/alerts_raw.json").read_text())
+
+          # Suporta tanto lista quanto wrapper já com gerado_em
+          if isinstance(raw, list):
+              alertas = raw
+          else:
+              alertas = raw.get("alertas", raw)
+
+          output = {
+              "gerado_em": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S"),
+              "alertas": alertas,
+          }
+          pathlib.Path("alerts.json").write_text(
+              json.dumps(output, ensure_ascii=False, indent=2)
+          )
+          print(f"alerts.json gerado com {len(alertas)} alerta(s).")
+          EOF
+
+      - name: Commitar alerts.json (apenas se houver mudança)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add alerts.json
+          if git diff --cached --quiet; then
+            echo "Sem mudanças — nada a commitar."
+          else
+            git commit -m "chore: atualiza alerts.json [skip ci]"
+            git push
+          fi
