@@ -96,11 +96,10 @@ jobs:
             -o scraper.py
 
       - name: Executar scraper
+        shell: bash {0}
         run: |
-          set +e
           python scraper.py --output /tmp/alerts_raw.json
           code=$?
-          set -e
           # 0 = sem alertas, 1 = alertas encontrados — ambos são sucesso
           test $code -le 1
 
