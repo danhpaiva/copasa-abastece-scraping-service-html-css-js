@@ -5,7 +5,9 @@ on:
     - cron: '0 * * * *'   # toda hora
   workflow_dispatch:        # disparo manual
   push:
-    branches: [main]        # também dispara ao fazer push (ex: primeiro merge)
+    branches: [main]
+    paths-ignore:           # evita loop quando o bot commita alerts.json
+      - 'alerts.json'
 
 permissions:
   contents: write
@@ -17,13 +19,64 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  scrape:
+  # ─────────────────────────────────────────────
+  # CI — valida os arquivos estáticos do frontend
+  # ─────────────────────────────────────────────
+  ci:
+    name: CI — Validar frontend
     runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verificar arquivos obrigatórios
+        run: |
+          for f in index.html style.css app.js alerts.json bairros.json; do
+            if [ ! -f "$f" ]; then
+              echo "ERRO: arquivo obrigatório ausente: $f"
+              exit 1
+            fi
+          done
+          echo "Todos os arquivos obrigatórios presentes."
+
+      - name: Validar JSON (alerts.json e bairros.json)
+        run: |
+          python -c "
+          import json, sys
+          for path in ['alerts.json', 'bairros.json']:
+              try:
+                  data = json.load(open(path))
+                  print(f'OK: {path}')
+              except Exception as e:
+                  print(f'ERRO em {path}: {e}')
+                  sys.exit(1)
+          "
+
+      - name: Verificar referências de assets no HTML
+        run: |
+          python -c "
+          import re, sys
+          html = open('index.html').read()
+          for asset in ['style.css', 'app.js']:
+              if asset not in html:
+                  print(f'ERRO: {asset} nao referenciado no index.html')
+                  sys.exit(1)
+          print('Referencias de assets OK.')
+          "
+
+  # ─────────────────────────────────────────────
+  # Scrape — coleta dados e commita alerts.json
+  # ─────────────────────────────────────────────
+  scrape:
+    name: Scrape — Coletar alertas
+    runs-on: ubuntu-latest
+    needs: ci
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
 
     steps:
-      - name: Checkout este repositório
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Configurar Python
@@ -44,12 +97,12 @@ jobs:
 
       - name: Executar scraper
         run: |
+          set +e
           python scraper.py --output /tmp/alerts_raw.json
-          EXIT=$?
+          code=$?
+          set -e
           # 0 = sem alertas, 1 = alertas encontrados — ambos são sucesso
-          if [ $EXIT -ne 0 ] && [ $EXIT -ne 1 ]; then
-            exit $EXIT
-          fi
+          test $code -le 1
 
       - name: Empacotar resultado com timestamp
         run: |
@@ -88,15 +141,22 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
+  # ─────────────────────────────────────────────
+  # CD — publica no GitHub Pages
+  # ─────────────────────────────────────────────
   deploy:
-    needs: scrape
+    name: CD — Deploy GitHub Pages
     runs-on: ubuntu-latest
+    needs: scrape
+    # Só deploya se o scrape rodou com sucesso (changed pode ser true ou false —
+    # ambos indicam execução bem-sucedida; na primeira vez também precisa publicar)
+    if: ${{ always() && needs.scrape.result == 'success' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Checkout (com alerts.json atualizado)
+      - name: Checkout (garante commit mais recente, incluindo alerts.json)
         uses: actions/checkout@v4
         with:
           ref: main
