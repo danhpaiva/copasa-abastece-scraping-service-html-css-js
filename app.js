@@ -464,7 +464,7 @@ async function refresh() {
   btn.querySelector('.btn-refresh-label').textContent =
     mudou ? ' Dados atualizados' : ' Sem novidades';
 
-  setTimeout(() => startCooldown(btn), 2000);
+  setTimeout(() => startCooldown(btn), 5000);
 }
 
 // ── Service Worker ─────────────────────────────────────
