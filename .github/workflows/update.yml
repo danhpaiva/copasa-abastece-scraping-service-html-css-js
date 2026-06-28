@@ -91,11 +91,13 @@ jobs:
           pip install playwright requests beautifulsoup4
           playwright install chromium --with-deps
 
-      - name: Baixar scraper.py
+      - name: Baixar scraper
         run: |
-          curl -fsSL \
-            "https://raw.githubusercontent.com/danhpaiva/copasa-abastece-scraping-service-py/main/scraper.py" \
-            -o scraper.py
+          git clone --depth=1 \
+            https://github.com/danhpaiva/copasa-abastece-scraping-service-py.git \
+            scraper_repo
+          cp scraper_repo/scraper.py .
+          cp -r scraper_repo/scraper ./scraper
 
       - name: Executar scraper
         run: |
@@ -104,10 +106,6 @@ jobs:
           code=$?
           set -e
           # 0 = sem alertas, 1 = alertas encontrados — ambos são sucesso
-          # Se exit 0 e o scraper não gravou o arquivo, cria JSON vazio para o próximo passo
-          if [ $code -eq 0 ] && [ ! -f /tmp/alerts_raw.json ]; then
-            echo '{"gerado_em":"","alertas":[]}' > /tmp/alerts_raw.json
-          fi
           test $code -le 1
 
       - name: Empacotar resultado com timestamp e atualizar build-info no HTML
