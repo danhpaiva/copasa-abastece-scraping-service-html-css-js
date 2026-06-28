@@ -64,24 +64,21 @@ function updateTitle(ativos) {
     : TITLE_BASE;
 }
 
+function _fmtDate(d) {
+  const p = n => String(n).padStart(2, '0');
+  return `${p(d.getDate())}/${p(d.getMonth() + 1)}/${d.getFullYear()} ${p(d.getHours())}:${p(d.getMinutes())}`;
+}
+
 function formatDate(isoString) {
   if (!isoString) return 'Desconhecida';
   const d = new Date(isoString);
-  if (isNaN(d)) return isoString;
-  return d.toLocaleString('pt-BR', {
-    day: '2-digit', month: '2-digit', year: 'numeric',
-    hour: '2-digit', minute: '2-digit',
-  });
+  return isNaN(d) ? isoString : _fmtDate(d);
 }
 
 function formatDateShort(isoString) {
   if (!isoString) return '–';
   const d = new Date(isoString);
-  if (isNaN(d)) return isoString;
-  return d.toLocaleString('pt-BR', {
-    day: '2-digit', month: '2-digit', year: 'numeric',
-    hour: '2-digit', minute: '2-digit',
-  });
+  return isNaN(d) ? isoString : _fmtDate(d);
 }
 
 function formatCountdown(ms) {
@@ -113,6 +110,7 @@ function startCountdown(el, fimIso) {
 // Bairros de todos os alertas carregados (para o filtro de busca)
 let _todosBairros = [];
 let _alertasAtual = [];
+let _lastGeradoEm = null;  // evita re-render desnecessário ao atualizar
 
 function renderFilter(alertas) {
   const bar = $('#filter-bar');
@@ -353,7 +351,7 @@ function showError(reason) {
   $('#last-updated').textContent = 'Desconhecida';
 }
 
-function applyData(data) {
+function applyData(data, forceRender = false) {
   // Suporta tanto o formato wrapper { gerado_em, alertas } quanto array legado
   let alertas, geradoEm;
   if (Array.isArray(data)) {
@@ -385,7 +383,13 @@ function applyData(data) {
     setStatus('ok', '✓ Abastecimento normal — sem interrupções ativas');
   }
 
-  renderCards(alertas);
+  // Só re-renderiza cards se os dados mudaram (evita reiniciar o contador regressivo)
+  const dadosMudaram = !geradoEm || geradoEm !== _lastGeradoEm;
+  _lastGeradoEm = geradoEm;
+
+  if (dadosMudaram || forceRender) {
+    renderCards(alertas);
+  }
 }
 
 async function load() {
