@@ -124,18 +124,55 @@ function renderFilter(alertas) {
   bar.hidden = _todosBairros.length === 0;
 }
 
+function wireBtnMore(tagList) {
+  const btnMore = tagList.querySelector('.btn-tag-more');
+  if (!btnMore) return;
+  btnMore.addEventListener('click', () => {
+    const extra = btnMore.previousElementSibling;
+    const expanded = extra.hidden;
+    extra.hidden = !expanded;
+    btnMore.setAttribute('aria-expanded', expanded);
+    btnMore.textContent = expanded
+      ? `▴ recolher`
+      : `+ ${extra.querySelectorAll('.tag').length} mais ▾`;
+  });
+}
+
+function rebuildBairrosTagList(card, bairros) {
+  const rows = card.querySelectorAll('.detail-row');
+  let bairrosRow = null;
+  rows.forEach(row => {
+    const label = row.querySelector('.detail-label');
+    if (label && label.textContent === 'Bairros afetados') bairrosRow = row;
+  });
+  if (!bairrosRow) return;
+  const tagList = bairrosRow.querySelector('.tag-list');
+  if (!tagList) return;
+  tagList.innerHTML = buildBairrosHtml(bairros);
+  wireBtnMore(tagList);
+}
+
 function applyFilter(alertas) {
   const query = ($('#filter-input')?.value || '').trim().toLowerCase();
   const cards = [...$('#cards-container').querySelectorAll('.card')];
-  const sorted = [...alertas].sort((a, b) => {
-    if (a.esta_ativa !== b.esta_ativa) return a.esta_ativa ? -1 : 1;
-    return new Date(b.inicio) - new Date(a.inicio);
-  });
 
-  cards.forEach((card, i) => {
-    if (!query) { card.hidden = false; return; }
-    const bairros = (sorted[i]?.bairros_afetados || []).map(b => b.toLowerCase());
-    card.hidden = !bairros.some(b => b.includes(query));
+  cards.forEach(card => {
+    const bairros = JSON.parse(card.dataset.bairros || '[]');
+
+    if (!query) {
+      card.hidden = false;
+      // restaura ordem original
+      if (bairros.length > 0) rebuildBairrosTagList(card, bairros);
+      return;
+    }
+
+    const matched = bairros.filter(b => b.toLowerCase().includes(query));
+    card.hidden = matched.length === 0;
+
+    if (!card.hidden && matched.length > 0) {
+      const rest = bairros.filter(b => !b.toLowerCase().includes(query));
+      rebuildBairrosTagList(card, [...matched, ...rest]);
+    }
   });
 
   // Atualiza contador de resultados visíveis
@@ -240,6 +277,7 @@ function buildCard(alerta) {
     `<span class="tag city">${esc(c)}</span>`).join('');
 
   const bairrosAfetados = alerta.bairros_afetados || [];
+  card.dataset.bairros = JSON.stringify(bairrosAfetados);
   const BAIRROS_VISIVEIS = 5;
   const bairrosHtml = bairrosAfetados.length > 0
     ? buildBairrosHtml(bairrosAfetados)
@@ -287,18 +325,8 @@ function buildCard(alerta) {
     </div>`;
 
   // Expandir bairros
-  const btnMore = card.querySelector('.btn-tag-more');
-  if (btnMore) {
-    btnMore.addEventListener('click', () => {
-      const extra = btnMore.previousElementSibling;
-      const expanded = extra.hidden;
-      extra.hidden = !expanded;
-      btnMore.setAttribute('aria-expanded', expanded);
-      btnMore.textContent = expanded
-        ? `▴ recolher`
-        : `+ ${extra.querySelectorAll('.tag').length} mais ▾`;
-    });
-  }
+  const btnMoreEl = card.querySelector('.btn-tag-more');
+  if (btnMoreEl) wireBtnMore(btnMoreEl.closest('.tag-list'));
 
   return card;
 }
