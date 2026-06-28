@@ -32,14 +32,15 @@ Os dados são coletados pelo scraper Python [`copasa-abastece-scraping-service-p
 
 ```
 .
-├── index.html                    # Página principal
-├── style.css                     # Estilos (mobile-first, sem dependências)
-├── app.js                        # Lógica de fetch, renderização e SW
-├── sw.js                         # Service Worker (cache offline / PWA)
+├── index.html                    # Página principal (raiz — exigido pelo GitHub Pages)
+├── sw.js                         # Service Worker (raiz — exigido pelo escopo do PWA)
 ├── manifest.json                 # Web App Manifest (instalável no celular)
-├── icon.svg                      # Ícone do app
 ├── alerts.json                   # Dados gerados pelo scraper (auto-atualizado)
 ├── bairros.json                  # Cidades e bairros monitorados (configure aqui)
+├── assets/
+│   ├── app.js                    # Lógica de fetch, renderização e interatividade
+│   ├── style.css                 # Estilos (mobile-first, sem dependências)
+│   └── icon.svg                  # Ícone do app (PWA + favicon)
 └── .github/
     └── workflows/
         └── update.yml            # GitHub Action: CI + scrape + CD (cron horário)
