@@ -241,9 +241,10 @@ function buildCard(alerta) {
   const cidades = (alerta.cidades || []).map(c =>
     `<span class="tag city">${esc(c)}</span>`).join('');
 
-  const bairros = (alerta.bairros_afetados || []).length > 0
-    ? alerta.bairros_afetados.map(b => `<span class="tag bairro">${esc(b)}</span>`).join('')
-    : '<span class="tag none">Nenhum bairro monitorado afetado</span>';
+  const bairrosAfetados = alerta.bairros_afetados || [];
+  const bairrosHtml = bairrosAfetados.length > 0
+    ? bairrosAfetados.map(b => `<span class="tag bairro">${esc(b)}</span>`).join('')
+    : null;
 
   const tituloHtml = alerta.url
     ? `<a href="${esc(alerta.url)}" target="_blank" rel="noopener">${esc(alerta.titulo)}</a>`
@@ -279,10 +280,11 @@ function buildCard(alerta) {
         <span class="detail-label">Cidades</span>
         <div class="tag-list">${cidades || '<span class="tag none">–</span>'}</div>
       </div>
+      ${bairrosHtml ? `
       <div class="detail-row">
         <span class="detail-label">Bairros afetados</span>
-        <div class="tag-list">${bairros}</div>
-      </div>
+        <div class="tag-list">${bairrosHtml}</div>
+      </div>` : ''}
     </div>`;
 
   return card;
