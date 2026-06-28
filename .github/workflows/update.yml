@@ -124,12 +124,14 @@ jobs:
           )
           print(f"alerts.json gerado com {len(alertas)} alerta(s).")
 
-          # Injeta timestamp de deploy no footer do index.html
+          # Injeta timestamp de deploy no footer do index.html (horário de Brasília, UTC-3)
+          brt = datetime.timezone(datetime.timedelta(hours=-3))
+          now_brt = now.astimezone(brt)
           html_path = pathlib.Path("index.html")
           html = html_path.read_text(encoding="utf-8")
-          build_str = f"Deploy: {now.strftime('%d/%m/%Y às %H:%M')} UTC"
+          build_str = f"Deploy: {now_brt.strftime('%d/%m/%Y às %H:%M')} (horário de Brasília)"
           html = re.sub(r'<!-- BUILD_TIME -->', build_str, html)
-          html = re.sub(r'Deploy: \d{2}/\d{2}/\d{4} às \d{2}:\d{2} UTC', build_str, html)
+          html = re.sub(r'Deploy: .+?\(horário de Brasília\)', build_str, html)
           html_path.write_text(html, encoding="utf-8")
           print(f"index.html atualizado com build-info: {build_str}")
 
