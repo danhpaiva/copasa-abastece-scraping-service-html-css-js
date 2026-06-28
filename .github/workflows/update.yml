@@ -43,7 +43,13 @@ jobs:
             -o scraper.py
 
       - name: Executar scraper
-        run: python scraper.py --output /tmp/alerts_raw.json
+        run: |
+          python scraper.py --output /tmp/alerts_raw.json
+          EXIT=$?
+          # 0 = sem alertas, 1 = alertas encontrados — ambos são sucesso
+          if [ $EXIT -ne 0 ] && [ $EXIT -ne 1 ]; then
+            exit $EXIT
+          fi
 
       - name: Empacotar resultado com timestamp
         run: |
