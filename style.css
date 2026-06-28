@@ -1,0 +1,322 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-ok: #16a34a;
+  --color-ok-bg: #f0fdf4;
+  --color-ok-border: #bbf7d0;
+  --color-alert: #dc2626;
+  --color-alert-bg: #fef2f2;
+  --color-alert-border: #fecaca;
+  --color-inactive: #6b7280;
+  --color-inactive-bg: #f9fafb;
+  --color-inactive-border: #e5e7eb;
+  --color-surface: #ffffff;
+  --color-bg: #f3f4f6;
+  --color-text: #111827;
+  --color-muted: #6b7280;
+  --color-tag-bg: #e0f2fe;
+  --color-tag-text: #0369a1;
+  --color-tag-bg-alt: #fef9c3;
+  --color-tag-text-alt: #854d0e;
+  --radius: 12px;
+  --radius-sm: 6px;
+  --shadow: 0 1px 3px rgba(0,0,0,.10), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,.10), 0 2px 4px -1px rgba(0,0,0,.06);
+  --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ── Header ── */
+header {
+  background: #1e3a5f;
+  color: #fff;
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+
+header p {
+  font-size: .875rem;
+  opacity: .8;
+  margin-top: .25rem;
+}
+
+/* ── Main ── */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── Status Banner ── */
+.status-banner {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  border: 1.5px solid transparent;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.status-banner.ok {
+  background: var(--color-ok-bg);
+  border-color: var(--color-ok-border);
+  color: var(--color-ok);
+}
+
+.status-banner.alert {
+  background: var(--color-alert-bg);
+  border-color: var(--color-alert-border);
+  color: var(--color-alert);
+}
+
+.status-banner.loading {
+  background: var(--color-inactive-bg);
+  border-color: var(--color-inactive-border);
+  color: var(--color-muted);
+}
+
+.status-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-banner.ok    .status-dot { background: var(--color-ok); }
+.status-banner.alert .status-dot { background: var(--color-alert); animation: pulse 1.4s ease infinite; }
+.status-banner.loading .status-dot { background: var(--color-muted); }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .5; transform: scale(.85); }
+}
+
+/* ── Last Updated ── */
+.meta-bar {
+  font-size: .8rem;
+  color: var(--color-muted);
+  text-align: right;
+  padding: 0 .25rem;
+}
+
+/* ── Alert Card ── */
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  border: 1.5px solid var(--color-inactive-border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card.active {
+  border-color: var(--color-alert-border);
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: 1rem 1.25rem .75rem;
+  border-bottom: 1px solid var(--color-inactive-border);
+}
+
+.card.active .card-header {
+  background: var(--color-alert-bg);
+  border-bottom-color: var(--color-alert-border);
+}
+
+.card-title {
+  font-size: .9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-title a:hover {
+  text-decoration: underline;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: .72rem;
+  font-weight: 600;
+  padding: .2rem .55rem;
+  border-radius: 99px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badge.active {
+  background: var(--color-alert);
+  color: #fff;
+}
+
+.badge.inactive {
+  background: var(--color-inactive-border);
+  color: var(--color-inactive);
+}
+
+.card-body {
+  padding: .875rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+/* ── Detail rows ── */
+.detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
+.detail-label {
+  font-size: .72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--color-muted);
+}
+
+.detail-value {
+  font-size: .875rem;
+}
+
+.period {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  flex-wrap: wrap;
+  font-size: .875rem;
+}
+
+.period-arrow {
+  color: var(--color-muted);
+  font-size: .75rem;
+}
+
+/* ── Tags ── */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+}
+
+.tag {
+  font-size: .75rem;
+  padding: .2rem .55rem;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+}
+
+.tag.city {
+  background: var(--color-tag-bg);
+  color: var(--color-tag-text);
+}
+
+.tag.bairro {
+  background: var(--color-tag-bg-alt);
+  color: var(--color-tag-text-alt);
+}
+
+.tag.none {
+  background: var(--color-inactive-bg);
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* ── Section label ── */
+.section-label {
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  margin-bottom: .25rem;
+}
+
+/* ── Error / Empty states ── */
+.state-card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  border: 1.5px solid var(--color-inactive-border);
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--color-muted);
+}
+
+.state-card .icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: .75rem;
+}
+
+.state-card p {
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+.state-card strong {
+  color: var(--color-text);
+}
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  font-size: .78rem;
+  color: var(--color-muted);
+  padding: 1rem;
+  border-top: 1px solid var(--color-inactive-border);
+  margin-top: auto;
+}
+
+footer a {
+  color: #1e3a5f;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsive tweaks ── */
+@media (min-width: 600px) {
+  header h1 { font-size: 1.5rem; }
+  .card-body { gap: 1rem; }
+  .detail-row { flex-direction: row; align-items: baseline; gap: .5rem; }
+  .detail-label { min-width: 7rem; }
+}

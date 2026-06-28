@@ -1,0 +1,32 @@
+{
+  "gerado_em": "2026-06-28T14:30:00",
+  "alertas": [
+    {
+      "titulo": "28/06 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://copasaabastece.com.br/abastecimento/detalhes/12345",
+      "cidades": ["Belo Horizonte", "Contagem"],
+      "inicio": "2026-06-28T06:00:00",
+      "fim": "2026-06-30T07:00:00",
+      "esta_ativa": true,
+      "bairros_afetados": ["Nazare", "Sao Gabriel", "Vista do Sol"]
+    },
+    {
+      "titulo": "27/06 - CONTAGEM - Situação do Abastecimento",
+      "url": "https://copasaabastece.com.br/abastecimento/detalhes/12340",
+      "cidades": ["Contagem"],
+      "inicio": "2026-06-27T08:00:00",
+      "fim": "2026-06-28T18:00:00",
+      "esta_ativa": false,
+      "bairros_afetados": ["Nacional"]
+    },
+    {
+      "titulo": "28/06 - SABARA - Situação do Abastecimento",
+      "url": "https://copasaabastece.com.br/abastecimento/detalhes/12350",
+      "cidades": ["Sabara", "Belo Horizonte"],
+      "inicio": "2026-06-28T10:00:00",
+      "fim": "2026-06-29T22:00:00",
+      "esta_ativa": true,
+      "bairros_afetados": []
+    }
+  ]
+}
