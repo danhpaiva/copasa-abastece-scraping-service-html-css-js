@@ -167,10 +167,10 @@ A GitHub Action instala `playwright`, `requests` e `beautifulsoup4` apenas no am
 
 ## Repositórios relacionados
 
-| Repositório | Descrição |
-|---|---|
-| [`copasa-abastece-scraping-service-py`](https://github.com/danhpaiva/copasa-abastece-scraping-service-py) | Scraper Python que coleta os dados da Copasa |
-| [`copasa-abastece-scraping-service-html-css-js`](https://github.com/danhpaiva/copasa-abastece-scraping-service-html-css-js) | Este repositório — frontend estático |
+| Repositório                                                                                                                 | Descrição                                    |
+| --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| [`copasa-abastece-scraping-service-py`](https://github.com/danhpaiva/copasa-abastece-scraping-service-py)                   | Scraper Python que coleta os dados da Copasa |
+| [`copasa-abastece-scraping-service-html-css-js`](https://github.com/danhpaiva/copasa-abastece-scraping-service-html-css-js) | Este repositório — frontend estático         |
 
 ---
 
