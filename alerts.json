@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-28T16:32:36",
+  "gerado_em": "2026-06-28T16:52:57",
   "alertas": [
     {
       "titulo": "28/06 - BELO HORIZONTE , CONTAGEM, NOVA LIMA, RAPOSOS, RIBEIRÃO DAS NEVES, SABARÁ, SANTA LUZIA, e VESPASIANO - Situação do Abastecimento",
@@ -767,17 +767,6 @@
       ],
       "inicio": "2026-06-25T23:00:00",
       "fim": "2026-06-26T21:00:00",
-      "esta_ativa": false,
-      "bairros_afetados": []
-    },
-    {
-      "titulo": "24/06 - VESPASIANO - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202606%2F40db1dea-5c12-4c43-89d4-800d7c86f133",
-      "cidades": [
-        "Vespasiano"
-      ],
-      "inicio": "2026-06-24T13:25:00",
-      "fim": "2026-06-25T04:00:00",
       "esta_ativa": false,
       "bairros_afetados": []
     }
