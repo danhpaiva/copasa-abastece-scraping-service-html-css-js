@@ -5,6 +5,7 @@
 }
 
 :root {
+  /* Tema claro (padrão) */
   --color-ok: #16a34a;
   --color-ok-bg: #f0fdf4;
   --color-ok-border: #bbf7d0;
@@ -22,11 +23,74 @@
   --color-tag-text: #0369a1;
   --color-tag-bg-alt: #fef9c3;
   --color-tag-text-alt: #854d0e;
+  --color-stale-bg: #fffbeb;
+  --color-stale-border: #fde68a;
+  --color-stale-text: #92400e;
+  --color-header-bg: #1e3a5f;
+  --color-filter-bg: var(--color-surface);
   --radius: 12px;
   --radius-sm: 6px;
   --shadow: 0 1px 3px rgba(0,0,0,.10), 0 1px 2px rgba(0,0,0,.06);
   --shadow-md: 0 4px 6px -1px rgba(0,0,0,.10), 0 2px 4px -1px rgba(0,0,0,.06);
   --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Tema escuro — sistema */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-ok: #4ade80;
+    --color-ok-bg: #052e16;
+    --color-ok-border: #166534;
+    --color-alert: #f87171;
+    --color-alert-bg: #1f0606;
+    --color-alert-border: #7f1d1d;
+    --color-inactive: #9ca3af;
+    --color-inactive-bg: #1f2937;
+    --color-inactive-border: #374151;
+    --color-surface: #1f2937;
+    --color-bg: #111827;
+    --color-text: #f9fafb;
+    --color-muted: #9ca3af;
+    --color-tag-bg: #0c4a6e;
+    --color-tag-text: #7dd3fc;
+    --color-tag-bg-alt: #422006;
+    --color-tag-text-alt: #fbbf24;
+    --color-stale-bg: #1c1408;
+    --color-stale-border: #854d0e;
+    --color-stale-text: #fbbf24;
+    --color-header-bg: #0f1f35;
+    --color-filter-bg: #1f2937;
+    --shadow: 0 1px 3px rgba(0,0,0,.4), 0 1px 2px rgba(0,0,0,.3);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,.4), 0 2px 4px -1px rgba(0,0,0,.3);
+  }
+}
+
+/* Tema escuro — toggle manual */
+:root[data-theme="dark"] {
+  --color-ok: #4ade80;
+  --color-ok-bg: #052e16;
+  --color-ok-border: #166534;
+  --color-alert: #f87171;
+  --color-alert-bg: #1f0606;
+  --color-alert-border: #7f1d1d;
+  --color-inactive: #9ca3af;
+  --color-inactive-bg: #1f2937;
+  --color-inactive-border: #374151;
+  --color-surface: #1f2937;
+  --color-bg: #111827;
+  --color-text: #f9fafb;
+  --color-muted: #9ca3af;
+  --color-tag-bg: #0c4a6e;
+  --color-tag-text: #7dd3fc;
+  --color-tag-bg-alt: #422006;
+  --color-tag-text-alt: #fbbf24;
+  --color-stale-bg: #1c1408;
+  --color-stale-border: #854d0e;
+  --color-stale-text: #fbbf24;
+  --color-header-bg: #0f1f35;
+  --color-filter-bg: #1f2937;
+  --shadow: 0 1px 3px rgba(0,0,0,.4), 0 1px 2px rgba(0,0,0,.3);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,.4), 0 2px 4px -1px rgba(0,0,0,.3);
 }
 
 body {
@@ -35,14 +99,16 @@ body {
   color: var(--color-text);
   min-height: 100vh;
   line-height: 1.6;
+  transition: background .25s, color .25s;
 }
 
 /* ── Header ── */
 header {
-  background: #1e3a5f;
+  background: var(--color-header-bg);
   color: #fff;
   padding: 1.25rem 1rem;
   text-align: center;
+  position: relative;
 }
 
 header h1 {
@@ -55,6 +121,29 @@ header p {
   font-size: .875rem;
   opacity: .8;
   margin-top: .25rem;
+}
+
+.btn-theme {
+  position: absolute;
+  top: .85rem;
+  right: .85rem;
+  background: rgba(255,255,255,.15);
+  border: 1.5px solid rgba(255,255,255,.3);
+  border-radius: 99px;
+  color: #fff;
+  font-size: 1rem;
+  width: 2.1rem;
+  height: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background .2s;
+  line-height: 1;
+}
+
+.btn-theme:hover {
+  background: rgba(255,255,255,.28);
 }
 
 /* ── Main ── */
@@ -122,16 +211,16 @@ main {
   flex-wrap: wrap;
   padding: .65rem 1rem;
   border-radius: var(--radius);
-  background: #fffbeb;
-  border: 1.5px solid #fde68a;
-  color: #92400e;
+  background: var(--color-stale-bg);
+  border: 1.5px solid var(--color-stale-border);
+  color: var(--color-stale-text);
   font-size: .82rem;
   font-weight: 500;
 }
 
 .stale-banner a {
   margin-left: auto;
-  color: #92400e;
+  color: var(--color-stale-text);
   font-weight: 600;
   white-space: nowrap;
 }
@@ -208,7 +297,7 @@ main {
   gap: .5rem;
   flex-wrap: wrap;
   padding: .65rem 1rem;
-  background: var(--color-surface);
+  background: var(--color-filter-bg);
   border: 1.5px solid var(--color-inactive-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);

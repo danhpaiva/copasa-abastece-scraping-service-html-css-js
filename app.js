@@ -1,8 +1,9 @@
 'use strict';
 
-const ALERTS_URL      = './alerts.json';
-const CACHE_KEY       = 'copasa_alerts_cache';
-const TITLE_BASE      = 'Copasa Abastece — Monitor de Interrupções';
+const ALERTS_URL          = './alerts.json';
+const CACHE_KEY           = 'copasa_alerts_cache';
+const THEME_KEY           = 'copasa_theme';
+const TITLE_BASE          = 'Copasa Abastece — Monitor de Interrupções';
 const REFRESH_COOLDOWN_MS = 3 * 60 * 1000; // 3 minutos
 
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
@@ -12,6 +13,34 @@ const _timers = [];
 
 // Bairros selecionados no filtro (conjunto vazio = todos)
 const _filtro = new Set();
+
+// ── Tema ───────────────────────────────────────────────
+function systemPrefersDark() {
+  return window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+
+function applyTheme(dark) {
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  $('#btn-theme').textContent = dark ? '☀️' : '🌙';
+}
+
+function initTheme() {
+  const saved = localStorage.getItem(THEME_KEY);
+  const dark  = saved !== null ? saved === 'dark' : systemPrefersDark();
+  applyTheme(dark);
+
+  // Acompanha mudança de preferência do sistema (sem salvar override)
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    if (localStorage.getItem(THEME_KEY) === null) applyTheme(e.matches);
+  });
+}
+
+function toggleTheme() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const next   = !isDark;
+  localStorage.setItem(THEME_KEY, next ? 'dark' : 'light');
+  applyTheme(next);
+}
 
 // ── Cache ──────────────────────────────────────────────
 function cacheLoad() {
@@ -372,6 +401,8 @@ async function refresh() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
   load();
   $('#btn-refresh').addEventListener('click', refresh);
+  $('#btn-theme').addEventListener('click', toggleTheme);
 });
