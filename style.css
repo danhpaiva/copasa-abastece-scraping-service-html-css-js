@@ -167,6 +167,7 @@ main {
   font-weight: 600;
   font-size: 1rem;
   box-shadow: var(--shadow);
+  transition: background .4s, border-color .4s, color .4s;
 }
 
 .status-banner.ok {
@@ -548,18 +549,75 @@ footer {
 }
 
 footer a {
-  color: #1e3a5f;
+  color: var(--color-header-bg);
   text-decoration: none;
+}
+
+#build-info {
+  display: block;
+  margin-top: .35rem;
+  font-size: .72rem;
+  opacity: .7;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
-/* ── Responsive tweaks ── */
+/* ── Skeleton loading ── */
+@keyframes shimmer {
+  from { background-position: -400px 0; }
+  to   { background-position:  400px 0; }
+}
+
+.skeleton {
+  pointer-events: none;
+}
+
+.skel-line, .skel-badge {
+  border-radius: var(--radius-sm);
+  background: linear-gradient(90deg,
+    var(--color-inactive-border) 25%,
+    var(--color-inactive-bg)     50%,
+    var(--color-inactive-border) 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+.skel-title  { height: 1rem;   width: 70%; margin-bottom: .25rem; }
+.skel-badge  { height: 1.4rem; width: 4.5rem; border-radius: 99px; flex-shrink: 0; }
+.skel-md     { height: .85rem; width: 90%; }
+.skel-sm     { height: .75rem; width: 55%; }
+
+.card.skeleton .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  padding: .875rem 1.25rem;
+}
+
+/* ── Responsive tweaks — mobile ── */
 @media (min-width: 600px) {
   header h1 { font-size: 1.5rem; }
   .card-body { gap: 1rem; }
   .detail-row { flex-direction: row; align-items: baseline; gap: .5rem; }
   .detail-label { min-width: 7rem; }
+}
+
+/* ── Responsive tweaks — tablet ── */
+@media (min-width: 768px) {
+  main { padding: 1.5rem 1.5rem 3rem; gap: 1.25rem; }
+
+  .status-banner { font-size: 1.05rem; padding: 1.1rem 1.5rem; }
+
+  .meta-bar { font-size: .85rem; }
+
+  .filter-bar { padding: .75rem 1.25rem; }
+
+  .card-header { padding: 1.1rem 1.5rem .85rem; }
+  .card-body   { padding: 1rem 1.5rem; }
+
+  .state-card { padding: 2.5rem 2rem; }
+  .state-card .icon { font-size: 3rem; }
 }

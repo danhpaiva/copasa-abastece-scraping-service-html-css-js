@@ -17,7 +17,9 @@
   <meta name="twitter:title"       content="💧 Copasa Abastece — Monitor de Interrupções" />
   <meta name="twitter:description" content="Acompanhe em tempo real as interrupções no abastecimento de água da Copasa para os bairros monitorados." />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="manifest" href="manifest.json" />
 </head>
 <body>
 
@@ -51,7 +53,7 @@
       <div id="filter-chips" class="filter-chips" role="group" aria-label="Filtro por bairro"></div>
     </div>
 
-    <section id="cards-container" aria-label="Lista de alertas de abastecimento">
+    <section id="cards-container" aria-label="Lista de alertas de abastecimento" aria-live="polite" aria-atomic="false">
       <!-- Cards injetados por app.js -->
     </section>
 
@@ -62,6 +64,7 @@
     <a href="https://copasaabastece.com.br" target="_blank" rel="noopener">copasaabastece.com.br</a>
     · Atualizado automaticamente a cada hora pelo GitHub Actions ·
     <a href="https://github.com/danhpaiva/copasa-abastece-scraping-service-html-css-js" target="_blank" rel="noopener">Código-fonte</a>
+    <br><span id="build-info"><!-- BUILD_TIME --></span>
   </footer>
 
   <script src="app.js"></script>

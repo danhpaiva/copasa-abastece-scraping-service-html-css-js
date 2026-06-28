@@ -104,26 +104,34 @@ jobs:
           # 0 = sem alertas, 1 = alertas encontrados — ambos são sucesso
           test $code -le 1
 
-      - name: Empacotar resultado com timestamp
+      - name: Empacotar resultado com timestamp e atualizar build-info no HTML
         run: |
           python - <<'EOF'
-          import json, datetime, pathlib
+          import json, datetime, pathlib, re
+
+          now = datetime.datetime.now(datetime.timezone.utc)
+          ts  = now.strftime("%Y-%m-%dT%H:%M:%S")
 
           raw = json.loads(pathlib.Path("/tmp/alerts_raw.json").read_text())
-
-          if isinstance(raw, list):
-              alertas = raw
-          else:
-              alertas = raw.get("alertas", raw)
+          alertas = raw if isinstance(raw, list) else raw.get("alertas", raw)
 
           output = {
-              "gerado_em": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
+              "gerado_em": ts,
               "alertas": alertas,
           }
           pathlib.Path("alerts.json").write_text(
               json.dumps(output, ensure_ascii=False, indent=2)
           )
           print(f"alerts.json gerado com {len(alertas)} alerta(s).")
+
+          # Injeta timestamp de deploy no footer do index.html
+          html_path = pathlib.Path("index.html")
+          html = html_path.read_text(encoding="utf-8")
+          build_str = f"Deploy: {now.strftime('%d/%m/%Y às %H:%M')} UTC"
+          html = re.sub(r'<!-- BUILD_TIME -->', build_str, html)
+          html = re.sub(r'Deploy: \d{2}/\d{2}/\d{4} às \d{2}:\d{2} UTC', build_str, html)
+          html_path.write_text(html, encoding="utf-8")
+          print(f"index.html atualizado com build-info: {build_str}")
           EOF
 
       - name: Commitar alerts.json (apenas se houver mudança)
@@ -131,12 +139,12 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add alerts.json
+          git add alerts.json index.html
           if git diff --cached --quiet; then
             echo "Sem mudanças — nada a commitar."
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
-            git commit -m "chore: atualiza alerts.json [skip ci]"
+            git commit -m "chore: atualiza alerts.json e build-info [skip ci]"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi

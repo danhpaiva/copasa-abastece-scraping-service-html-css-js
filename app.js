@@ -125,6 +125,7 @@ function renderFilter(alertas) {
   // Chip "Todos"
   const all = document.createElement('button');
   all.className = 'chip' + (_filtro.size === 0 ? ' active' : '');
+  all.setAttribute('aria-pressed', _filtro.size === 0 ? 'true' : 'false');
   all.textContent = 'Todos';
   all.addEventListener('click', () => {
     _filtro.clear();
@@ -135,7 +136,9 @@ function renderFilter(alertas) {
 
   todos.forEach(bairro => {
     const chip = document.createElement('button');
-    chip.className = 'chip' + (_filtro.has(bairro) ? ' active' : '');
+    const isActive = _filtro.has(bairro);
+    chip.className = 'chip' + (isActive ? ' active' : '');
+    chip.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     chip.textContent = bairro;
     chip.addEventListener('click', () => {
       if (_filtro.has(bairro)) {
@@ -343,12 +346,12 @@ function applyData(data) {
 }
 
 async function load() {
-  // Exibe cache imediatamente para eliminar o flash de "Carregando..."
   const cached = cacheLoad();
   if (cached) {
-    applyData(cached);
+    applyData(cached);   // exibe cache imediatamente — sem flash
   } else {
     setStatus('loading', 'Carregando dados…');
+    showSkeleton(2);     // skeleton só quando não há cache
   }
 
   let data;
@@ -400,9 +403,51 @@ async function refresh() {
   startCooldown(btn);
 }
 
+// ── Service Worker ─────────────────────────────────────
+function registerSW() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
+  }
+}
+
+// ── Skeleton loading ───────────────────────────────────
+function showSkeleton(n = 2) {
+  const container = $('#cards-container');
+  container.innerHTML = Array.from({ length: n }, () => `
+    <div class="card skeleton" aria-hidden="true">
+      <div class="card-header">
+        <div class="skel-line skel-title"></div>
+        <div class="skel-badge"></div>
+      </div>
+      <div class="card-body">
+        <div class="skel-line skel-sm"></div>
+        <div class="skel-line skel-md"></div>
+        <div class="skel-line skel-sm"></div>
+      </div>
+    </div>`).join('');
+}
+
+// ── Auto-refresh silencioso ────────────────────────────
+const AUTO_REFRESH_MS = 30 * 60 * 1000; // 30 minutos
+
+function startAutoRefresh() {
+  setInterval(async () => {
+    let data;
+    try {
+      const res = await fetch(ALERTS_URL, { cache: 'no-store' });
+      if (!res.ok) return;
+      data = await res.json();
+    } catch { return; }
+    cacheSave(data);
+    applyData(data);
+  }, AUTO_REFRESH_MS);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  registerSW();
   initTheme();
   load();
+  startAutoRefresh();
   $('#btn-refresh').addEventListener('click', refresh);
   $('#btn-theme').addEventListener('click', toggleTheme);
 });
