@@ -287,11 +287,14 @@ function buildCard(alerta) {
     ? `<a href="${esc(alerta.url)}" target="_blank" rel="noopener">${esc(alerta.titulo)}</a>`
     : esc(alerta.titulo);
 
-  const countdownHtml = isActive && alerta.fim
+  const countdownInicial = isActive && alerta.fim
+    ? formatCountdown(new Date(alerta.fim) - Date.now())
+    : null;
+  const countdownHtml = countdownInicial !== null
     ? `<div class="detail-row">
         <span class="detail-label">Termina em</span>
         <div class="countdown">
-          <span class="countdown-value">–</span>
+          <span class="countdown-value">${esc(countdownInicial)}</span>
         </div>
       </div>`
     : '';
