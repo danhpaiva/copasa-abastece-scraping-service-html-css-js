@@ -91,11 +91,13 @@ jobs:
           pip install playwright requests beautifulsoup4
           playwright install chromium --with-deps
 
-      - name: Baixar scraper.py
+      - name: Baixar scraper
         run: |
-          curl -fsSL \
-            "https://raw.githubusercontent.com/danhpaiva/copasa-abastece-scraping-service-py/main/scraper.py" \
-            -o scraper.py
+          git clone --depth=1 \
+            https://github.com/danhpaiva/copasa-abastece-scraping-service-py.git \
+            scraper_repo
+          cp scraper_repo/scraper.py .
+          cp -r scraper_repo/scraper ./scraper
 
       - name: Executar scraper
         run: |
