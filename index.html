@@ -22,9 +22,12 @@
       <span id="status-text">Carregando dados…</span>
     </div>
 
-    <p class="meta-bar">
-      Última atualização: <strong id="last-updated">–</strong>
-    </p>
+    <div class="meta-bar">
+      <span>Última atualização: <strong id="last-updated">–</strong></span>
+      <button id="btn-refresh" class="btn-refresh" aria-label="Atualizar dados agora">
+        <span class="btn-refresh-icon">↻</span> Atualizar agora
+      </button>
+    </div>
 
     <section id="cards-container" aria-label="Lista de alertas de abastecimento">
       <!-- Cards injetados por app.js -->

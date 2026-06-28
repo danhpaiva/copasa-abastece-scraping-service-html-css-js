@@ -215,4 +215,16 @@ async function load() {
   renderCards(alertas);
 }
 
-document.addEventListener('DOMContentLoaded', load);
+async function refresh() {
+  const btn = $('#btn-refresh');
+  btn.disabled = true;
+  btn.classList.add('spinning');
+  await load();
+  btn.classList.remove('spinning');
+  btn.disabled = false;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  load();
+  $('#btn-refresh').addEventListener('click', refresh);
+});
