@@ -132,6 +132,14 @@ jobs:
           html = re.sub(r'Deploy: \d{2}/\d{2}/\d{4} às \d{2}:\d{2} UTC', build_str, html)
           html_path.write_text(html, encoding="utf-8")
           print(f"index.html atualizado com build-info: {build_str}")
+
+          # Atualiza versão do cache do Service Worker (força bust em cada deploy)
+          sw_path = pathlib.Path("sw.js")
+          sw = sw_path.read_text(encoding="utf-8")
+          sw_ver = now.strftime("%Y%m%d%H%M")
+          sw = re.sub(r"copasa-[^'\"]+", f"copasa-{sw_ver}", sw)
+          sw_path.write_text(sw, encoding="utf-8")
+          print(f"sw.js atualizado com cache version: copasa-{sw_ver}")
           EOF
 
       - name: Commitar alerts.json (apenas se houver mudança)
@@ -139,7 +147,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add alerts.json index.html
+          git add alerts.json index.html sw.js
           if git diff --cached --quiet; then
             echo "Sem mudanças — nada a commitar."
             echo "changed=false" >> "$GITHUB_OUTPUT"

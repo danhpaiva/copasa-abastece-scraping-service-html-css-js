@@ -1,10 +1,13 @@
 'use strict';
 
 const ALERTS_URL          = './alerts.json';
+const BAIRROS_URL         = './bairros.json';
 const CACHE_KEY           = 'copasa_alerts_cache';
 const THEME_KEY           = 'copasa_theme';
 const TITLE_BASE          = 'Copasa Abastece — Monitor de Interrupções';
 const REFRESH_COOLDOWN_MS = 3 * 60 * 1000; // 3 minutos
+
+let _displayNames = {};  // mapa normalizado → nome com acentos
 
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 
@@ -121,18 +124,55 @@ function renderFilter(alertas) {
   bar.hidden = _todosBairros.length === 0;
 }
 
+function wireBtnMore(tagList) {
+  const btnMore = tagList.querySelector('.btn-tag-more');
+  if (!btnMore) return;
+  btnMore.addEventListener('click', () => {
+    const extra = btnMore.previousElementSibling;
+    const expanded = extra.hidden;
+    extra.hidden = !expanded;
+    btnMore.setAttribute('aria-expanded', expanded);
+    btnMore.textContent = expanded
+      ? `▴ recolher`
+      : `+ ${extra.querySelectorAll('.tag').length} mais ▾`;
+  });
+}
+
+function rebuildBairrosTagList(card, bairros) {
+  const rows = card.querySelectorAll('.detail-row');
+  let bairrosRow = null;
+  rows.forEach(row => {
+    const label = row.querySelector('.detail-label');
+    if (label && label.textContent === 'Bairros afetados') bairrosRow = row;
+  });
+  if (!bairrosRow) return;
+  const tagList = bairrosRow.querySelector('.tag-list');
+  if (!tagList) return;
+  tagList.innerHTML = buildBairrosHtml(bairros);
+  wireBtnMore(tagList);
+}
+
 function applyFilter(alertas) {
   const query = ($('#filter-input')?.value || '').trim().toLowerCase();
   const cards = [...$('#cards-container').querySelectorAll('.card')];
-  const sorted = [...alertas].sort((a, b) => {
-    if (a.esta_ativa !== b.esta_ativa) return a.esta_ativa ? -1 : 1;
-    return new Date(b.inicio) - new Date(a.inicio);
-  });
 
-  cards.forEach((card, i) => {
-    if (!query) { card.hidden = false; return; }
-    const bairros = (sorted[i]?.bairros_afetados || []).map(b => b.toLowerCase());
-    card.hidden = !bairros.some(b => b.includes(query));
+  cards.forEach(card => {
+    const bairros = JSON.parse(card.dataset.bairros || '[]');
+
+    if (!query) {
+      card.hidden = false;
+      // restaura ordem original
+      if (bairros.length > 0) rebuildBairrosTagList(card, bairros);
+      return;
+    }
+
+    const matched = bairros.filter(b => b.toLowerCase().includes(query));
+    card.hidden = matched.length === 0;
+
+    if (!card.hidden && matched.length > 0) {
+      const rest = bairros.filter(b => !b.toLowerCase().includes(query));
+      rebuildBairrosTagList(card, [...matched, ...rest]);
+    }
   });
 
   // Atualiza contador de resultados visíveis
@@ -208,14 +248,18 @@ function renderCards(alertas) {
 
 const BAIRROS_VISIVEIS = 5;
 
+function displayBairro(b) {
+  return _displayNames[b] || b;
+}
+
 function buildBairrosHtml(bairros) {
   const visiveis = bairros.slice(0, BAIRROS_VISIVEIS);
   const restantes = bairros.slice(BAIRROS_VISIVEIS);
-  const tagsVisiveis = visiveis.map(b => `<span class="tag bairro">${esc(b)}</span>`).join('');
+  const tagsVisiveis = visiveis.map(b => `<span class="tag bairro">${esc(displayBairro(b))}</span>`).join('');
 
   if (restantes.length === 0) return tagsVisiveis;
 
-  const tagsRestantes = restantes.map(b => `<span class="tag bairro">${esc(b)}</span>`).join('');
+  const tagsRestantes = restantes.map(b => `<span class="tag bairro">${esc(displayBairro(b))}</span>`).join('');
   return `
     ${tagsVisiveis}
     <span class="tag-more-wrap">
@@ -233,6 +277,7 @@ function buildCard(alerta) {
     `<span class="tag city">${esc(c)}</span>`).join('');
 
   const bairrosAfetados = alerta.bairros_afetados || [];
+  card.dataset.bairros = JSON.stringify(bairrosAfetados);
   const BAIRROS_VISIVEIS = 5;
   const bairrosHtml = bairrosAfetados.length > 0
     ? buildBairrosHtml(bairrosAfetados)
@@ -280,18 +325,8 @@ function buildCard(alerta) {
     </div>`;
 
   // Expandir bairros
-  const btnMore = card.querySelector('.btn-tag-more');
-  if (btnMore) {
-    btnMore.addEventListener('click', () => {
-      const extra = btnMore.previousElementSibling;
-      const expanded = extra.hidden;
-      extra.hidden = !expanded;
-      btnMore.setAttribute('aria-expanded', expanded);
-      btnMore.textContent = expanded
-        ? `▴ recolher`
-        : `+ ${extra.querySelectorAll('.tag').length} mais ▾`;
-    });
-  }
+  const btnMoreEl = card.querySelector('.btn-tag-more');
+  if (btnMoreEl) wireBtnMore(btnMoreEl.closest('.tag-list'));
 
   return card;
 }
@@ -451,9 +486,28 @@ function startAutoRefresh() {
   }, AUTO_REFRESH_MS);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+async function loadBairrosConfig() {
+  try {
+    const res = await fetch(BAIRROS_URL, { cache: 'no-store' });
+    if (!res.ok) return;
+    const cfg = await res.json();
+
+    // #4 — mapa de nomes com acentos
+    _displayNames = cfg.display_names || {};
+
+    // #2 — exibe cidades monitoradas no rodapé
+    const cidades = cfg.cidades_alvo || [];
+    const el = $('#cidades-monitoradas');
+    if (el && cidades.length > 0) {
+      el.textContent = 'Monitorando: ' + cidades.join(', ');
+    }
+  } catch {}
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
   registerSW();
   initTheme();
+  await loadBairrosConfig();
   load();
   startAutoRefresh();
   $('#btn-refresh').addEventListener('click', refresh);
