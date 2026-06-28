@@ -390,7 +390,7 @@ main {
   border: 1.5px solid var(--color-inactive-border);
   box-shadow: var(--shadow);
   overflow: hidden;
-  transition: box-shadow .2s;
+  transition: box-shadow .2s, border-color .6s;
   animation: card-in .35s ease both;
 }
 
@@ -423,6 +423,7 @@ main {
   gap: .75rem;
   padding: 1rem 1.25rem .75rem;
   border-bottom: 1px solid var(--color-inactive-border);
+  transition: background .6s, border-bottom-color .6s;
 }
 
 .card.active .card-header {
@@ -455,6 +456,7 @@ main {
   border-radius: 99px;
   white-space: nowrap;
   flex-shrink: 0;
+  transition: background .6s;
 }
 
 .badge.active {

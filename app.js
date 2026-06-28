@@ -95,17 +95,45 @@ function formatCountdown(ms) {
   return `${mins}min`;
 }
 
+function expireCard(card) {
+  card.classList.replace('active', 'inactive');
+
+  const badge = card.querySelector('.badge');
+  if (badge) {
+    badge.classList.replace('active', 'inactive');
+    badge.textContent = 'ENCERRADO';
+  }
+
+  // Recalcula o banner de status com base nos cards ainda ativos na tela
+  const ativos = [...$('#cards-container').querySelectorAll('.card.active')].length;
+  updateTitle(ativos);
+  if (ativos > 0) {
+    setStatus('alert', ativos === 1
+      ? '⚠ Há 1 interrupção ativa'
+      : `⚠ Há ${ativos} interrupções ativas`
+    );
+  } else {
+    setStatus('ok', '✓ Abastecimento normal — sem interrupções ativas');
+  }
+}
+
 function startCountdown(el, fimIso) {
   const fim = new Date(fimIso);
+  let id;
 
   function tick() {
     const diff = fim - Date.now();
     el.textContent = formatCountdown(diff);
-    if (diff <= 0) el.closest('.countdown')?.classList.add('expired');
+    if (diff <= 0) {
+      el.closest('.countdown')?.classList.add('expired');
+      clearInterval(id);
+      const card = el.closest('.card');
+      if (card?.classList.contains('active')) expireCard(card);
+    }
   }
 
   tick();
-  const id = setInterval(tick, 30000); // atualiza a cada 30s
+  id = setInterval(tick, 30000); // atualiza a cada 30s
   _timers.push(id);
 }
 
