@@ -1,7 +1,16 @@
 {
   "bairros": [],
   "aliases": {},
-  "cidades_alvo": ["Belo Horizonte", "Contagem", "Nova Lima", "Raposos", "Ribeirao das Neves", "Sabara", "Santa Luzia", "Vespasiano"],
+  "cidades_alvo": [
+    "Belo Horizonte",
+    "Contagem",
+    "Nova Lima",
+    "Raposos",
+    "Ribeirao das Neves",
+    "Sabara",
+    "Santa Luzia",
+    "Vespasiano"
+  ],
   "display_names": {
     "Sao Gabriel": "São Gabriel",
     "Nazare": "Nazaré",
@@ -28,7 +37,6 @@
     "Caete": "Caeté",
     "Lagoa Santa": "Lagoa Santa",
     "Raposos": "Raposos",
-    "Ribeirao das Neves": "Ribeirão das Neves",
     "Vespasiano": "Vespasiano"
   }
 }
