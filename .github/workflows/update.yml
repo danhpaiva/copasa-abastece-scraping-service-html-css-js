@@ -4,13 +4,23 @@ on:
   schedule:
     - cron: '0 * * * *'   # toda hora
   workflow_dispatch:        # disparo manual
+  push:
+    branches: [main]        # também dispara ao fazer push (ex: primeiro merge)
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
 
     steps:
       - name: Checkout este repositório
@@ -42,7 +52,6 @@ jobs:
 
           raw = json.loads(pathlib.Path("/tmp/alerts_raw.json").read_text())
 
-          # Suporta tanto lista quanto wrapper já com gerado_em
           if isinstance(raw, list):
               alertas = raw
           else:
@@ -59,13 +68,41 @@ jobs:
           EOF
 
       - name: Commitar alerts.json (apenas se houver mudança)
+        id: commit
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add alerts.json
           if git diff --cached --quiet; then
             echo "Sem mudanças — nada a commitar."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "chore: atualiza alerts.json [skip ci]"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+  deploy:
+    needs: scrape
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout (com alerts.json atualizado)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Configurar Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artefato do site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy para GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
