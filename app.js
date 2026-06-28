@@ -107,54 +107,22 @@ function startCountdown(el, fimIso) {
   _timers.push(id);
 }
 
-function renderFilter(alertas) {
-  const bar   = $('#filter-bar');
-  const chips = $('#filter-chips');
+// Bairros de todos os alertas carregados (para o filtro de busca)
+let _todosBairros = [];
+let _alertasAtual = [];
 
-  // Coleta todos os bairros únicos presentes em qualquer alerta
-  const todos = [...new Set(
+function renderFilter(alertas) {
+  const bar = $('#filter-bar');
+
+  _todosBairros = [...new Set(
     alertas.flatMap(a => a.bairros_afetados || [])
   )].sort((a, b) => a.localeCompare(b, 'pt-BR'));
 
-  // Só exibe o filtro se houver mais de um bairro
-  if (todos.length <= 1) { bar.hidden = true; return; }
-
-  chips.innerHTML = '';
-  bar.hidden = false;
-
-  // Chip "Todos"
-  const all = document.createElement('button');
-  all.className = 'chip' + (_filtro.size === 0 ? ' active' : '');
-  all.setAttribute('aria-pressed', _filtro.size === 0 ? 'true' : 'false');
-  all.textContent = 'Todos';
-  all.addEventListener('click', () => {
-    _filtro.clear();
-    applyFilter(alertas);
-    renderFilter(alertas);
-  });
-  chips.appendChild(all);
-
-  todos.forEach(bairro => {
-    const chip = document.createElement('button');
-    const isActive = _filtro.has(bairro);
-    chip.className = 'chip' + (isActive ? ' active' : '');
-    chip.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-    chip.textContent = bairro;
-    chip.addEventListener('click', () => {
-      if (_filtro.has(bairro)) {
-        _filtro.delete(bairro);
-      } else {
-        _filtro.add(bairro);
-      }
-      applyFilter(alertas);
-      renderFilter(alertas);
-    });
-    chips.appendChild(chip);
-  });
+  bar.hidden = _todosBairros.length === 0;
 }
 
 function applyFilter(alertas) {
-  // Seleciona todos os cards pelo índice de posição no container
+  const query = ($('#filter-input')?.value || '').trim().toLowerCase();
   const cards = [...$('#cards-container').querySelectorAll('.card')];
   const sorted = [...alertas].sort((a, b) => {
     if (a.esta_ativa !== b.esta_ativa) return a.esta_ativa ? -1 : 1;
@@ -162,13 +130,17 @@ function applyFilter(alertas) {
   });
 
   cards.forEach((card, i) => {
-    if (_filtro.size === 0) {
-      card.hidden = false;
-      return;
-    }
-    const bairros = sorted[i]?.bairros_afetados || [];
-    card.hidden = !bairros.some(b => _filtro.has(b));
+    if (!query) { card.hidden = false; return; }
+    const bairros = (sorted[i]?.bairros_afetados || []).map(b => b.toLowerCase());
+    card.hidden = !bairros.some(b => b.includes(query));
   });
+
+  // Atualiza contador de resultados visíveis
+  const visíveis = cards.filter(c => !c.hidden).length;
+  const hint = $('#filter-hint');
+  if (hint) hint.textContent = query
+    ? `${visíveis} alerta${visíveis !== 1 ? 's' : ''} encontrado${visíveis !== 1 ? 's' : ''}`
+    : '';
 }
 
 function checkStaleData(geradoEm) {
@@ -229,8 +201,27 @@ function renderCards(alertas) {
     }
   });
 
+  _alertasAtual = alertas;
   renderFilter(alertas);
   applyFilter(alertas);
+}
+
+const BAIRROS_VISIVEIS = 5;
+
+function buildBairrosHtml(bairros) {
+  const visiveis = bairros.slice(0, BAIRROS_VISIVEIS);
+  const restantes = bairros.slice(BAIRROS_VISIVEIS);
+  const tagsVisiveis = visiveis.map(b => `<span class="tag bairro">${esc(b)}</span>`).join('');
+
+  if (restantes.length === 0) return tagsVisiveis;
+
+  const tagsRestantes = restantes.map(b => `<span class="tag bairro">${esc(b)}</span>`).join('');
+  return `
+    ${tagsVisiveis}
+    <span class="tag-more-wrap">
+      <span class="tags-extra" hidden>${tagsRestantes}</span>
+      <button class="btn-tag-more" aria-expanded="false">+ ${restantes.length} mais ▾</button>
+    </span>`;
 }
 
 function buildCard(alerta) {
@@ -242,8 +233,9 @@ function buildCard(alerta) {
     `<span class="tag city">${esc(c)}</span>`).join('');
 
   const bairrosAfetados = alerta.bairros_afetados || [];
+  const BAIRROS_VISIVEIS = 5;
   const bairrosHtml = bairrosAfetados.length > 0
-    ? bairrosAfetados.map(b => `<span class="tag bairro">${esc(b)}</span>`).join('')
+    ? buildBairrosHtml(bairrosAfetados)
     : null;
 
   const tituloHtml = alerta.url
@@ -286,6 +278,20 @@ function buildCard(alerta) {
         <div class="tag-list">${bairrosHtml}</div>
       </div>` : ''}
     </div>`;
+
+  // Expandir bairros
+  const btnMore = card.querySelector('.btn-tag-more');
+  if (btnMore) {
+    btnMore.addEventListener('click', () => {
+      const extra = btnMore.previousElementSibling;
+      const expanded = extra.hidden;
+      extra.hidden = !expanded;
+      btnMore.setAttribute('aria-expanded', expanded);
+      btnMore.textContent = expanded
+        ? `▴ recolher`
+        : `+ ${extra.querySelectorAll('.tag').length} mais ▾`;
+    });
+  }
 
   return card;
 }
@@ -452,4 +458,7 @@ document.addEventListener('DOMContentLoaded', () => {
   startAutoRefresh();
   $('#btn-refresh').addEventListener('click', refresh);
   $('#btn-theme').addEventListener('click', toggleTheme);
+
+  $('#filter-input').addEventListener('input', () => applyFilter(_alertasAtual));
+  $('#filter-input').addEventListener('search', () => applyFilter(_alertasAtual));
 });

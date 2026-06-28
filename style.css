@@ -294,9 +294,8 @@ main {
 /* ── Filter bar ── */
 .filter-bar {
   display: flex;
-  align-items: center;
-  gap: .5rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: .4rem;
   padding: .65rem 1rem;
   background: var(--color-filter-bg);
   border: 1.5px solid var(--color-inactive-border);
@@ -313,34 +312,67 @@ main {
   white-space: nowrap;
 }
 
-.filter-chips {
+.filter-input-wrap {
+  flex: 1;
   display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.filter-input {
+  width: 100%;
+  font-size: .875rem;
+  font-family: var(--font);
+  padding: .4rem .75rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-inactive-border);
+  background: var(--color-bg);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color .15s;
+}
+
+.filter-input:focus {
+  border-color: #1e3a5f;
+}
+
+.filter-hint {
+  font-size: .72rem;
+  color: var(--color-muted);
+  min-height: 1em;
+}
+
+/* ── Expandable bairros ("+ N mais") ── */
+.tag-more-wrap {
+  display: inline-flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: .35rem;
 }
 
-.chip {
-  font-size: .78rem;
-  font-weight: 500;
-  padding: .25rem .65rem;
-  border-radius: 99px;
-  border: 1.5px solid var(--color-inactive-border);
-  background: var(--color-bg);
-  color: var(--color-muted);
+.tags-extra {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+}
+
+.tags-extra[hidden] { display: none; }
+
+.btn-tag-more {
+  font-size: .72rem;
+  font-weight: 600;
+  padding: .2rem .55rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-tag-bg-alt);
+  background: transparent;
+  color: var(--color-tag-text-alt);
   cursor: pointer;
-  transition: background .15s, color .15s, border-color .15s;
-  user-select: none;
+  transition: background .15s, color .15s;
+  white-space: nowrap;
 }
 
-.chip:hover {
-  border-color: #1e3a5f;
-  color: #1e3a5f;
-}
-
-.chip.active {
-  background: #1e3a5f;
-  border-color: #1e3a5f;
-  color: #fff;
+.btn-tag-more:hover {
+  background: var(--color-tag-bg-alt);
 }
 
 /* card oculto pelo filtro */

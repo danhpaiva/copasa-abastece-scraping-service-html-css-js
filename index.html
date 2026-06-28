@@ -25,7 +25,7 @@
 
   <header>
     <h1>💧 Copasa Abastece — Monitor</h1>
-    <p>Acompanhe interrupções no abastecimento de água para os bairros monitorados</p>
+    <p>Acompanhe interrupções no abastecimento de água para as cidades monitoradas</p>
     <button id="btn-theme" class="btn-theme" aria-label="Alternar tema claro/escuro" title="Alternar tema">🌙</button>
   </header>
 
@@ -49,8 +49,13 @@
     </div>
 
     <div id="filter-bar" class="filter-bar" hidden>
-      <span class="filter-label">Filtrar por bairro:</span>
-      <div id="filter-chips" class="filter-chips" role="group" aria-label="Filtro por bairro"></div>
+      <label for="filter-input" class="filter-label">🔍 Filtrar por bairro</label>
+      <div class="filter-input-wrap">
+        <input id="filter-input" type="search" class="filter-input"
+          placeholder="Digite o nome do bairro…"
+          aria-label="Filtrar alertas por bairro" autocomplete="off" />
+        <span id="filter-hint" class="filter-hint" aria-live="polite"></span>
+      </div>
     </div>
 
     <section id="cards-container" aria-label="Lista de alertas de abastecimento" aria-live="polite" aria-atomic="false">
