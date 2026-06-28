@@ -104,6 +104,10 @@ jobs:
           code=$?
           set -e
           # 0 = sem alertas, 1 = alertas encontrados — ambos são sucesso
+          # Se exit 0 e o scraper não gravou o arquivo, cria JSON vazio para o próximo passo
+          if [ $code -eq 0 ] && [ ! -f /tmp/alerts_raw.json ]; then
+            echo '{"gerado_em":"","alertas":[]}' > /tmp/alerts_raw.json
+          fi
           test $code -le 1
 
       - name: Empacotar resultado com timestamp e atualizar build-info no HTML
