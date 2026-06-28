@@ -1,6 +1,8 @@
 'use strict';
 
-const ALERTS_URL = './alerts.json';
+const ALERTS_URL  = './alerts.json';
+const CACHE_KEY   = 'copasa_alerts_cache';
+const TITLE_BASE  = 'Copasa Abastece — Monitor de Interrupções';
 
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 
@@ -9,6 +11,25 @@ const _timers = [];
 
 // Bairros selecionados no filtro (conjunto vazio = todos)
 const _filtro = new Set();
+
+// ── Cache ──────────────────────────────────────────────
+function cacheLoad() {
+  try {
+    const raw = localStorage.getItem(CACHE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch { return null; }
+}
+
+function cacheSave(data) {
+  try { localStorage.setItem(CACHE_KEY, JSON.stringify(data)); } catch {}
+}
+
+// ── Badge dinâmico no título ───────────────────────────
+function updateTitle(ativos) {
+  document.title = ativos > 0
+    ? `(⚠ ${ativos} alerta${ativos > 1 ? 's' : ''}) ${TITLE_BASE}`
+    : TITLE_BASE;
+}
 
 function formatDate(isoString) {
   if (!isoString) return 'Desconhecida';
@@ -256,19 +277,7 @@ function showError(reason) {
   $('#last-updated').textContent = 'Desconhecida';
 }
 
-async function load() {
-  setStatus('loading', 'Carregando dados…');
-
-  let data;
-  try {
-    const res = await fetch(ALERTS_URL, { cache: 'no-store' });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    data = await res.json();
-  } catch (err) {
-    showError('Falha ao buscar alerts.json: ' + err.message);
-    return;
-  }
-
+function applyData(data) {
   // Suporta tanto o formato wrapper { gerado_em, alertas } quanto array legado
   let alertas, geradoEm;
   if (Array.isArray(data)) {
@@ -283,6 +292,7 @@ async function load() {
   checkStaleData(geradoEm);
 
   const ativos = alertas.filter(a => a.esta_ativa);
+  updateTitle(ativos.length);
 
   if (ativos.length > 0) {
     const bairrosText = ativos
@@ -300,6 +310,29 @@ async function load() {
   }
 
   renderCards(alertas);
+}
+
+async function load() {
+  // Exibe cache imediatamente para eliminar o flash de "Carregando..."
+  const cached = cacheLoad();
+  if (cached) {
+    applyData(cached);
+  } else {
+    setStatus('loading', 'Carregando dados…');
+  }
+
+  let data;
+  try {
+    const res = await fetch(ALERTS_URL, { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    data = await res.json();
+  } catch (err) {
+    if (!cached) showError('Falha ao buscar alerts.json: ' + err.message);
+    return;
+  }
+
+  cacheSave(data);
+  applyData(data);
 }
 
 async function refresh() {
