@@ -417,6 +417,14 @@ function applyData(data, forceRender = false) {
     geradoEm = data.gerado_em || null;
   }
 
+  // Recalcula esta_ativa com base no horário atual — o campo no JSON pode estar obsoleto
+  // se o pipeline estiver atrasado e um alerta tiver encerrado desde a última coleta.
+  const agora = Date.now();
+  alertas = alertas.map(a => ({
+    ...a,
+    esta_ativa: a.esta_ativa && (!a.fim || parseBRT(a.fim) > agora),
+  }));
+
   $('#last-updated').textContent = geradoEm ? formatDate(geradoEm) : 'Desconhecida';
   checkStaleData(geradoEm, alertas);
 
