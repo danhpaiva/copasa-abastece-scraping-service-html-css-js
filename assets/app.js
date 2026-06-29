@@ -234,7 +234,7 @@ function checkStaleData(geradoEm, alertasNovos) {
     const h = Math.floor(diffH);
     banner.hidden = false;
     staleText.textContent =
-      `Dados com ${h}h de atraso — o pipeline pode estar com problema. `;
+      `Dados com ${h}h sem atualizar — aguarde a próxima rotina. `;
     return;
   }
 
