@@ -234,7 +234,7 @@ function checkStaleData(geradoEm, alertasNovos) {
     const h = Math.floor(diffH);
     banner.hidden = false;
     staleText.textContent =
-      `Dados com ${h}h de atraso — o pipeline pode estar com problema. `;
+      `Dados com ${h}h sem atualizar — aguarde a próxima rotina. `;
     return;
   }
 
@@ -416,6 +416,14 @@ function applyData(data, forceRender = false) {
     alertas = data.alertas || [];
     geradoEm = data.gerado_em || null;
   }
+
+  // Recalcula esta_ativa com base no horário atual — o campo no JSON pode estar obsoleto
+  // se o pipeline estiver atrasado e um alerta tiver encerrado desde a última coleta.
+  const agora = Date.now();
+  alertas = alertas.map(a => ({
+    ...a,
+    esta_ativa: a.esta_ativa && (!a.fim || parseBRT(a.fim) > agora),
+  }));
 
   $('#last-updated').textContent = geradoEm ? formatDate(geradoEm) : 'Desconhecida';
   checkStaleData(geradoEm, alertas);
