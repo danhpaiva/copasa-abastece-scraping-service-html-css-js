@@ -77,10 +77,20 @@ function formatDate(isoString) {
   return isNaN(d) ? isoString : _fmtDate(d);
 }
 
+function parseBRT(isoString) {
+  if (!isoString) return null;
+  // Datas de início/fim vêm sem timezone — são sempre horário de Brasília (UTC-3)
+  const s = isoString.endsWith('Z') || /[+-]\d{2}:\d{2}$/.test(isoString)
+    ? isoString
+    : isoString + '-03:00';
+  const d = new Date(s);
+  return isNaN(d) ? null : d;
+}
+
 function formatDateShort(isoString) {
   if (!isoString) return '–';
-  const d = new Date(isoString);
-  return isNaN(d) ? isoString : _fmtDate(d);
+  const d = parseBRT(isoString);
+  return d ? _fmtDate(d) : isoString;
 }
 
 function formatCountdown(ms) {
@@ -118,7 +128,7 @@ function expireCard(card) {
 }
 
 function startCountdown(el, fimIso) {
-  const fim = new Date(fimIso);
+  const fim = parseBRT(fimIso);
   let id;
 
   function tick() {
@@ -328,7 +338,7 @@ function buildCard(alerta) {
     : esc(alerta.titulo);
 
   const countdownInicial = isActive && alerta.fim
-    ? formatCountdown(new Date(alerta.fim) - Date.now())
+    ? formatCountdown(parseBRT(alerta.fim) - Date.now())
     : null;
   const countdownHtml = countdownInicial !== null
     ? `<div class="detail-row">
