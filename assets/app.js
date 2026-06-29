@@ -414,14 +414,9 @@ function applyData(data, forceRender = false) {
   updateTitle(ativos.length);
 
   if (ativos.length > 0) {
-    const bairrosText = ativos
-      .flatMap(a => a.bairros_afetados || [])
-      .filter((v, i, arr) => arr.indexOf(v) === i)
-      .join(', ');
-
     setStatus('alert',
       ativos.length === 1
-        ? `⚠ Há 1 interrupção ativa${bairrosText ? ' — ' + bairrosText : ''}`
+        ? '⚠ Há 1 interrupção ativa'
         : `⚠ Há ${ativos.length} interrupções ativas`
     );
   } else {
