@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-30T09:21:44",
+  "gerado_em": "2026-06-30T11:12:42",
   "alertas": [
     {
       "titulo": "28/06 - BELO HORIZONTE , CONTAGEM, NOVA LIMA, RAPOSOS, RIBEIRÃO DAS NEVES, SABARÁ, SANTA LUZIA, VESPASIANO - Situação do Abastecimento",
@@ -16,7 +16,7 @@
       ],
       "inicio": "2026-06-28T06:00:00-03:00",
       "fim": "2026-06-30T07:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Aarão Reis",
         "Acaiaca",
