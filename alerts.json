@@ -1,9 +1,9 @@
 {
-  "gerado_em": "2026-06-29T22:33:03",
+  "gerado_em": "2026-06-30T09:21:44",
   "alertas": [
     {
-      "titulo": "28/06 - BELO HORIZONTE , CONTAGEM, NOVA LIMA, RAPOSOS, RIBEIRÃO DAS NEVES, SABARÁ, SANTA LUZIA, e VESPASIANO - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202606%2Fc259aa85-fb31-4b30-a528-9d0681c22123",
+      "titulo": "28/06 - BELO HORIZONTE , CONTAGEM, NOVA LIMA, RAPOSOS, RIBEIRÃO DAS NEVES, SABARÁ, SANTA LUZIA, VESPASIANO - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202606%2F75ed6e2f-9182-40fa-9ddf-cb13b71dcc72",
       "cidades": [
         "Belo Horizonte",
         "Contagem",
@@ -713,59 +713,6 @@
         "Santa Clara",
         "São Damião",
         "Vila Esportiva"
-      ]
-    },
-    {
-      "titulo": "27/06 - NOVA LIMA - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202606%2F846878b7-ee2c-4f69-9550-3c0842c123ab",
-      "cidades": [
-        "Nova Lima"
-      ],
-      "inicio": "2026-06-27T17:20:00-03:00",
-      "fim": "2026-06-28T13:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Vale Do Sol."
-      ]
-    },
-    {
-      "titulo": "27/06 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202606%2F4a68ceb9-4c57-45b6-ae17-b97342e4b1c4",
-      "cidades": [
-        "Ribeirão Das Neves"
-      ],
-      "inicio": "2026-06-27T13:00:00-03:00",
-      "fim": "2026-06-28T12:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Esperanca",
-        "Girassol",
-        "Menezes"
-      ]
-    },
-    {
-      "titulo": "27/06 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202606%2F4593e31f-bf41-4fd3-aebb-dad451ca2a0e",
-      "cidades": [
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-06-27T20:58:00-03:00",
-      "fim": "2026-06-28T23:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Alto Das Antenas",
-        "Araguaia",
-        "Barreiro De Cima",
-        "Bonsucesso",
-        "Flavio Marques Lisboa",
-        "Jardim Das Rosas",
-        "Jardim Liberdade",
-        "Liberdade",
-        "Milionários",
-        "São Judas Tadeu",
-        "Serra Do Curral",
-        "Vila Cemig",
-        "Vila Esperança"
       ]
     }
   ]
