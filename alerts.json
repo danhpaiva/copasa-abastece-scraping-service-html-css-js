@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-01T18:51:59",
+  "gerado_em": "2026-07-01T20:44:32",
   "alertas": [
     {
       "titulo": "01/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
@@ -53,7 +53,7 @@
       ],
       "inicio": "2026-07-01T05:00:14-03:00",
       "fim": "2026-07-01T17:00:09-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Califórnia",
         "Água Branca",
