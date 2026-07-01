@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-01T13:12:02",
+  "gerado_em": "2026-07-01T15:10:19",
   "alertas": [
     {
       "titulo": "01/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
@@ -28,6 +28,20 @@
         "Tropical Ii",
         "Vera Lúcia",
         "Vila Esplanada."
+      ]
+    },
+    {
+      "titulo": "01/07 - CONTAGEM - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc68d51e3-8bf3-4d59-a6d4-2053a90c4b0f",
+      "cidades": [
+        "Contagem"
+      ],
+      "inicio": "2026-07-01T11:00:00-03:00",
+      "fim": "2026-07-01T23:59:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Conjunto Habitacional Oitis",
+        "Oitis."
       ]
     },
     {
