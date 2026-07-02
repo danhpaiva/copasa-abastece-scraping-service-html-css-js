@@ -211,3 +211,7 @@ jobs:
       - name: Deploy para GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # Aumenta o timeout padrão (10min) para dar mais margem a picos
+          # de fila do backend do GitHub Pages (deployment_queued prolongado)
+          timeout: 1200000
