@@ -214,4 +214,4 @@ jobs:
         with:
           # Aumenta o timeout padrão (10min) para dar mais margem a picos
           # de fila do backend do GitHub Pages (deployment_queued prolongado)
-          timeout: 1200000
+          timeout: 60000
