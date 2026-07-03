@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-02T23:18:21",
+  "gerado_em": "2026-07-03T10:47:40",
   "alertas": [
     {
       "titulo": "02/07 - BELO HORIZONTE - Situação do Abastecimento",
@@ -9,7 +9,7 @@
       ],
       "inicio": "2026-07-02T15:38:00-03:00",
       "fim": "2026-07-03T04:30:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Andiroba",
         "Eymard",
@@ -22,109 +22,6 @@
         "São Paulo",
         "União",
         "Vila São Paulo."
-      ]
-    },
-    {
-      "titulo": "01/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F30b31a1c-f263-45b2-b13e-4427445bf573",
-      "cidades": [
-        "Ribeirão Das Neves"
-      ],
-      "inicio": "2026-07-01T05:00:00-03:00",
-      "fim": "2026-07-01T23:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Adriana",
-        "Belo Vale",
-        "Botafogo",
-        "Cristais",
-        "Cruzeiro",
-        "Esperança",
-        "Girassol",
-        "Jardim São Judas Tadeu",
-        "Labanca",
-        "Maracanã",
-        "Menezes",
-        "Nossa Senhora Da Piedade",
-        "Paraíso Das Piabas",
-        "Tropical",
-        "Tropical Ii",
-        "Vera Lúcia",
-        "Vila Esplanada."
-      ]
-    },
-    {
-      "titulo": "01/07 - CONTAGEM - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc68d51e3-8bf3-4d59-a6d4-2053a90c4b0f",
-      "cidades": [
-        "Contagem"
-      ],
-      "inicio": "2026-07-01T11:00:00-03:00",
-      "fim": "2026-07-01T23:59:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Conjunto Habitacional Oitis",
-        "Oitis."
-      ]
-    },
-    {
-      "titulo": "01/07 - BELO HORIZONTE E CONTAGEM - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F96e8b0f7-2ef8-4c8b-9721-7d5e9a0f4304",
-      "cidades": [
-        "Belo Horizonte",
-        "Contagem"
-      ],
-      "inicio": "2026-07-01T05:00:14-03:00",
-      "fim": "2026-07-01T17:00:09-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Califórnia",
-        "Água Branca",
-        "Cidade Industrial",
-        "Cidade Jardim Eldorado",
-        "Cinco",
-        "Conjunto Habitacional Água Branca",
-        "Darcy Vargas",
-        "Jk",
-        "Jardim Das Oliveiras E Jardim Dos Bandeirantes"
-      ]
-    },
-    {
-      "titulo": "30/06 - BELO HORIZONTE E CONTAGEM - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202606%2F182f1861-61bd-4a19-afa0-b748d346f1df",
-      "cidades": [
-        "Belo Horizonte",
-        "Contagem"
-      ],
-      "inicio": "2026-06-30T16:30:00-03:00",
-      "fim": "2026-07-01T23:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Coqueiros",
-        "Novo Glória",
-        "Pindorama",
-        "São Salvador",
-        "Jardim Laguna",
-        "Milanez",
-        "Parque Novo Progresso"
-      ]
-    },
-    {
-      "titulo": "30/06 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202606%2F22df9aa5-f663-41ea-8c19-3489226b727b",
-      "cidades": [
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-06-30T10:00:00-03:00",
-      "fim": "2026-07-01T20:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Alípio De Melo",
-        "Inconfidência",
-        "Jardim São José",
-        "Manacás",
-        "São José",
-        "Vila Jardim São José"
       ]
     }
   ]
