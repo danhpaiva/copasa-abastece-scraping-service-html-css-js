@@ -1,6 +1,72 @@
 {
-  "gerado_em": "2026-07-04T10:21:55",
+  "gerado_em": "2026-07-04T13:53:09",
   "alertas": [
+    {
+      "titulo": "03/07 - VESPASIANO - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fd5ce6bae-ad33-41fa-9979-30e08b397089",
+      "cidades": [
+        "Vespasiano"
+      ],
+      "inicio": "2026-07-03T22:40:00-03:00",
+      "fim": "2026-07-04T23:59:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Célvia",
+        "Centro",
+        "Fagundes",
+        "Jardim Alterosa",
+        "Jardim Itaú",
+        "Lourdes",
+        "Názia."
+      ]
+    },
+    {
+      "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fd55aaa7c-61be-4c43-ac42-4eb3b0f28d98",
+      "cidades": [
+        "Belo Horizonte"
+      ],
+      "inicio": "2026-07-07T09:00:00-03:00",
+      "fim": "2026-07-07T23:59:00-03:00",
+      "esta_ativa": false,
+      "bairros_afetados": [
+        "Águas Claras",
+        "Brasil Industrial",
+        "Cardoso",
+        "Castanheira",
+        "Diamante",
+        "Distrito Industrial Do Jatobá",
+        "Eliana Silva",
+        "Jatobá",
+        "Novo Santa Cecília",
+        "Petrópolis",
+        "Santa Cecília",
+        "Santa Rita",
+        "Solar Do Barreiro",
+        "Urucuia",
+        "Vale Do Jatobá",
+        "Vila Corumbiara",
+        "Vila Ecológica",
+        "Vila Formosa",
+        "Vila Pinho",
+        "Vitória Da Conquista."
+      ]
+    },
+    {
+      "titulo": "03/07 - VESPASIANO - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F81a93551-1a30-442e-bba7-4210411982f0",
+      "cidades": [
+        "Vespasiano"
+      ],
+      "inicio": "2026-07-03T18:16:00-03:00",
+      "fim": "2026-07-04T15:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Bela Vista",
+        "Jardim Encantado",
+        "Santa Cruz"
+      ]
+    },
     {
       "titulo": "02/07 - BELO HORIZONTE - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F73395ffc-3271-4141-abc5-2bcf30af1964",
