@@ -1,6 +1,38 @@
 {
-  "gerado_em": "2026-07-04T23:06:32",
+  "gerado_em": "2026-07-05T10:25:10",
   "alertas": [
+    {
+      "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fdaffe125-aeb1-4e2c-a7d2-a30810e87872",
+      "cidades": [
+        "Belo Horizonte"
+      ],
+      "inicio": "2026-07-07T09:00:00-03:00",
+      "fim": "2026-07-07T23:59:00-03:00",
+      "esta_ativa": false,
+      "bairros_afetados": [
+        "Águas Claras",
+        "Brasil Industrial",
+        "Cardoso",
+        "Castanheira",
+        "Diamante",
+        "Distrito Industrial Do Jatobá",
+        "Eliana Silva",
+        "Jatobá",
+        "Novo Santa Cecília",
+        "Petrópolis",
+        "Santa Cecília",
+        "Santa Rita",
+        "Solar Do Barreiro",
+        "Urucuia",
+        "Vale Do Jatobá",
+        "Vila Corumbiara",
+        "Vila Ecológica",
+        "Vila Formosa",
+        "Vila Pinho",
+        "Vitória Da Conquista."
+      ]
+    },
     {
       "titulo": "04/07 - SABARÁ - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F9a3b7bdb-e95c-431d-b9ac-8ae62513e0cd",
@@ -9,7 +41,7 @@
       ],
       "inicio": "2026-07-04T03:00:00-03:00",
       "fim": "2026-07-05T03:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Adelmolândia",
         "Adelmolândia Ii",
@@ -67,7 +99,7 @@
       ],
       "inicio": "2026-07-03T22:40:00-03:00",
       "fim": "2026-07-04T23:59:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Célvia",
         "Centro",
@@ -76,38 +108,6 @@
         "Jardim Itaú",
         "Lourdes",
         "Názia."
-      ]
-    },
-    {
-      "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fd55aaa7c-61be-4c43-ac42-4eb3b0f28d98",
-      "cidades": [
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-07-07T09:00:00-03:00",
-      "fim": "2026-07-07T23:59:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Águas Claras",
-        "Brasil Industrial",
-        "Cardoso",
-        "Castanheira",
-        "Diamante",
-        "Distrito Industrial Do Jatobá",
-        "Eliana Silva",
-        "Jatobá",
-        "Novo Santa Cecília",
-        "Petrópolis",
-        "Santa Cecília",
-        "Santa Rita",
-        "Solar Do Barreiro",
-        "Urucuia",
-        "Vale Do Jatobá",
-        "Vila Corumbiara",
-        "Vila Ecológica",
-        "Vila Formosa",
-        "Vila Pinho",
-        "Vitória Da Conquista."
       ]
     },
     {
@@ -123,29 +123,6 @@
         "Bela Vista",
         "Jardim Encantado",
         "Santa Cruz"
-      ]
-    },
-    {
-      "titulo": "02/07 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F73395ffc-3271-4141-abc5-2bcf30af1964",
-      "cidades": [
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-07-02T15:38:00-03:00",
-      "fim": "2026-07-03T04:30:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Andiroba",
-        "Eymard",
-        "Fernão Dias",
-        "Ipiranga",
-        "Maria Virgínia",
-        "Palmares",
-        "Pirajá",
-        "Providência",
-        "São Paulo",
-        "União",
-        "Vila São Paulo."
       ]
     }
   ]
