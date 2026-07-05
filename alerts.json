@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-05T10:25:10",
+  "gerado_em": "2026-07-05T14:00:59",
   "alertas": [
     {
       "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
@@ -31,6 +31,29 @@
         "Vila Formosa",
         "Vila Pinho",
         "Vitória Da Conquista."
+      ]
+    },
+    {
+      "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Ff36ff6e2-c11c-49e2-ae6a-19dab1381113",
+      "cidades": [
+        "Belo Horizonte"
+      ],
+      "inicio": "2026-07-07T07:00:00-03:00",
+      "fim": "2026-07-07T23:00:00-03:00",
+      "esta_ativa": false,
+      "bairros_afetados": [
+        "Alta Tensão I",
+        "Araguaia",
+        "Barreiro",
+        "Barreiro De Cima",
+        "Bonsucesso",
+        "Das Indústrias I",
+        "Flávio Marques Lisboa",
+        "Milionários",
+        "Novo Das Indústrias",
+        "Vila Cemig",
+        "Vila Nova Dos Milionários."
       ]
     },
     {
