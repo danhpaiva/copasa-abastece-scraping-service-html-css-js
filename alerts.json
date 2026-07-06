@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-06T20:10:25",
+  "gerado_em": "2026-07-06T23:17:27",
   "alertas": [
     {
       "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
@@ -93,7 +93,7 @@
       ],
       "inicio": "2026-07-05T17:30:00-03:00",
       "fim": "2026-07-06T19:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Santa Maria."
       ]
