@@ -1,9 +1,32 @@
 {
-  "gerado_em": "2026-07-05T23:11:46",
+  "gerado_em": "2026-07-06T12:12:57",
   "alertas": [
     {
       "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fdaffe125-aeb1-4e2c-a7d2-a30810e87872",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F303a45f5-f2a3-44d7-a521-9a0bee6bf370",
+      "cidades": [
+        "Belo Horizonte"
+      ],
+      "inicio": "2026-07-07T07:00:00-03:00",
+      "fim": "2026-07-07T23:00:00-03:00",
+      "esta_ativa": false,
+      "bairros_afetados": [
+        "Alta Tensão I",
+        "Araguaia",
+        "Barreiro",
+        "Barreiro De Cima",
+        "Bonsucesso",
+        "Das Indústrias I",
+        "Flávio Marques Lisboa",
+        "Milionários",
+        "Novo Das Indústrias",
+        "Vila Cemig",
+        "Vila Nova Dos Milionários."
+      ]
+    },
+    {
+      "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F6f8ba57f-dc80-446b-9812-555df639a782",
       "cidades": [
         "Belo Horizonte"
       ],
@@ -31,29 +54,6 @@
         "Vila Formosa",
         "Vila Pinho",
         "Vitória Da Conquista."
-      ]
-    },
-    {
-      "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Ff36ff6e2-c11c-49e2-ae6a-19dab1381113",
-      "cidades": [
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-07-07T07:00:00-03:00",
-      "fim": "2026-07-07T23:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Alta Tensão I",
-        "Araguaia",
-        "Barreiro",
-        "Barreiro De Cima",
-        "Bonsucesso",
-        "Das Indústrias I",
-        "Flávio Marques Lisboa",
-        "Milionários",
-        "Novo Das Indústrias",
-        "Vila Cemig",
-        "Vila Nova Dos Milionários."
       ]
     },
     {
@@ -141,40 +141,6 @@
         "Vila Santa Cruz",
         "Vila Santo Antônio De Pádua",
         "Villa Real"
-      ]
-    },
-    {
-      "titulo": "03/07 - VESPASIANO - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fd5ce6bae-ad33-41fa-9979-30e08b397089",
-      "cidades": [
-        "Vespasiano"
-      ],
-      "inicio": "2026-07-03T22:40:00-03:00",
-      "fim": "2026-07-04T23:59:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Célvia",
-        "Centro",
-        "Fagundes",
-        "Jardim Alterosa",
-        "Jardim Itaú",
-        "Lourdes",
-        "Názia."
-      ]
-    },
-    {
-      "titulo": "03/07 - VESPASIANO - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F81a93551-1a30-442e-bba7-4210411982f0",
-      "cidades": [
-        "Vespasiano"
-      ],
-      "inicio": "2026-07-03T18:16:00-03:00",
-      "fim": "2026-07-04T15:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Bela Vista",
-        "Jardim Encantado",
-        "Santa Cruz"
       ]
     }
   ]
