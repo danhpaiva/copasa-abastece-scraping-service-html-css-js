@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-06T17:09:48",
+  "gerado_em": "2026-07-06T20:10:25",
   "alertas": [
     {
       "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
@@ -64,7 +64,7 @@
       ],
       "inicio": "2026-07-05T10:21:00-03:00",
       "fim": "2026-07-06T15:30:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Campo Do Pires",
         "Conjunto Habitacional Paulo Gaetani",
@@ -83,6 +83,19 @@
       "esta_ativa": false,
       "bairros_afetados": [
         "Santa Maria"
+      ]
+    },
+    {
+      "titulo": "05/07 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc4698ab0-0c0f-43bc-9c36-74beb30b65be",
+      "cidades": [
+        "Belo Horizonte"
+      ],
+      "inicio": "2026-07-05T17:30:00-03:00",
+      "fim": "2026-07-06T19:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Santa Maria."
       ]
     },
     {
