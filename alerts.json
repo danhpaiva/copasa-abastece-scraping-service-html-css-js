@@ -1,15 +1,15 @@
 {
-  "gerado_em": "2026-07-06T23:17:27",
+  "gerado_em": "2026-07-07T11:18:01",
   "alertas": [
     {
       "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F303a45f5-f2a3-44d7-a521-9a0bee6bf370",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F292532af-a326-4368-8752-caa4a77aca17",
       "cidades": [
         "Belo Horizonte"
       ],
       "inicio": "2026-07-07T07:00:00-03:00",
       "fim": "2026-07-07T23:00:00-03:00",
-      "esta_ativa": false,
+      "esta_ativa": true,
       "bairros_afetados": [
         "Alta Tensão I",
         "Araguaia",
@@ -26,7 +26,7 @@
     },
     {
       "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F6f8ba57f-dc80-446b-9812-555df639a782",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc8b6755c-be8c-401e-9ca6-f307d2a034b4",
       "cidades": [
         "Belo Horizonte"
       ],
@@ -96,64 +96,6 @@
       "esta_ativa": false,
       "bairros_afetados": [
         "Santa Maria."
-      ]
-    },
-    {
-      "titulo": "04/07 - SABARÁ - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F9a3b7bdb-e95c-431d-b9ac-8ae62513e0cd",
-      "cidades": [
-        "Sabará"
-      ],
-      "inicio": "2026-07-04T03:00:00-03:00",
-      "fim": "2026-07-05T03:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Adelmolândia",
-        "Adelmolândia Ii",
-        "Águas Férreas",
-        "Alto Bela Vista",
-        "Alto Do Cabral",
-        "Alto Do Fidalgo",
-        "Arraial Velho",
-        "Cabral",
-        "Caieira",
-        "Campinas",
-        "Centro",
-        "Condomínio Eugenie Scharle",
-        "Conjunto Hab Morada Da Serra",
-        "Córrego Da Ilha",
-        "Dist Ind Op Raimundo Fantini",
-        "Esplanada",
-        "Fogo Apagou",
-        "Gaia",
-        "Galego",
-        "Mangabeiras",
-        "Morro Da Cruz",
-        "Morro São Francisco",
-        "Mundo Velho",
-        "Nossa Senhora Conceição",
-        "Nossa Senhora Da Conceição",
-        "Nossa Senhora Do O",
-        "Paciência",
-        "Padre Chiquinho",
-        "Praia Dos Bandeirantes",
-        "Rosário",
-        "Rosário Ii",
-        "Rosário Iii",
-        "Santana",
-        "Santo Antônio",
-        "Santo Antônio De Rocas Grandes",
-        "Siderúrgica",
-        "Sobradinho",
-        "Terra Santa",
-        "Vila Do Triângulo",
-        "Vila Esperança",
-        "Vila Francisco De Moura",
-        "Vila Mangueiras",
-        "Vila Michel",
-        "Vila Santa Cruz",
-        "Vila Santo Antônio De Pádua",
-        "Villa Real"
       ]
     }
   ]
