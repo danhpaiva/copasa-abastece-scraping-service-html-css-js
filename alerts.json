@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-07T23:10:58",
+  "gerado_em": "2026-07-08T10:29:08",
   "alertas": [
     {
       "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
@@ -9,7 +9,7 @@
       ],
       "inicio": "2026-07-07T07:00:00-03:00",
       "fim": "2026-07-07T23:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Alta Tensão I",
         "Araguaia",
@@ -25,6 +25,48 @@
       ]
     },
     {
+      "titulo": "07/07 - SABARÁ - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc6d8531f-03d5-4934-8f9d-f0082049d4db",
+      "cidades": [
+        "Sabará"
+      ],
+      "inicio": "2026-07-07T18:30:00-03:00",
+      "fim": "2026-07-08T15:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Itacolomi"
+      ]
+    },
+    {
+      "titulo": "07/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F0fed551c-ccf7-4876-9ae1-f9e79144d8dd",
+      "cidades": [
+        "Ribeirão Das Neves"
+      ],
+      "inicio": "2026-07-07T19:56:00-03:00",
+      "fim": "2026-07-08T12:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Jardim Verona"
+      ]
+    },
+    {
+      "titulo": "07/07 - RAPOSOS - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fbc7546ae-0fad-454f-ae6f-c9e34b794eef",
+      "cidades": [
+        "Raposos"
+      ],
+      "inicio": "2026-07-07T15:54:00-03:00",
+      "fim": "2026-07-08T17:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Água Limpa",
+        "Centro",
+        "Margem Da Linha",
+        "Vila Bela."
+      ]
+    },
+    {
       "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc8b6755c-be8c-401e-9ca6-f307d2a034b4",
       "cidades": [
@@ -32,7 +74,7 @@
       ],
       "inicio": "2026-07-07T09:00:00-03:00",
       "fim": "2026-07-07T23:59:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Águas Claras",
         "Brasil Industrial",
@@ -54,48 +96,6 @@
         "Vila Formosa",
         "Vila Pinho",
         "Vitória Da Conquista."
-      ]
-    },
-    {
-      "titulo": "05/07 - NOVA LIMA - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F1d901c0c-6f02-444e-a01c-62ddd4d05dcd",
-      "cidades": [
-        "Nova Lima"
-      ],
-      "inicio": "2026-07-05T10:21:00-03:00",
-      "fim": "2026-07-06T15:30:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Campo Do Pires",
-        "Conjunto Habitacional Paulo Gaetani",
-        "Nossa Senhora De Fátima",
-        "Fazenda Do Benito."
-      ]
-    },
-    {
-      "titulo": "05/07 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F16873f5f-a901-4068-ba2c-44a4d36b3298",
-      "cidades": [
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-07-05T17:30:00-03:00",
-      "fim": "2026-07-06T14:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Santa Maria"
-      ]
-    },
-    {
-      "titulo": "05/07 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc4698ab0-0c0f-43bc-9c36-74beb30b65be",
-      "cidades": [
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-07-05T17:30:00-03:00",
-      "fim": "2026-07-06T19:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Santa Maria."
       ]
     }
   ]
