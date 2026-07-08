@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-08T14:34:53",
+  "gerado_em": "2026-07-08T17:48:25",
   "alertas": [
     {
       "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
@@ -45,7 +45,7 @@
       ],
       "inicio": "2026-07-07T19:56:00-03:00",
       "fim": "2026-07-08T12:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Jardim Verona"
       ]
