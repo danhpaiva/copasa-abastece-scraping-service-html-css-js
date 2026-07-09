@@ -1,27 +1,38 @@
 {
-  "gerado_em": "2026-07-08T23:19:08",
+  "gerado_em": "2026-07-09T11:35:10",
   "alertas": [
     {
-      "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F292532af-a326-4368-8752-caa4a77aca17",
+      "titulo": "09/07 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F0dad271d-0f0a-4be8-bc0b-dac7f648c31b",
       "cidades": [
         "Belo Horizonte"
       ],
-      "inicio": "2026-07-07T07:00:00-03:00",
-      "fim": "2026-07-07T23:00:00-03:00",
-      "esta_ativa": false,
+      "inicio": "2026-07-09T05:00:47-03:00",
+      "fim": "2026-07-09T20:00:33-03:00",
+      "esta_ativa": true,
       "bairros_afetados": [
-        "Alta Tensão I",
-        "Araguaia",
+        "Alípio De Melo"
+      ]
+    },
+    {
+      "titulo": "08/07 - CONTAGEM - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F017fe194-97e3-4b0f-928a-8892a4aa2954",
+      "cidades": [
+        "Contagem"
+      ],
+      "inicio": "2026-07-08T20:15:00-03:00",
+      "fim": "2026-07-09T18:30:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Cidade Industrial",
+        "Industrial 1 E 2 Seção",
+        "Vila São Paulo",
         "Barreiro",
-        "Barreiro De Cima",
-        "Bonsucesso",
-        "Das Indústrias I",
-        "Flávio Marques Lisboa",
-        "Milionários",
-        "Novo Das Indústrias",
-        "Vila Cemig",
-        "Vila Nova Dos Milionários."
+        "Betania",
+        "Camargos",
+        "Das Industrias I Madre Gertrudes",
+        "Sport Club",
+        "Vila Madre Gertrudes Iii."
       ]
     },
     {
@@ -64,38 +75,6 @@
         "Centro",
         "Margem Da Linha",
         "Vila Bela."
-      ]
-    },
-    {
-      "titulo": "07/07 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc8b6755c-be8c-401e-9ca6-f307d2a034b4",
-      "cidades": [
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-07-07T09:00:00-03:00",
-      "fim": "2026-07-07T23:59:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Águas Claras",
-        "Brasil Industrial",
-        "Cardoso",
-        "Castanheira",
-        "Diamante",
-        "Distrito Industrial Do Jatobá",
-        "Eliana Silva",
-        "Jatobá",
-        "Novo Santa Cecília",
-        "Petrópolis",
-        "Santa Cecília",
-        "Santa Rita",
-        "Solar Do Barreiro",
-        "Urucuia",
-        "Vale Do Jatobá",
-        "Vila Corumbiara",
-        "Vila Ecológica",
-        "Vila Formosa",
-        "Vila Pinho",
-        "Vitória Da Conquista."
       ]
     }
   ]
