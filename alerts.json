@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-09T23:21:39",
+  "gerado_em": "2026-07-10T11:15:15",
   "alertas": [
     {
       "titulo": "09/07 - BELO HORIZONTE - Situação do Abastecimento",
@@ -33,48 +33,6 @@
         "Das Industrias I Madre Gertrudes",
         "Sport Club",
         "Vila Madre Gertrudes Iii."
-      ]
-    },
-    {
-      "titulo": "07/07 - SABARÁ - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc6d8531f-03d5-4934-8f9d-f0082049d4db",
-      "cidades": [
-        "Sabará"
-      ],
-      "inicio": "2026-07-07T18:30:00-03:00",
-      "fim": "2026-07-08T15:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Itacolomi"
-      ]
-    },
-    {
-      "titulo": "07/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F0fed551c-ccf7-4876-9ae1-f9e79144d8dd",
-      "cidades": [
-        "Ribeirão Das Neves"
-      ],
-      "inicio": "2026-07-07T19:56:00-03:00",
-      "fim": "2026-07-08T12:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Jardim Verona"
-      ]
-    },
-    {
-      "titulo": "07/07 - RAPOSOS - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fbc7546ae-0fad-454f-ae6f-c9e34b794eef",
-      "cidades": [
-        "Raposos"
-      ],
-      "inicio": "2026-07-07T15:54:00-03:00",
-      "fim": "2026-07-08T17:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Água Limpa",
-        "Centro",
-        "Margem Da Linha",
-        "Vila Bela."
       ]
     }
   ]
