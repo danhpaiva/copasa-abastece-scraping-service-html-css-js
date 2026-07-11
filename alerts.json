@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-11T09:46:15",
+  "gerado_em": "2026-07-11T11:13:56",
   "alertas": [
     {
       "titulo": "10/07 - BELO HORIZONTE , CONTAGEM E IBIRITÉ -",
@@ -11,7 +11,7 @@
       ],
       "inicio": "2026-07-10T09:18:00-03:00",
       "fim": "2026-07-11T07:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Ademar Maldonado",
         "Alpes",
