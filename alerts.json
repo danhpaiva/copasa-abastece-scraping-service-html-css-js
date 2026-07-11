@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-10T23:08:23",
+  "gerado_em": "2026-07-11T09:46:15",
   "alertas": [
     {
       "titulo": "10/07 - BELO HORIZONTE , CONTAGEM E IBIRITÉ -",
@@ -136,40 +136,6 @@
         "Sol Nascente",
         "Vila Dos Operários",
         "Washington Pires"
-      ]
-    },
-    {
-      "titulo": "09/07 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F0dad271d-0f0a-4be8-bc0b-dac7f648c31b",
-      "cidades": [
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-07-09T05:00:47-03:00",
-      "fim": "2026-07-09T20:00:33-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Alípio De Melo"
-      ]
-    },
-    {
-      "titulo": "08/07 - CONTAGEM - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F017fe194-97e3-4b0f-928a-8892a4aa2954",
-      "cidades": [
-        "Contagem"
-      ],
-      "inicio": "2026-07-08T20:15:00-03:00",
-      "fim": "2026-07-09T18:30:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Cidade Industrial",
-        "Industrial 1 E 2 Seção",
-        "Vila São Paulo",
-        "Barreiro",
-        "Betania",
-        "Camargos",
-        "Das Industrias I Madre Gertrudes",
-        "Sport Club",
-        "Vila Madre Gertrudes Iii."
       ]
     }
   ]
