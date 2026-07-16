@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-16T10:20:40",
+  "gerado_em": "2026-07-16T14:14:25",
   "alertas": [
     {
       "titulo": "16/07 - BELO HORIZONTE - Situação do Abastecimento",
@@ -9,7 +9,7 @@
       ],
       "inicio": "2026-07-16T09:00:00-03:00",
       "fim": "2026-07-16T23:00:00-03:00",
-      "esta_ativa": false,
+      "esta_ativa": true,
       "bairros_afetados": [
         "Barreiro",
         "Diamante",
