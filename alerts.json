@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-17T19:23:35",
+  "gerado_em": "2026-07-17T21:07:03",
   "alertas": [
     {
       "titulo": "17/07 - BELO HORIZONTE - Situação do Abastecimento",
@@ -9,7 +9,7 @@
       ],
       "inicio": "2026-07-17T02:05:00-03:00",
       "fim": "2026-07-17T17:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Anchieta",
         "Carmo",
