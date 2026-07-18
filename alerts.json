@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-18T21:01:46",
+  "gerado_em": "2026-07-18T22:59:10",
   "alertas": [
     {
       "titulo": "21/07 - SABARÁ - Situação do Abastecimento",
@@ -44,6 +44,22 @@
         "Gutierrez",
         "São Pedro",
         "Savassi"
+      ]
+    },
+    {
+      "titulo": "18/07 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fd37954e1-a3e1-4492-b925-07cab7a1c21e",
+      "cidades": [
+        "Belo Horizonte"
+      ],
+      "inicio": "2026-07-18T16:40:00-03:00",
+      "fim": "2026-07-19T18:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Calafate",
+        "Carlos Prates",
+        "Padre Eustáquio",
+        "Prado"
       ]
     },
     {
