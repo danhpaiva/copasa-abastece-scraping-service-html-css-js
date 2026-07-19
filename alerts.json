@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-19T21:02:45",
+  "gerado_em": "2026-07-19T23:04:33",
   "alertas": [
     {
       "titulo": "18/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
@@ -9,7 +9,7 @@
       ],
       "inicio": "2026-07-18T18:14:00-03:00",
       "fim": "2026-07-19T19:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Lagoa",
         "Santa Fé"
