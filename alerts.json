@@ -1,9 +1,9 @@
 {
-  "gerado_em": "2026-07-18T22:59:10",
+  "gerado_em": "2026-07-19T09:59:56",
   "alertas": [
     {
       "titulo": "21/07 - SABARÁ - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F97f1eb55-4461-4816-bd7f-0a68b0388a3e",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F11e0ef93-1548-43ee-89fe-c7381991e596",
       "cidades": [
         "Sabará"
       ],
@@ -60,26 +60,6 @@
         "Carlos Prates",
         "Padre Eustáquio",
         "Prado"
-      ]
-    },
-    {
-      "titulo": "17/07 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc1bb68d2-c43f-45e3-a74b-cead7155559e",
-      "cidades": [
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-07-17T02:05:00-03:00",
-      "fim": "2026-07-17T17:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Anchieta",
-        "Carmo",
-        "Cruzeiro",
-        "Estrela",
-        "Mala E Cuia",
-        "Santo Antônio",
-        "São Pedro",
-        "Sion"
       ]
     }
   ]
