@@ -1,6 +1,33 @@
 {
-  "gerado_em": "2026-07-19T11:18:19",
+  "gerado_em": "2026-07-19T19:44:35",
   "alertas": [
+    {
+      "titulo": "18/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Ff44c8cb2-de50-499d-9d15-783a6b9a59af",
+      "cidades": [
+        "Ribeirão Das Neves"
+      ],
+      "inicio": "2026-07-18T18:14:00-03:00",
+      "fim": "2026-07-19T19:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Lagoa",
+        "Santa Fé"
+      ]
+    },
+    {
+      "titulo": "18/07 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F45baa121-d081-46c5-be40-15a10b4164fc",
+      "cidades": [
+        "Belo Horizonte"
+      ],
+      "inicio": "2026-07-18T23:00:00-03:00",
+      "fim": "2026-07-19T16:00:00-03:00",
+      "esta_ativa": false,
+      "bairros_afetados": [
+        "Santa Efigênia"
+      ]
+    },
     {
       "titulo": "21/07 - SABARÁ - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F11e0ef93-1548-43ee-89fe-c7381991e596",
@@ -36,7 +63,7 @@
       ],
       "inicio": "2026-07-18T12:50:00-03:00",
       "fim": "2026-07-19T14:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Barro Preto",
         "Carmo",
