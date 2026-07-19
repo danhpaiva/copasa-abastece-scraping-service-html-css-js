@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-19T19:44:35",
+  "gerado_em": "2026-07-19T21:02:45",
   "alertas": [
     {
       "titulo": "18/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
@@ -81,7 +81,7 @@
       ],
       "inicio": "2026-07-18T16:40:00-03:00",
       "fim": "2026-07-19T18:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Calafate",
         "Carlos Prates",
