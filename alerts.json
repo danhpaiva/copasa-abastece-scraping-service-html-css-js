@@ -1,6 +1,33 @@
 {
-  "gerado_em": "2026-07-19T23:04:33",
+  "gerado_em": "2026-07-20T11:10:44",
   "alertas": [
+    {
+      "titulo": "21/07 - SABARÁ - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F016524cf-af52-4d8f-b239-0a9c7ebde2be",
+      "cidades": [
+        "Sabará"
+      ],
+      "inicio": "2026-07-21T05:00:00-03:00",
+      "fim": "2026-07-22T23:00:00-03:00",
+      "esta_ativa": false,
+      "bairros_afetados": [
+        "Adelmolândia",
+        "Adelmolândia Ii",
+        "Alto Bela Vista",
+        "Alto Do Fidalgo",
+        "Arraial Velho",
+        "Conjunto Habitacional Morada Da Serra",
+        "Córrego Da Ilha",
+        "Distrito Industrial Operário Raimundo Fantini",
+        "Esplanada",
+        "Fogo Apagou",
+        "Galego",
+        "Morro Da Cruz",
+        "Nossa Senhora Do Ó",
+        "Vila Francisco De Moura",
+        "Vila Santo Antônio De Pádua."
+      ]
+    },
     {
       "titulo": "18/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Ff44c8cb2-de50-499d-9d15-783a6b9a59af",
@@ -26,33 +53,6 @@
       "esta_ativa": false,
       "bairros_afetados": [
         "Santa Efigênia"
-      ]
-    },
-    {
-      "titulo": "21/07 - SABARÁ - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F11e0ef93-1548-43ee-89fe-c7381991e596",
-      "cidades": [
-        "Sabará"
-      ],
-      "inicio": "2026-07-21T05:00:00-03:00",
-      "fim": "2026-07-22T23:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Adelmolândia",
-        "Adelmolândia Ii",
-        "Alto Bela Vista",
-        "Alto Do Fidalgo",
-        "Arraial Velho",
-        "Conjunto Habitacional Morada Da Serra",
-        "Córrego Da Ilha",
-        "Distrito Industrial Operário Raimundo Fantini",
-        "Esplanada",
-        "Fogo Apagou",
-        "Galego",
-        "Morro Da Cruz",
-        "Nossa Senhora Do Ó",
-        "Vila Francisco De Moura",
-        "Vila Santo Antônio De Pádua."
       ]
     },
     {
