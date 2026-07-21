@@ -1,15 +1,15 @@
 {
-  "gerado_em": "2026-07-20T14:28:04",
+  "gerado_em": "2026-07-21T10:32:43",
   "alertas": [
     {
       "titulo": "21/07 - SABARÁ - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F016524cf-af52-4d8f-b239-0a9c7ebde2be",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F27cb0d61-73e1-4d64-96cf-3a1d6ce82be2",
       "cidades": [
         "Sabará"
       ],
       "inicio": "2026-07-21T05:00:00-03:00",
       "fim": "2026-07-22T23:00:00-03:00",
-      "esta_ativa": false,
+      "esta_ativa": true,
       "bairros_afetados": [
         "Adelmolândia",
         "Adelmolândia Ii",
@@ -29,64 +29,38 @@
       ]
     },
     {
-      "titulo": "18/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Ff44c8cb2-de50-499d-9d15-783a6b9a59af",
+      "titulo": "20/07 - CONTAGEM - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F0ae23a00-b48e-4e9e-bb44-f40b3956e2c0",
       "cidades": [
-        "Ribeirão Das Neves"
+        "Contagem"
       ],
-      "inicio": "2026-07-18T18:14:00-03:00",
-      "fim": "2026-07-19T19:00:00-03:00",
-      "esta_ativa": false,
+      "inicio": "2026-07-20T13:07:00-03:00",
+      "fim": "2026-07-21T18:00:00-03:00",
+      "esta_ativa": true,
       "bairros_afetados": [
-        "Lagoa",
-        "Santa Fé"
+        "Colorado",
+        "Milanez",
+        "Morada Nova"
       ]
     },
     {
-      "titulo": "18/07 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F45baa121-d081-46c5-be40-15a10b4164fc",
+      "titulo": "20/07 - CONTAGEM , BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F1b96f043-0e3a-4970-bb86-ecf450a4be12",
       "cidades": [
+        "Contagem",
         "Belo Horizonte"
       ],
-      "inicio": "2026-07-18T23:00:00-03:00",
-      "fim": "2026-07-19T16:00:00-03:00",
-      "esta_ativa": false,
+      "inicio": "2026-07-20T14:00:00-03:00",
+      "fim": "2026-07-21T12:00:00-03:00",
+      "esta_ativa": true,
       "bairros_afetados": [
-        "Santa Efigênia"
-      ]
-    },
-    {
-      "titulo": "18/07 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fefcae6dc-a7b0-477f-9a9d-cdb24334f79a",
-      "cidades": [
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-07-18T12:50:00-03:00",
-      "fim": "2026-07-19T14:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Barro Preto",
-        "Carmo",
-        "Funcionários",
-        "Gutierrez",
-        "São Pedro",
-        "Savassi"
-      ]
-    },
-    {
-      "titulo": "18/07 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fd37954e1-a3e1-4492-b925-07cab7a1c21e",
-      "cidades": [
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-07-18T16:40:00-03:00",
-      "fim": "2026-07-19T18:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Calafate",
-        "Carlos Prates",
-        "Padre Eustáquio",
-        "Prado"
+        "Agua Branca",
+        "Cincao",
+        "Conj Hab Agua Branca",
+        "Darcy Vargas",
+        "Jardim Das Oliveiras",
+        "Jardim Dos Bandeirantes",
+        "Califórnia"
       ]
     }
   ]
