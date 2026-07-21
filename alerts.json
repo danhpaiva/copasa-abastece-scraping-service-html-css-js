@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-21T14:15:08",
+  "gerado_em": "2026-07-21T17:39:20",
   "alertas": [
     {
       "titulo": "21/07 - SABARÁ - Situação do Abastecimento",
@@ -68,7 +68,7 @@
       ],
       "inicio": "2026-07-20T14:00:00-03:00",
       "fim": "2026-07-21T12:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Agua Branca",
         "Cincao",
