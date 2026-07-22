@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-21T23:16:52",
+  "gerado_em": "2026-07-22T10:33:42",
   "alertas": [
     {
       "titulo": "21/07 - SABARÁ - Situação do Abastecimento",
@@ -36,12 +36,44 @@
       ],
       "inicio": "2026-07-21T09:30:00-03:00",
       "fim": "2026-07-21T23:59:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Camilo Alves",
         "Centro",
         "Nossa Senhora Do Carmo",
         "Santa Helena."
+      ]
+    },
+    {
+      "titulo": "21/07 - CONTAGEM - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc63fe2e2-622e-47e9-82ac-603dc19c6556",
+      "cidades": [
+        "Contagem"
+      ],
+      "inicio": "2026-07-21T20:00:00-03:00",
+      "fim": "2026-07-22T18:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Colorado",
+        "Milanez",
+        "Morada Nova"
+      ]
+    },
+    {
+      "titulo": "21/07 - BELO HORIZONTE , SABARÁ - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F7945b5c7-6215-4821-b5e3-e61245e327e5",
+      "cidades": [
+        "Belo Horizonte",
+        "Sabará"
+      ],
+      "inicio": "2026-07-21T21:45:00-03:00",
+      "fim": "2026-07-23T09:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Baleia",
+        "Cidade Jardim Taquaril",
+        "Conjunto Taquaril E Pirineus",
+        "Jardim Castanheira"
       ]
     },
     {
