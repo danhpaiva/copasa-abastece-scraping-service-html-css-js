@@ -1,6 +1,35 @@
 {
-  "gerado_em": "2026-07-22T23:14:40",
+  "gerado_em": "2026-07-23T10:33:00",
   "alertas": [
+    {
+      "titulo": "22/07 - CONTAGEM - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F1733fa38-41e1-4273-be5f-24359ec76a26",
+      "cidades": [
+        "Contagem"
+      ],
+      "inicio": "2026-07-22T20:00:00-03:00",
+      "fim": "2026-07-23T16:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Tropical"
+      ]
+    },
+    {
+      "titulo": "22/07 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F846e1fe7-a17e-4e35-860d-0169732c7c1c",
+      "cidades": [
+        "Belo Horizonte"
+      ],
+      "inicio": "2026-07-22T18:50:00-03:00",
+      "fim": "2026-07-23T18:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Cidade Nova",
+        "Da Graça",
+        "Lagoinha",
+        "Sagrada Família"
+      ]
+    },
     {
       "titulo": "21/07 - SABARÁ - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F27cb0d61-73e1-4d64-96cf-3a1d6ce82be2",
@@ -9,7 +38,7 @@
       ],
       "inicio": "2026-07-21T05:00:00-03:00",
       "fim": "2026-07-22T23:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Adelmolândia",
         "Adelmolândia Ii",
@@ -26,22 +55,6 @@
         "Nossa Senhora Do Ó",
         "Vila Francisco De Moura",
         "Vila Santo Antônio De Pádua."
-      ]
-    },
-    {
-      "titulo": "21/07 - CONTAGEM - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F70fe94ce-0a9c-4aad-83b0-36c8a2a37e4f",
-      "cidades": [
-        "Contagem"
-      ],
-      "inicio": "2026-07-21T09:30:00-03:00",
-      "fim": "2026-07-21T23:59:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Camilo Alves",
-        "Centro",
-        "Nossa Senhora Do Carmo",
-        "Santa Helena."
       ]
     },
     {
@@ -74,41 +87,6 @@
         "Cidade Jardim Taquaril",
         "Conjunto Taquaril E Pirineus",
         "Jardim Castanheira"
-      ]
-    },
-    {
-      "titulo": "20/07 - CONTAGEM - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F0ae23a00-b48e-4e9e-bb44-f40b3956e2c0",
-      "cidades": [
-        "Contagem"
-      ],
-      "inicio": "2026-07-20T13:07:00-03:00",
-      "fim": "2026-07-21T18:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Colorado",
-        "Milanez",
-        "Morada Nova"
-      ]
-    },
-    {
-      "titulo": "20/07 - CONTAGEM , BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F1b96f043-0e3a-4970-bb86-ecf450a4be12",
-      "cidades": [
-        "Contagem",
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-07-20T14:00:00-03:00",
-      "fim": "2026-07-21T12:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Agua Branca",
-        "Cincao",
-        "Conj Hab Agua Branca",
-        "Darcy Vargas",
-        "Jardim Das Oliveiras",
-        "Jardim Dos Bandeirantes",
-        "Califórnia"
       ]
     }
   ]
