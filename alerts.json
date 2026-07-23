@@ -1,6 +1,21 @@
 {
-  "gerado_em": "2026-07-23T17:41:39",
+  "gerado_em": "2026-07-23T19:40:24",
   "alertas": [
+    {
+      "titulo": "23/07 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc3ad8797-a21d-40a7-888b-c3d22bc98aa0",
+      "cidades": [
+        "Belo Horizonte"
+      ],
+      "inicio": "2026-07-23T15:30:00-03:00",
+      "fim": "2026-07-24T09:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Buritis",
+        "Palmeiras",
+        "Vila Nova Paraiso"
+      ]
+    },
     {
       "titulo": "22/07 - CONTAGEM - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F1733fa38-41e1-4273-be5f-24359ec76a26",
@@ -9,7 +24,7 @@
       ],
       "inicio": "2026-07-22T20:00:00-03:00",
       "fim": "2026-07-23T16:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Tropical"
       ]
