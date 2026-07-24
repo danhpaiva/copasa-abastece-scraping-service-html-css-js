@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-23T19:40:24",
+  "gerado_em": "2026-07-24T03:19:00",
   "alertas": [
     {
       "titulo": "23/07 - BELO HORIZONTE - Situação do Abastecimento",
@@ -37,54 +37,12 @@
       ],
       "inicio": "2026-07-22T18:50:00-03:00",
       "fim": "2026-07-23T18:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Cidade Nova",
         "Da Graça",
         "Lagoinha",
         "Sagrada Família"
-      ]
-    },
-    {
-      "titulo": "21/07 - SABARÁ - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F27cb0d61-73e1-4d64-96cf-3a1d6ce82be2",
-      "cidades": [
-        "Sabará"
-      ],
-      "inicio": "2026-07-21T05:00:00-03:00",
-      "fim": "2026-07-22T23:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Adelmolândia",
-        "Adelmolândia Ii",
-        "Alto Bela Vista",
-        "Alto Do Fidalgo",
-        "Arraial Velho",
-        "Conjunto Habitacional Morada Da Serra",
-        "Córrego Da Ilha",
-        "Distrito Industrial Operário Raimundo Fantini",
-        "Esplanada",
-        "Fogo Apagou",
-        "Galego",
-        "Morro Da Cruz",
-        "Nossa Senhora Do Ó",
-        "Vila Francisco De Moura",
-        "Vila Santo Antônio De Pádua."
-      ]
-    },
-    {
-      "titulo": "21/07 - CONTAGEM - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc63fe2e2-622e-47e9-82ac-603dc19c6556",
-      "cidades": [
-        "Contagem"
-      ],
-      "inicio": "2026-07-21T20:00:00-03:00",
-      "fim": "2026-07-22T18:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Colorado",
-        "Milanez",
-        "Morada Nova"
       ]
     },
     {
