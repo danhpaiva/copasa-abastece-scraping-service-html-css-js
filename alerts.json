@@ -1,6 +1,35 @@
 {
-  "gerado_em": "2026-07-24T03:19:00",
+  "gerado_em": "2026-07-24T16:35:33",
   "alertas": [
+    {
+      "titulo": "23/07 - CONTAGEM - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fba989823-d368-4ebd-84cb-963c955641ef",
+      "cidades": [
+        "Contagem"
+      ],
+      "inicio": "2026-07-23T18:20:00-03:00",
+      "fim": "2026-07-24T23:59:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Alvorada",
+        "Arcádia",
+        "Beatriz",
+        "Bitácula Ou 40 Alqueires",
+        "Central Parque",
+        "Centro",
+        "Dos Funcionários",
+        "Fonte Grande",
+        "Fonte Grande 1ª Seção",
+        "Fonte Grande 3ª Seção",
+        "Fonte Grande 4ª Seção",
+        "Linda Vista",
+        "Nossa Senhora Do Carmo",
+        "Santa Terezinha",
+        "São Gonçalo",
+        "Três Barras",
+        "Vila Riachinho."
+      ]
+    },
     {
       "titulo": "23/07 - BELO HORIZONTE - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc3ad8797-a21d-40a7-888b-c3d22bc98aa0",
@@ -9,7 +38,7 @@
       ],
       "inicio": "2026-07-23T15:30:00-03:00",
       "fim": "2026-07-24T09:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Buritis",
         "Palmeiras",
@@ -43,23 +72,6 @@
         "Da Graça",
         "Lagoinha",
         "Sagrada Família"
-      ]
-    },
-    {
-      "titulo": "21/07 - BELO HORIZONTE , SABARÁ - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F7945b5c7-6215-4821-b5e3-e61245e327e5",
-      "cidades": [
-        "Belo Horizonte",
-        "Sabará"
-      ],
-      "inicio": "2026-07-21T21:45:00-03:00",
-      "fim": "2026-07-23T09:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Baleia",
-        "Cidade Jardim Taquaril",
-        "Conjunto Taquaril E Pirineus",
-        "Jardim Castanheira"
       ]
     }
   ]
