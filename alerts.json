@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-25T21:03:37",
+  "gerado_em": "2026-07-25T23:03:06",
   "alertas": [
     {
       "titulo": "28/07 - SABARÁ - Situação do Abastecimento",
@@ -26,6 +26,35 @@
         "Nossa Senhora Do Ó",
         "Vila Francisco De Moura",
         "Vila Santo Antônio De Pádua."
+      ]
+    },
+    {
+      "titulo": "25/07 - SABARÁ - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fbc86ec1f-a234-4f1e-8ba4-54bed3f55017",
+      "cidades": [
+        "Sabará"
+      ],
+      "inicio": "2026-07-25T16:10:00-03:00",
+      "fim": "2026-07-26T17:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Alvorada",
+        "Novo Alvorada",
+        "Rio Negro",
+        "Vila Bom Retiro"
+      ]
+    },
+    {
+      "titulo": "25/07 - SABARÁ - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F256ad784-6494-45a1-8589-b30c06284bda",
+      "cidades": [
+        "Sabará"
+      ],
+      "inicio": "2026-07-25T16:53:00-03:00",
+      "fim": "2026-07-26T19:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Jardim Castenheira"
       ]
     },
     {
