@@ -1,9 +1,9 @@
 {
-  "gerado_em": "2026-07-25T23:03:06",
+  "gerado_em": "2026-07-26T10:09:46",
   "alertas": [
     {
       "titulo": "28/07 - SABARÁ - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F558880c0-3ac5-42bd-a357-dd969275f9ae",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F601124b5-92cd-42c8-b237-848cddb433ae",
       "cidades": [
         "Sabará"
       ],
@@ -55,50 +55,6 @@
       "esta_ativa": true,
       "bairros_afetados": [
         "Jardim Castenheira"
-      ]
-    },
-    {
-      "titulo": "23/07 - CONTAGEM - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fba989823-d368-4ebd-84cb-963c955641ef",
-      "cidades": [
-        "Contagem"
-      ],
-      "inicio": "2026-07-23T18:20:00-03:00",
-      "fim": "2026-07-24T23:59:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Alvorada",
-        "Arcádia",
-        "Beatriz",
-        "Bitácula Ou 40 Alqueires",
-        "Central Parque",
-        "Centro",
-        "Dos Funcionários",
-        "Fonte Grande",
-        "Fonte Grande 1ª Seção",
-        "Fonte Grande 3ª Seção",
-        "Fonte Grande 4ª Seção",
-        "Linda Vista",
-        "Nossa Senhora Do Carmo",
-        "Santa Terezinha",
-        "São Gonçalo",
-        "Três Barras",
-        "Vila Riachinho."
-      ]
-    },
-    {
-      "titulo": "23/07 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc3ad8797-a21d-40a7-888b-c3d22bc98aa0",
-      "cidades": [
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-07-23T15:30:00-03:00",
-      "fim": "2026-07-24T09:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Buritis",
-        "Palmeiras",
-        "Vila Nova Paraiso"
       ]
     }
   ]
