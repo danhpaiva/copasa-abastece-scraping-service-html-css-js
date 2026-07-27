@@ -1,9 +1,9 @@
 {
-  "gerado_em": "2026-07-26T23:06:14",
+  "gerado_em": "2026-07-27T11:35:29",
   "alertas": [
     {
       "titulo": "28/07 - SABARÁ - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F601124b5-92cd-42c8-b237-848cddb433ae",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fec9b81e4-b3a1-43ea-8896-241e2b9bbf12",
       "cidades": [
         "Sabará"
       ],
@@ -26,6 +26,40 @@
         "Nossa Senhora Do Ó",
         "Vila Francisco De Moura",
         "Vila Santo Antônio De Pádua."
+      ]
+    },
+    {
+      "titulo": "30/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fd57c934b-168c-48c8-83cc-496966cc3378",
+      "cidades": [
+        "Ribeirão Das Neves"
+      ],
+      "inicio": "2026-07-30T05:00:00-03:00",
+      "fim": "2026-07-31T09:00:00-03:00",
+      "esta_ativa": false,
+      "bairros_afetados": [
+        "Alterosa",
+        "Conjunto Habitacional Henrique Sapori",
+        "Fazenda Castro",
+        "Florença",
+        "San Genaro",
+        "Vale Da Prata",
+        "Veneza",
+        "Vila Henrique Sapori."
+      ]
+    },
+    {
+      "titulo": "26/07 - CONTAGEM - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F3cc62d21-066d-4320-bf33-3a3d1e0ea9f6",
+      "cidades": [
+        "Contagem"
+      ],
+      "inicio": "2026-07-26T20:00:00-03:00",
+      "fim": "2026-07-27T18:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Conjunto Parque Das Mangueiras",
+        "Santa Maria"
       ]
     },
     {
