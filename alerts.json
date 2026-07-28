@@ -1,15 +1,15 @@
 {
-  "gerado_em": "2026-07-28T03:22:25",
+  "gerado_em": "2026-07-28T10:54:18",
   "alertas": [
     {
       "titulo": "28/07 - SABARÁ - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fec9b81e4-b3a1-43ea-8896-241e2b9bbf12",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F9fe76239-7e31-4a50-8d95-ea1514cc8ec8",
       "cidades": [
         "Sabará"
       ],
       "inicio": "2026-07-28T05:00:00-03:00",
       "fim": "2026-07-29T06:00:00-03:00",
-      "esta_ativa": false,
+      "esta_ativa": true,
       "bairros_afetados": [
         "Adelmolândia",
         "Adelmolândia Ii",
@@ -30,7 +30,7 @@
     },
     {
       "titulo": "30/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fd57c934b-168c-48c8-83cc-496966cc3378",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F143cb996-44a8-42b8-99fb-72e2453530b7",
       "cidades": [
         "Ribeirão Das Neves"
       ],
