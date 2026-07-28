@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-28T17:43:54",
+  "gerado_em": "2026-07-28T19:48:09",
   "alertas": [
     {
       "titulo": "28/07 - SABARÁ - Situação do Abastecimento",
@@ -46,65 +46,6 @@
         "Vale Da Prata",
         "Veneza",
         "Vila Henrique Sapori."
-      ]
-    },
-    {
-      "titulo": "28/07 - SABARÁ - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc9b8b063-bc0b-4f7f-9f1b-772a2cfc361e",
-      "cidades": [
-        "Sabará"
-      ],
-      "inicio": "2026-07-28T11:30:00-03:00",
-      "fim": "2026-07-29T07:00:00-03:00",
-      "esta_ativa": true,
-      "bairros_afetados": [
-        "Adelmolândia",
-        "Adelmolândia Ii",
-        "Águas Férreas",
-        "Alto Bela Vista",
-        "Alto Do Cabral",
-        "Alto Do Fidalgo",
-        "Arraial Velho",
-        "Cabral",
-        "Caieira",
-        "Campinas",
-        "Centro",
-        "Condomínio Eugénie Scharlé",
-        "Conjunto Habitacional Morada Da Serra",
-        "Córrego Da Ilha",
-        "Distrito Industrial Operário Raimundo Fantini",
-        "Esplanada",
-        "Fogo Apagou",
-        "Gaia",
-        "Galego",
-        "Mangabeiras",
-        "Morro Da Cruz",
-        "Morro São Francisco",
-        "Mundo Velho",
-        "Nossa Senhora Conceição",
-        "Nossa Senhora Da Conceição",
-        "Nossa Senhora Do Ó",
-        "Paciência",
-        "Padre Chiquinho",
-        "Praia Dos Bandeirantes",
-        "Rosário",
-        "Rosário Ii",
-        "Rosário Iii",
-        "Santana",
-        "Santo Antônio",
-        "Santo Antônio De Roças Grandes",
-        "Serranos",
-        "Siderúrgica",
-        "Sobradinho",
-        "Terra Santa",
-        "Vila Do Triângulo",
-        "Vila Esperança",
-        "Vila Francisco De Moura",
-        "Vila Mangueiras",
-        "Vila Michel",
-        "Vila Santa Cruz",
-        "Vila Santo Antônio De Pádua",
-        "Villa Real."
       ]
     },
     {
