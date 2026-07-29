@@ -1,36 +1,9 @@
 {
-  "gerado_em": "2026-07-28T23:10:33",
+  "gerado_em": "2026-07-29T10:48:22",
   "alertas": [
     {
-      "titulo": "28/07 - SABARÁ - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F9fe76239-7e31-4a50-8d95-ea1514cc8ec8",
-      "cidades": [
-        "Sabará"
-      ],
-      "inicio": "2026-07-28T05:00:00-03:00",
-      "fim": "2026-07-29T06:00:00-03:00",
-      "esta_ativa": true,
-      "bairros_afetados": [
-        "Adelmolândia",
-        "Adelmolândia Ii",
-        "Alto Bela Vista",
-        "Alto Do Fidalgo",
-        "Arraial Velho",
-        "Conjunto Habitacional Morada Da Serra",
-        "Córrego Da Ilha",
-        "Distrito Industrial Operário Raimundo Fantini",
-        "Esplanada",
-        "Fogo Apagou",
-        "Galego",
-        "Morro Da Cruz",
-        "Nossa Senhora Do Ó",
-        "Vila Francisco De Moura",
-        "Vila Santo Antônio De Pádua."
-      ]
-    },
-    {
       "titulo": "30/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F143cb996-44a8-42b8-99fb-72e2453530b7",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F0cfef7c1-2f58-47a0-856a-053f764af267",
       "cidades": [
         "Ribeirão Das Neves"
       ],
@@ -50,13 +23,40 @@
     },
     {
       "titulo": "28/07 - SABARÁ - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F9fe76239-7e31-4a50-8d95-ea1514cc8ec8",
+      "cidades": [
+        "Sabará"
+      ],
+      "inicio": "2026-07-28T05:00:00-03:00",
+      "fim": "2026-07-29T06:00:00-03:00",
+      "esta_ativa": false,
+      "bairros_afetados": [
+        "Adelmolândia",
+        "Adelmolândia Ii",
+        "Alto Bela Vista",
+        "Alto Do Fidalgo",
+        "Arraial Velho",
+        "Conjunto Habitacional Morada Da Serra",
+        "Córrego Da Ilha",
+        "Distrito Industrial Operário Raimundo Fantini",
+        "Esplanada",
+        "Fogo Apagou",
+        "Galego",
+        "Morro Da Cruz",
+        "Nossa Senhora Do Ó",
+        "Vila Francisco De Moura",
+        "Vila Santo Antônio De Pádua."
+      ]
+    },
+    {
+      "titulo": "28/07 - SABARÁ - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc9b8b063-bc0b-4f7f-9f1b-772a2cfc361e",
       "cidades": [
         "Sabará"
       ],
       "inicio": "2026-07-28T11:30:00-03:00",
       "fim": "2026-07-29T07:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Adelmolândia",
         "Adelmolândia Ii",
@@ -105,20 +105,6 @@
         "Vila Santa Cruz",
         "Vila Santo Antônio De Pádua",
         "Villa Real."
-      ]
-    },
-    {
-      "titulo": "26/07 - CONTAGEM - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F3cc62d21-066d-4320-bf33-3a3d1e0ea9f6",
-      "cidades": [
-        "Contagem"
-      ],
-      "inicio": "2026-07-26T20:00:00-03:00",
-      "fim": "2026-07-27T18:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Conjunto Parque Das Mangueiras",
-        "Santa Maria"
       ]
     }
   ]
