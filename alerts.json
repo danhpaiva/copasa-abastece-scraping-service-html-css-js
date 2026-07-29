@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-29T17:24:33",
+  "gerado_em": "2026-07-29T19:37:45",
   "alertas": [
     {
       "titulo": "30/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
@@ -19,6 +19,26 @@
         "Vale Da Prata",
         "Veneza",
         "Vila Henrique Sapori."
+      ]
+    },
+    {
+      "titulo": "29/07 - BELO HORIZONTE , IBIRITÉ - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fc5c2923e-1e0a-403c-851f-111e422ea7c7",
+      "cidades": [
+        "Belo Horizonte",
+        "Ibirité"
+      ],
+      "inicio": "2026-07-29T12:00:00-03:00",
+      "fim": "2026-07-30T05:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Independência",
+        "Mineirão",
+        "Águia Dourada",
+        "Barreirinho",
+        "Morada Da Serra",
+        "Nossa Senhora De Lourdes",
+        "Primavera"
       ]
     },
     {
