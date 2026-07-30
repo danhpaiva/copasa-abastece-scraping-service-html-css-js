@@ -1,15 +1,15 @@
 {
-  "gerado_em": "2026-07-29T23:07:53",
+  "gerado_em": "2026-07-30T10:34:50",
   "alertas": [
     {
       "titulo": "30/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F0cfef7c1-2f58-47a0-856a-053f764af267",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F29172bfb-175e-4d94-86d9-4ec1f5c13588",
       "cidades": [
         "Ribeirão Das Neves"
       ],
       "inicio": "2026-07-30T05:00:00-03:00",
       "fim": "2026-07-31T09:00:00-03:00",
-      "esta_ativa": false,
+      "esta_ativa": true,
       "bairros_afetados": [
         "Alterosa",
         "Conjunto Habitacional Henrique Sapori",
@@ -30,7 +30,7 @@
       ],
       "inicio": "2026-07-29T12:00:00-03:00",
       "fim": "2026-07-30T05:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Independência",
         "Mineirão",
