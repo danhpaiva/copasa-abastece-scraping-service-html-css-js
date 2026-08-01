@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-01T16:09:03",
+  "gerado_em": "2026-08-01T23:11:23",
   "alertas": [
     {
       "titulo": "02/08 - BELO HORIZONTE - Situação do Abastecimento",
@@ -18,6 +18,17 @@
         "Sport Club",
         "Vila Virgínia"
       ]
+    },
+    {
+      "titulo": "01/08 - SABARÁ - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F1698ae07-23fc-424d-a935-da9956974106",
+      "cidades": [
+        "Sabará"
+      ],
+      "inicio": "2026-08-01T10:30:00-03:00",
+      "fim": "2026-08-02T04:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": []
     },
     {
       "titulo": "31/07 - SABARÁ - Situação do Abastecimento",
@@ -86,7 +97,7 @@
       ],
       "inicio": "2026-07-31T16:45:00-03:00",
       "fim": "2026-08-01T15:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Tocantins"
       ]
@@ -107,6 +118,21 @@
       ]
     },
     {
+      "titulo": "31/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fd6026a2a-435e-445e-bc7d-49c494f10af4",
+      "cidades": [
+        "Ribeirão Das Neves"
+      ],
+      "inicio": "2026-07-31T20:03:00-03:00",
+      "fim": "2026-08-01T18:00:00-03:00",
+      "esta_ativa": false,
+      "bairros_afetados": [
+        "Landi I",
+        "Landi Ii",
+        "Pedra Branca."
+      ]
+    },
+    {
       "titulo": "31/07 - CONTAGEM - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fd68135f6-8eb7-4039-a101-6816ed3f25c2",
       "cidades": [
@@ -114,7 +140,7 @@
       ],
       "inicio": "2026-07-31T21:00:00-03:00",
       "fim": "2026-08-01T15:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Colorado",
         "Jardim Laguna",
@@ -362,7 +388,7 @@
       ],
       "inicio": "2026-07-30T18:00:00-03:00",
       "fim": "2026-08-01T15:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Colorado"
       ]
