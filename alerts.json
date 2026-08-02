@@ -1,15 +1,29 @@
 {
-  "gerado_em": "2026-08-01T23:11:23",
+  "gerado_em": "2026-08-02T16:06:55",
   "alertas": [
     {
       "titulo": "02/08 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2Ff8e16be6-2d2c-42e6-b3bf-27742d9a883a",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F29972e15-cd2b-45af-95bd-aba0b200ac8c",
+      "cidades": [
+        "Belo Horizonte"
+      ],
+      "inicio": "2026-08-01T23:00:00-03:00",
+      "fim": "2026-08-02T23:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Belvedere",
+        "Mangabeiras"
+      ]
+    },
+    {
+      "titulo": "02/08 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F16878a69-414d-4bc9-b544-809a8f4bd480",
       "cidades": [
         "Belo Horizonte"
       ],
       "inicio": "2026-08-02T09:00:00-03:00",
       "fim": "2026-08-02T22:00:00-03:00",
-      "esta_ativa": false,
+      "esta_ativa": true,
       "bairros_afetados": [
         "Califórnia",
         "Camargos",
@@ -27,7 +41,7 @@
       ],
       "inicio": "2026-08-01T10:30:00-03:00",
       "fim": "2026-08-02T04:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": []
     },
     {
@@ -282,102 +296,6 @@
         "Serra Dourada",
         "Sol Nascente",
         "Vila Dos Operários E Washington Pires"
-      ]
-    },
-    {
-      "titulo": "30/07 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F29172bfb-175e-4d94-86d9-4ec1f5c13588",
-      "cidades": [
-        "Ribeirão Das Neves"
-      ],
-      "inicio": "2026-07-30T05:00:00-03:00",
-      "fim": "2026-07-31T09:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Alterosa",
-        "Conjunto Habitacional Henrique Sapori",
-        "Fazenda Castro",
-        "Florença",
-        "San Genaro",
-        "Vale Da Prata",
-        "Veneza",
-        "Vila Henrique Sapori."
-      ]
-    },
-    {
-      "titulo": "30/07 - SANTA LUZIA - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2F9b9dcd26-0242-4f97-85d6-8f0dbeb78189",
-      "cidades": [
-        "Santa Luzia"
-      ],
-      "inicio": "2026-07-30T09:30:00-03:00",
-      "fim": "2026-07-31T05:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Adeodato",
-        "Barreiro Do Amaral",
-        "Bela Vista",
-        "Bom Jesus",
-        "Bonanza",
-        "Camelos",
-        "Centro",
-        "Colorado",
-        "Condominio Estancias Dos Lagos",
-        "Condominio Recanto Da Mata",
-        "Condominio Recanto Do Luar",
-        "Condominio Retiro Do Recreio",
-        "Corrego Frio",
-        "Corrego Tenente",
-        "Esplanada",
-        "Fazendinha Do Barão",
-        "Fecho",
-        "Idulipe",
-        "Imperial",
-        "Industrial Americano",
-        "Kennedy",
-        "Maria Adelia",
-        "Mata Dos Ipes",
-        "Mirante Do Barao",
-        "Moreira",
-        "Parque Boa Esperanca",
-        "Parque Nova Esperanca",
-        "Petropolis I",
-        "Petropolis Ii",
-        "Pinhoes",
-        "Quarenta E Dois",
-        "Santa Helena",
-        "Santa Matilde",
-        "Santa Monica",
-        "Sao Geraldo",
-        "Vila Das Mansoes",
-        "Vila Parnaso",
-        "Vila Sao Mateus"
-      ]
-    },
-    {
-      "titulo": "30/07 - CONTAGEM - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fadfa00c4-b6c2-441a-9cf7-ecfc63f8cf63",
-      "cidades": [
-        "Contagem"
-      ],
-      "inicio": "2026-07-30T18:00:00-03:00",
-      "fim": "2026-07-31T18:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Colorado"
-      ]
-    },
-    {
-      "titulo": "30/07 - CONTAGEM - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202607%2Fa6224a40-bc26-4c4c-b6fd-bae409dcc38d",
-      "cidades": [
-        "Contagem"
-      ],
-      "inicio": "2026-07-30T18:00:00-03:00",
-      "fim": "2026-07-31T23:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Colorado"
       ]
     },
     {
