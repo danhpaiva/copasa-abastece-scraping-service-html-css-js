@@ -1,6 +1,20 @@
 {
-  "gerado_em": "2026-08-03T11:38:15",
+  "gerado_em": "2026-08-03T15:10:06",
   "alertas": [
+    {
+      "titulo": "03/08 - CONTAGEM - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2Fb52ea4dd-0c11-471f-95b5-afde7ad2cf8b",
+      "cidades": [
+        "Contagem"
+      ],
+      "inicio": "2026-08-02T20:00:00-03:00",
+      "fim": "2026-08-03T16:30:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Alvorada",
+        "Olinda"
+      ]
+    },
     {
       "titulo": "02/08 - BELO HORIZONTE - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F29972e15-cd2b-45af-95bd-aba0b200ac8c",
@@ -54,7 +68,7 @@
       ],
       "inicio": "2026-07-31T23:56:00-03:00",
       "fim": "2026-08-03T09:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Bairros Ademar Maldonado",
         "Alpes",
