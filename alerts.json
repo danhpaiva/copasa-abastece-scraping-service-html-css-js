@@ -1,6 +1,38 @@
 {
-  "gerado_em": "2026-08-04T17:59:25",
+  "gerado_em": "2026-08-04T19:48:38",
   "alertas": [
+    {
+      "titulo": "04/08 - BELO HORIZONTE , SABARÁ E SANTA LUZIA - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F289e8e8c-29eb-40a6-8cb9-d07a5ce04e39",
+      "cidades": [
+        "Belo Horizonte",
+        "Sabará",
+        "Santa Luzia"
+      ],
+      "inicio": "2026-08-04T15:00:00-03:00",
+      "fim": "2026-08-05T12:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Beija Flor",
+        "Beira Linha",
+        "Belmonte",
+        "Capitao Eduardo",
+        "Conjunto Capitao Eduardo",
+        "Conjunto Paulo Vi",
+        "Jardim Vitoria",
+        "Maria Teresa",
+        "Montes Claros",
+        "Paulo Vi",
+        "Ribeiro De Abreu",
+        "Tiradentes",
+        "Amélia Moreira",
+        "Borba Gato",
+        "Borges",
+        "Condomínio Jardim Dos Borges",
+        "Distrito Ind Simao Da Cunha",
+        "Bom Destino"
+      ]
+    },
     {
       "titulo": "03/08 - CONTAGEM - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2Fb52ea4dd-0c11-471f-95b5-afde7ad2cf8b",
