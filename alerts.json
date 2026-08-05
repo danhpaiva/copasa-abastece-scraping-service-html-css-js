@@ -1,6 +1,26 @@
 {
-  "gerado_em": "2026-08-05T10:45:15",
+  "gerado_em": "2026-08-05T14:30:28",
   "alertas": [
+    {
+      "titulo": "05/08 - BELO HORIZONTE , IBIRITÉ - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F20fa710d-dfc1-4ffd-9b79-e3f9d4a402ea",
+      "cidades": [
+        "Belo Horizonte",
+        "Ibirité"
+      ],
+      "inicio": "2026-08-05T07:00:00-03:00",
+      "fim": "2026-08-05T23:30:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Independência",
+        "Mineirão",
+        "Águia Dourada",
+        "Barreirinho",
+        "Morada Da Serra",
+        "Nossa Senhora De Lourdes",
+        "Primavera"
+      ]
+    },
     {
       "titulo": "04/08 - BELO HORIZONTE , SABARÁ E SANTA LUZIA - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F289e8e8c-29eb-40a6-8cb9-d07a5ce04e39",
