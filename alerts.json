@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-05T14:30:28",
+  "gerado_em": "2026-08-05T17:50:36",
   "alertas": [
     {
       "titulo": "05/08 - BELO HORIZONTE , IBIRITÉ - Situação do Abastecimento",
@@ -31,7 +31,7 @@
       ],
       "inicio": "2026-08-04T15:00:00-03:00",
       "fim": "2026-08-05T12:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Beija Flor",
         "Beira Linha",
