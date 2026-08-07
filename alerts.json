@@ -1,4 +1,70 @@
 {
-  "gerado_em": "2026-08-07T00:12:32",
-  "alertas": []
+  "gerado_em": "2026-08-07T11:01:40",
+  "alertas": [
+    {
+      "titulo": "06/08 - CONTAGEM - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F9737908e-8197-4307-923d-4be630387198",
+      "cidades": [
+        "Contagem"
+      ],
+      "inicio": "2026-08-06T22:02:00-03:00",
+      "fim": "2026-08-07T16:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Alvorada",
+        "Europa",
+        "Olinda."
+      ]
+    },
+    {
+      "titulo": "06/08 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2Fe47c15c4-8243-481c-8f0d-4b4609c1a5af",
+      "cidades": [
+        "Belo Horizonte"
+      ],
+      "inicio": "2026-08-06T13:00:00-03:00",
+      "fim": "2026-08-07T06:00:00-03:00",
+      "esta_ativa": false,
+      "bairros_afetados": [
+        "Acaba Mundo",
+        "Alto Vera Cruz",
+        "Anchieta",
+        "Barroca",
+        "Belvedere",
+        "Carmo",
+        "Cidade Jardim",
+        "Comiteco",
+        "Coração De Jesus",
+        "Cruzeiro",
+        "Estoril",
+        "Estrela",
+        "Fazendinha",
+        "Funcionários",
+        "Grajaú",
+        "Gutierrez",
+        "Luxemburgo",
+        "Mangabeiras",
+        "Marcola",
+        "Monte São José",
+        "Nossa Senhora Da Aparecida",
+        "Nossa Senhora Da Conceição",
+        "Nossa Senhora De Fátima",
+        "Olhos D'Água",
+        "Santa Isabel",
+        "Santa Lúcia",
+        "Santa Rita De Cássia",
+        "Santo Antônio",
+        "São Bento",
+        "São Jorge Ii",
+        "São Lucas",
+        "São Pedro",
+        "Serra",
+        "Sion",
+        "Vila Barragem Santa Lucia",
+        "Vila Fumec",
+        "Vila Novo São Lucas",
+        "Vila Paris."
+      ]
+    }
+  ]
 }
