@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-07T17:01:52",
+  "gerado_em": "2026-08-08T01:09:05",
   "alertas": [
     {
       "titulo": "06/08 - CONTAGEM - Situação do Abastecimento",
@@ -9,11 +9,26 @@
       ],
       "inicio": "2026-08-06T22:02:00-03:00",
       "fim": "2026-08-07T16:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Alvorada",
         "Europa",
         "Olinda."
+      ]
+    },
+    {
+      "titulo": "06/08 - CONTAGEM - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F382d21b4-beed-4e16-96fe-9a34f17a62d9",
+      "cidades": [
+        "Contagem"
+      ],
+      "inicio": "2026-08-06T22:02:00-03:00",
+      "fim": "2026-08-07T20:00:00-03:00",
+      "esta_ativa": false,
+      "bairros_afetados": [
+        "Alvorada",
+        "Europa",
+        "Olinda"
       ]
     },
     {
