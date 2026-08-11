@@ -1,4 +1,64 @@
 {
-  "gerado_em": "2026-08-11T10:58:55",
-  "alertas": []
+  "gerado_em": "2026-08-11T13:24:14",
+  "alertas": [
+    {
+      "titulo": "11/08 - SABARÁ - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F441b002c-89aa-4524-a6df-960b44f971bb",
+      "cidades": [
+        "Sabará"
+      ],
+      "inicio": "2026-08-11T06:50:00-03:00",
+      "fim": "2026-08-12T12:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Adelmolândia",
+        "Adelmolândia Ii",
+        "Águas Férreas",
+        "Alto Bela Vista",
+        "Alto Do Cabral",
+        "Alto Do Fidalgo",
+        "Arraial Velho",
+        "Cabral",
+        "Caieira",
+        "Campinas",
+        "Centro",
+        "Condomínio Eugenie Scharle",
+        "Conjunto Habitacional Morada Da Serra",
+        "Córrego Da Ilha",
+        "Distrito Industrial Operário Raimundo Fantini",
+        "Esplanada",
+        "Fogo Apagou",
+        "Gaia",
+        "Galego",
+        "Mangabeiras",
+        "Morro Da Cruz",
+        "Morro São Francisco",
+        "Mundo Velho",
+        "Nossa Senhora Conceição",
+        "Nossa Senhora Da Conceição",
+        "Nossa Senhora Do Ó",
+        "Paciência",
+        "Padre Chiquinho",
+        "Praia Dos Bandeirantes",
+        "Rosário",
+        "Rosário Ii",
+        "Rosário Iii",
+        "Santana",
+        "Santo Antônio",
+        "Santo Antônio De Rocas Grandes",
+        "Serranos",
+        "Siderúrgica",
+        "Sobradinho",
+        "Terra Santa",
+        "Vila Do Triângulo",
+        "Vila Esperança",
+        "Vila Francisco De Moura",
+        "Vila Mangueiras",
+        "Vila Michel",
+        "Vila Santa Cruz",
+        "Vila Santo Antônio De Pádua",
+        "Villa Real."
+      ]
+    }
+  ]
 }
