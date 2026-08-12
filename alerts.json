@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-12T13:35:43",
+  "gerado_em": "2026-08-12T15:07:10",
   "alertas": [
     {
       "titulo": "11/08 - SABARÁ - Situação do Abastecimento",
@@ -9,7 +9,7 @@
       ],
       "inicio": "2026-08-11T06:50:00-03:00",
       "fim": "2026-08-12T12:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Adelmolândia",
         "Adelmolândia Ii",
