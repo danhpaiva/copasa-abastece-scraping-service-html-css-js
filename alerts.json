@@ -1,6 +1,36 @@
 {
-  "gerado_em": "2026-08-13T20:54:44",
+  "gerado_em": "2026-08-14T15:15:48",
   "alertas": [
+    {
+      "titulo": "13/08 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2Fdbe59412-2355-481d-a525-20820c7ad232",
+      "cidades": [
+        "Belo Horizonte"
+      ],
+      "inicio": "2026-08-13T19:50:00-03:00",
+      "fim": "2026-08-14T23:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Barro Preto",
+        "Centro",
+        "Santo Agostinho."
+      ]
+    },
+    {
+      "titulo": "13/08 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F99e55978-c6a5-4db0-9ec4-c54e94b80b52",
+      "cidades": [
+        "Belo Horizonte"
+      ],
+      "inicio": "2026-08-13T19:50:00-03:00",
+      "fim": "2026-08-14T17:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Barro Preto",
+        "Centro",
+        "Santo Agostinho"
+      ]
+    },
     {
       "titulo": "12/08 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F37a23c29-f06b-48fa-b62c-65564886e9dd",
@@ -9,7 +39,7 @@
       ],
       "inicio": "2026-08-12T16:50:00-03:00",
       "fim": "2026-08-13T21:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Cerejeira",
         "Eliane",
@@ -29,65 +59,6 @@
         "Vera Lucia",
         "Viena",
         "Vila Papine."
-      ]
-    },
-    {
-      "titulo": "11/08 - SABARÁ - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F441b002c-89aa-4524-a6df-960b44f971bb",
-      "cidades": [
-        "Sabará"
-      ],
-      "inicio": "2026-08-11T06:50:00-03:00",
-      "fim": "2026-08-12T12:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Adelmolândia",
-        "Adelmolândia Ii",
-        "Águas Férreas",
-        "Alto Bela Vista",
-        "Alto Do Cabral",
-        "Alto Do Fidalgo",
-        "Arraial Velho",
-        "Cabral",
-        "Caieira",
-        "Campinas",
-        "Centro",
-        "Condomínio Eugenie Scharle",
-        "Conjunto Habitacional Morada Da Serra",
-        "Córrego Da Ilha",
-        "Distrito Industrial Operário Raimundo Fantini",
-        "Esplanada",
-        "Fogo Apagou",
-        "Gaia",
-        "Galego",
-        "Mangabeiras",
-        "Morro Da Cruz",
-        "Morro São Francisco",
-        "Mundo Velho",
-        "Nossa Senhora Conceição",
-        "Nossa Senhora Da Conceição",
-        "Nossa Senhora Do Ó",
-        "Paciência",
-        "Padre Chiquinho",
-        "Praia Dos Bandeirantes",
-        "Rosário",
-        "Rosário Ii",
-        "Rosário Iii",
-        "Santana",
-        "Santo Antônio",
-        "Santo Antônio De Rocas Grandes",
-        "Serranos",
-        "Siderúrgica",
-        "Sobradinho",
-        "Terra Santa",
-        "Vila Do Triângulo",
-        "Vila Esperança",
-        "Vila Francisco De Moura",
-        "Vila Mangueiras",
-        "Vila Michel",
-        "Vila Santa Cruz",
-        "Vila Santo Antônio De Pádua",
-        "Villa Real."
       ]
     }
   ]
