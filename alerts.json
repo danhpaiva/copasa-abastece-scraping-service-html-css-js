@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-14T22:32:39",
+  "gerado_em": "2026-08-15T10:31:22",
   "alertas": [
     {
       "titulo": "13/08 - BELO HORIZONTE - Situação do Abastecimento",
@@ -9,41 +9,11 @@
       ],
       "inicio": "2026-08-13T19:50:00-03:00",
       "fim": "2026-08-14T23:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Barro Preto",
         "Centro",
         "Santo Agostinho."
-      ]
-    },
-    {
-      "titulo": "12/08 - RIBEIRÃO DAS NEVES - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F37a23c29-f06b-48fa-b62c-65564886e9dd",
-      "cidades": [
-        "Ribeirão Das Neves"
-      ],
-      "inicio": "2026-08-12T16:50:00-03:00",
-      "fim": "2026-08-13T21:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Cerejeira",
-        "Eliane",
-        "Elizabeth",
-        "Felixlândia",
-        "Fortaleza",
-        "Granjas Primavera",
-        "Itapoã",
-        "Jardim De Ala 1ª Seção",
-        "Jardim De Ala 3ª Seção",
-        "Katia",
-        "Nossa Senhora Da Conceição",
-        "Núcleo Tradicional",
-        "Santa Branca",
-        "São João De Deus",
-        "São Miguel Arcanjo",
-        "Vera Lucia",
-        "Viena",
-        "Vila Papine."
       ]
     }
   ]
