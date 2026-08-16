@@ -1,4 +1,18 @@
 {
-  "gerado_em": "2026-08-16T18:41:01",
-  "alertas": []
+  "gerado_em": "2026-08-16T20:32:25",
+  "alertas": [
+    {
+      "titulo": "16/08 - VESPASIANO - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F1831022b-695a-4dae-9ec3-5fd62ac8980d",
+      "cidades": [
+        "Vespasiano"
+      ],
+      "inicio": "2026-08-16T16:20:00-03:00",
+      "fim": "2026-08-17T08:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Morro Alto"
+      ]
+    }
+  ]
 }
