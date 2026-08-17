@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-17T10:41:23",
+  "gerado_em": "2026-08-17T12:59:59",
   "alertas": [
     {
       "titulo": "16/08 - VESPASIANO - Situação do Abastecimento",
@@ -9,7 +9,7 @@
       ],
       "inicio": "2026-08-16T16:20:00-03:00",
       "fim": "2026-08-17T08:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Morro Alto"
       ]
