@@ -1,6 +1,33 @@
 {
-  "gerado_em": "2026-08-18T13:03:03",
+  "gerado_em": "2026-08-18T14:42:42",
   "alertas": [
+    {
+      "titulo": "18/08 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2Fdc07fcee-2641-47e5-8965-4f5a40373904",
+      "cidades": [
+        "Belo Horizonte"
+      ],
+      "inicio": "2026-08-18T09:22:00-03:00",
+      "fim": "2026-08-18T23:59:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Anchieta",
+        "Carmo",
+        "Cruzeiro",
+        "Estrela",
+        "Funcionários",
+        "Mala E Cuia",
+        "Nossa Senhora Da Aparecida",
+        "Pindura Saia",
+        "Santa Efigênia",
+        "Santo Antônio",
+        "São Lucas",
+        "São Pedro",
+        "Savassi",
+        "Serra",
+        "Sion."
+      ]
+    },
     {
       "titulo": "16/08 - VESPASIANO - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F1831022b-695a-4dae-9ec3-5fd62ac8980d",
