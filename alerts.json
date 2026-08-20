@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-20T02:38:23",
+  "gerado_em": "2026-08-20T08:50:20",
   "alertas": [
     {
       "titulo": "19/08 - BELO HORIZONTE - Situação do Abastecimento",
@@ -9,7 +9,7 @@
       ],
       "inicio": "2026-08-19T06:30:00-03:00",
       "fim": "2026-08-19T23:59:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Alpes",
         "Alto Barroca",
