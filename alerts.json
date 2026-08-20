@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-20T14:45:32",
+  "gerado_em": "2026-08-20T16:44:13",
   "alertas": [
     {
       "titulo": "19/08 - NOVA LIMA - Situação do Abastecimento",
@@ -9,7 +9,7 @@
       ],
       "inicio": "2026-08-19T20:00:00-03:00",
       "fim": "2026-08-20T12:30:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Honório Bicalho"
       ]
