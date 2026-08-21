@@ -1,6 +1,31 @@
 {
-  "gerado_em": "2026-08-21T08:51:42",
+  "gerado_em": "2026-08-21T10:38:28",
   "alertas": [
+    {
+      "titulo": "21/08 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F4bf03197-f219-45fc-a9ba-15ae78ea28d8",
+      "cidades": [
+        "Belo Horizonte"
+      ],
+      "inicio": "2026-08-21T07:00:00-03:00",
+      "fim": "2026-08-21T22:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Betânia",
+        "Buritis",
+        "Cinquentenário",
+        "Conjunto Betânia",
+        "Das Indústrias I",
+        "Estrela Do Oriente",
+        "Gameleira",
+        "Marajó",
+        "Nova Suíça",
+        "Palmeiras",
+        "Parque São José",
+        "Salgado Filho",
+        "Vista Alegre."
+      ]
+    },
     {
       "titulo": "19/08 - NOVA LIMA - Situação do Abastecimento",
       "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F13b95217-a10c-4ee9-9d0a-41822f1e7407",
