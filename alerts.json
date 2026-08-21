@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-20T22:36:49",
+  "gerado_em": "2026-08-21T08:51:42",
   "alertas": [
     {
       "titulo": "19/08 - NOVA LIMA - Situação do Abastecimento",
@@ -12,78 +12,6 @@
       "esta_ativa": false,
       "bairros_afetados": [
         "Honório Bicalho"
-      ]
-    },
-    {
-      "titulo": "19/08 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F864b6dff-8965-45d3-a8a1-d495820c386a",
-      "cidades": [
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-08-19T06:30:00-03:00",
-      "fim": "2026-08-19T23:59:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Alpes",
-        "Alto Barroca",
-        "Ambrosina",
-        "Barão Homem De Melo I",
-        "Barão Homem De Melo Iii",
-        "Barão Homem De Melo Iv",
-        "Barroca",
-        "Betânia",
-        "Buritis",
-        "Calafate",
-        "Cinquentenário",
-        "Conjunto Betânia",
-        "Das Indústrias I",
-        "Estoril",
-        "Estrela Do Oriente",
-        "Gameleira",
-        "Grajaú",
-        "Gutierrez",
-        "Havaí",
-        "Jardim América",
-        "Marajó",
-        "Morro Das Pedras",
-        "Nova Granada",
-        "Nova Suíça",
-        "Palmeiras",
-        "Parque São José",
-        "Salgado Filho",
-        "Santa Sofia",
-        "São Jorge I",
-        "São Jorge Ii",
-        "São Jorge Iii",
-        "Vila São Domingos",
-        "Vista Alegre."
-      ]
-    },
-    {
-      "titulo": "18/08 - BELO HORIZONTE - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2Fd0eaa7e5-9d8f-453b-a749-ddc74acb2d47",
-      "cidades": [
-        "Belo Horizonte"
-      ],
-      "inicio": "2026-08-18T09:22:00-03:00",
-      "fim": "2026-08-19T09:00:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Anchieta",
-        "Carmo",
-        "Cruzeiro",
-        "Estrela",
-        "Funcionários",
-        "Mala E Cuia",
-        "Nossa Senhora Da Aparecida",
-        "Pindura Saia",
-        "Santa Efigênia",
-        "Santo Antônio",
-        "São Lucas",
-        "São Pedro",
-        "Savassi",
-        "Serra",
-        "Sion."
       ]
     }
   ]
