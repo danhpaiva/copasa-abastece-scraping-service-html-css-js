@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-21T10:38:28",
+  "gerado_em": "2026-08-21T13:03:45",
   "alertas": [
     {
       "titulo": "21/08 - BELO HORIZONTE - Situação do Abastecimento",
@@ -24,6 +24,43 @@
         "Parque São José",
         "Salgado Filho",
         "Vista Alegre."
+      ]
+    },
+    {
+      "titulo": "21/08 - BELO HORIZONTE - Situação do Abastecimento",
+      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F22f8d6b0-71a8-4d4d-8f46-ea338209e7c2",
+      "cidades": [
+        "Belo Horizonte"
+      ],
+      "inicio": "2026-08-21T09:00:00-03:00",
+      "fim": "2026-08-22T21:00:00-03:00",
+      "esta_ativa": true,
+      "bairros_afetados": [
+        "Alpes",
+        "Alto Barroca",
+        "Ambrosina",
+        "Barão Homem De Melo I",
+        "Barão Homem De Melo",
+        "Barão Homem De Melo Iv",
+        "Betânia",
+        "Calafate",
+        "Cinquentenário",
+        "Estoril",
+        "Estrela Do Oriente",
+        "Grajaú",
+        "Gutierrez",
+        "Havaí",
+        "Jardim América",
+        "Marajó",
+        "Nova Granada",
+        "Nova Suissa",
+        "Salgado Filho",
+        "Santa Sofia",
+        "São Jorge I",
+        "São Jorge Iii",
+        "Ventosa",
+        "Vila São Domingos",
+        "Vila Ventosa."
       ]
     },
     {
