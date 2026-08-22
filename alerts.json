@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-21T22:33:41",
+  "gerado_em": "2026-08-22T08:40:24",
   "alertas": [
     {
       "titulo": "21/08 - BELO HORIZONTE - Situação do Abastecimento",
@@ -9,7 +9,7 @@
       ],
       "inicio": "2026-08-21T07:00:00-03:00",
       "fim": "2026-08-21T22:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Betânia",
         "Buritis",
@@ -61,19 +61,6 @@
         "Ventosa",
         "Vila São Domingos",
         "Vila Ventosa."
-      ]
-    },
-    {
-      "titulo": "19/08 - NOVA LIMA - Situação do Abastecimento",
-      "url": "https://www.copasa.com.br/wps/portal/internet/imprensa/noticias/informacoes-sobre-abastecimento/?1dmy&urile=wcm%3apath%3a%2Fsite-copasa-conteudos%2Finternet%2Fperfil%2Fimprensa%2Fnoticias%2Finformacoes-sobre-abastecimento%2Fabast2026%2Fabast202608%2F13b95217-a10c-4ee9-9d0a-41822f1e7407",
-      "cidades": [
-        "Nova Lima"
-      ],
-      "inicio": "2026-08-19T20:00:00-03:00",
-      "fim": "2026-08-20T12:30:00-03:00",
-      "esta_ativa": false,
-      "bairros_afetados": [
-        "Honório Bicalho"
       ]
     }
   ]
