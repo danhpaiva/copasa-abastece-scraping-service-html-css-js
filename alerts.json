@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-22T20:34:10",
+  "gerado_em": "2026-08-22T22:32:03",
   "alertas": [
     {
       "titulo": "22/08 - BELO HORIZONTE - Situação do Abastecimento",
@@ -9,7 +9,7 @@
       ],
       "inicio": "2026-08-22T05:00:00-03:00",
       "fim": "2026-08-22T18:00:00-03:00",
-      "esta_ativa": true,
+      "esta_ativa": false,
       "bairros_afetados": [
         "Aarão Reis",
         "Boa União I",
